@@ -80,7 +80,7 @@
   &__search-input {
     font-size: calc(100vw * (20 / 1920));
     color: $black;
-    background: $white url("/img/search.png") no-repeat;
+    background: $white url("../img/search.png") no-repeat;
     background-position: center right calc(100vw * (10 / 1920));
     background-size: calc(100vw * (30 / 1920)) auto;
     width: calc(100vw * (330 / 1920));

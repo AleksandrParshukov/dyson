@@ -1,7 +1,7 @@
 .callback {
   color: $white;
   padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
-  background: $black url('/img/callback_bg.png') no-repeat bottom left;
+  background: $black url('../img/callback_bg.png') no-repeat bottom left;
   background-size: 100% auto;
   box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
 

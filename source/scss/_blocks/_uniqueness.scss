@@ -3,7 +3,7 @@
   height: calc(100vw * (670 / 1920));
   padding: calc(100vw * (220 / 1920)) calc(100vw * (245 / 1920)) 0;
 
-  background: $black url('/img/uniqueness.png') no-repeat top left;
+  background: $black url('../img/uniqueness.png') no-repeat top left;
   background-size: 100% 100%;
 
   &__wrapper {

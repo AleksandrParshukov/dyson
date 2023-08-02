@@ -37,7 +37,7 @@
   &__star {
     width: calc(100vw * (30 / 1920));
     aspect-ratio: 1 / 1;
-    background: transparent url('/img/star_filled.png') center no-repeat;
+    background: transparent url('../img/star_filled.png') center no-repeat;
     background-size: contain;
   }
 }

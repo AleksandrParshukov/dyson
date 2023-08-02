@@ -1,28 +1,28 @@
 .banner {
   padding: calc(100vw * (200 / 1920)) calc(100vw * (250 / 1920)) calc(100vw * (220 / 1920));
-  background: #fafafa url('/img/banner.png') no-repeat top left;
+  background: #fafafa url('../img/banner.png') no-repeat top left;
   background-size: 100% auto;
 
   @include xl {
     padding: calc(100vw * (200 / $xl)) calc(100vw * (155 / $xl)) calc(100vw * (220 / $xl));
-    background-image: url('/img/banner_xl.png');
+    background-image: url('../img/banner_xl.png');
   }
 
   @include lg {
     padding: calc(100vw * (113 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (104 / $lg));
-    background-image: url('/img/banner_lg.png');
+    background-image: url('../img/banner_lg.png');
   }
 
   @include sm {
     padding: calc(100vw * (86 / $sm)) calc(100vw * (57 / $sm)) calc(100vw * (88 / $sm));
-    background-image: url('/img/banner_sm.png');
+    background-image: url('../img/banner_sm.png');
     background-position: top right;
     background-size: 100% auto;
   }
 
   @include xs {
     padding: calc(100vw * (35 / $xs-base)) calc(100vw * (48 / $xs-base)) calc(100vw * (25 / $xs-base));
-    background-image: url('/img/banner_xs.png');
+    background-image: url('../img/banner_xs.png');
     background-position: bottom center;
   }
 
@@ -47,7 +47,7 @@
     }
 
     @include xs {
-      font-size: calc(100vw * (30 / $xs-base));
+      font-size: calc(100vw * (25 / $xs-base));
       margin-bottom: calc(100vw * (304 / $xs-base));
       display: flex;
       flex-direction: column;
