@@ -1,0 +1,163 @@
+.catalog-sc {
+  color: $primary;
+  padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
+  background: $black url('/img/catalog-sc_bg.png') no-repeat bottom center;
+  background-size: 100% auto;
+
+  @include xl {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (50 / $sm)) calc(100vw * (37 / $sm));
+  }
+
+  @include xs {
+    padding: 0 calc(100vw * (15 / $xs-base));
+    background-image: none;
+  }
+
+  &__title {
+    color: inherit;
+    margin-bottom: calc(100vw * (70 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (60 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (35 / $sm));
+    }
+  }
+
+  &__list {
+    width: max-content;
+    margin-inline: auto;
+    gap: calc(100vw * (200 / 1920));
+
+    @include xl {
+      gap: calc(100vw * (200 / $xl));
+    }
+
+    @include lg {
+      gap: calc(100vw * (140 / $lg));
+    }
+
+    @include sm {
+      gap: calc(100vw * (50 / $sm));
+    }
+
+    @include xs {
+      width: 100%;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include xs {
+      width: 100%;
+      padding: calc(100vw * (39 / $xs-base)) calc(100vw * (35 / $xs-base)) calc(100vw * (27 / $xs-base));
+      margin-bottom: calc(100vw * (11 / $xs-base));
+      border: 2px solid rgb(59, 59, 59);
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  &__img {
+    width: auto;
+    height: calc(100vw * (457 / 1920));
+
+    @include xl {
+      height: calc(100vw * (457 / $xl));
+    }
+
+    @include lg {
+      height: calc(100vw * (341 / $lg));
+    }
+
+    @include sm {
+      height: calc(100vw * (270 / $sm));
+    }
+
+    @include xs {
+      height: calc(100vw * (354 / $xs-base));
+      position: absolute;
+      top: 0;
+      right: -10%;
+      z-index: 0;
+    }
+  }
+
+  &__category {
+    font-size: calc(100vw * (30 / 1920));
+    line-height: 1;
+    margin-top: calc(100vw * (16 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (30 / $xl));
+      margin-top: calc(100vw * (16 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (20 / $lg));
+      margin-top: calc(100vw * (13 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (22 / $sm));
+      margin-top: calc(100vw * (14 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (25 / $xs-base));
+      width: min-content;
+      margin-top: 0;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__name {
+    font-size: calc(100vw * (30 / 1920));
+    line-height: 1;
+    color: $gray;
+    margin-bottom: calc(100vw * (32 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (30 / $xl));
+      margin-bottom: calc(100vw * (32 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (20 / $lg));
+      margin-bottom: calc(100vw * (26 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (22 / $sm));
+      margin-bottom: calc(100vw * (24 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (25 / $xs-base));
+      width: min-content;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

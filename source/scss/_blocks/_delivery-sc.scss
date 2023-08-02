@@ -1,0 +1,160 @@
+.delivery-sc {
+  color: $gray;
+  padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
+  background-color: $white;
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
+
+  @include xl {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (50 / $sm)) calc(100vw * (37 / $sm));
+  }
+
+  @include xs {
+    padding:  calc(100vw * (40 / $xs-base)) 0 0;
+    background-color: $black;
+  }
+
+  &__title {
+    margin-bottom: calc(100vw * (50 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (50 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (38 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (38 / $sm));
+    }
+
+    @include xs {
+      margin-bottom: calc(100vw * (53 / $xs-base));
+      color: $white;
+    }
+  }
+
+  &__list {
+    width: max-content;
+    margin-inline: auto;
+    gap: calc(100vw * (100 / 1920));
+
+    @include xl {
+      gap: calc(100vw * (100 / $xl));
+    }
+
+    @include lg {
+      gap: calc(100vw * (90 / $lg));
+    }
+
+    @include sm {
+      gap: calc(100vw * (25 / $sm));
+    }
+
+    @include xs {
+      width: 100%;
+      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (28 / $xs-base));
+      background-color: $white;
+      gap: calc(100vw * (20 / $xs-base));
+    }
+  }
+
+  &__item {
+    text-align: center;
+    max-width: calc(100vw * (200 / 1920));
+
+    @include xl {
+      max-width: calc(100vw * (200 / $xl));
+    }
+
+    @include lg {
+      max-width: calc(100vw * (175 / $lg));
+    }
+
+    @include sm {
+      max-width: calc(100vw * (175 / $sm));
+    }
+
+    @include xs {
+      max-width: calc(100vw * (140 / $xs-base));
+      margin-bottom: calc(100vw * (25 / $xs-base));
+    }
+  }
+
+  &__img {
+    max-width: calc(100vw * (100 / 1920));
+    height: auto;
+    margin-bottom: auto;
+
+    @include xl {
+      max-width: calc(100vw * (100 / $xl));
+    }
+
+    @include lg {
+      max-width: calc(100vw * (65 / $lg));
+    }
+
+    @include sm {
+      max-width: calc(100vw * (60 / $sm));
+    }
+
+    @include xs {
+      max-width: calc(100vw * (75 / $xs-base));
+    }
+  }
+
+  &__name {
+    font-size: calc(100vw * (26 / 1920));
+    line-height: 1.3;
+    margin-block: calc(100vw * (40 / 1920)) calc(100vw * (16 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (26 / $xl));
+      margin-block: calc(100vw * (26 / $xl)) calc(100vw * (26 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (18 / $lg));
+      margin-block: calc(100vw * (26 / $lg)) calc(100vw * (26 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      margin-block: calc(100vw * (26 / $sm)) calc(100vw * (26 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+      margin-block: calc(100vw * (26 / $xs-base)) calc(100vw * (26 / $xs-base));
+    }
+  }
+
+  &__desc {
+    font-size: calc(100vw * (18 / 1920));
+    line-height: 1.3;
+
+    @include xl {
+      font-size: calc(100vw * (18 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (15 / $xs-base));
+    }
+  }
+}

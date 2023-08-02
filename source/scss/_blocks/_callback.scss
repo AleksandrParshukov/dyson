@@ -1,0 +1,61 @@
+.callback {
+  color: $white;
+  padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
+  background: $black url('/img/callback_bg.png') no-repeat bottom left;
+  background-size: 100% auto;
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
+
+  &__title {
+    color: inherit;
+    margin-bottom: calc(100vw * (20 / 1920));
+  }
+
+  &__form {
+    width: calc(100vw * (570 / 1920));
+    margin-inline: auto;
+    gap: calc(100vw * (35 / 1920));
+  }
+
+  &__form-caption {
+    font-size: calc(100vw * (20 / 1920));
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__input {
+    font-size: calc(100vw * (20 / 1920));
+    color: $black;
+    width: 100%;
+    height: calc(100vw * (50 / 1920));
+    border-radius: calc(100vw * (10 / 1920));
+    background-color: $white;
+    padding-inline: calc(100vw * (26 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+    }
+
+    &--textarea {
+      height: calc(100vw * (200 / 1920));
+      padding-top: calc(100vw * (15 / 1920));
+      border: none;
+      border-radius: calc(100vw * (20 / 1920));
+    }
+  }
+
+  &__submit {
+    margin-inline: auto;
+  }
+}

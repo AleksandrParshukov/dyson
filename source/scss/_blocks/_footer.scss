@@ -1,0 +1,98 @@
+.footer {
+  padding: calc(100vw * (90 / 1920)) calc(100vw * (95 / 1920)) calc(100vw * (40 / 1920));
+  color: $white;
+  background-color: $black;
+
+  &__logo {
+    width: calc(100vw * (159 / 1920));
+    height: calc(100vw * (87 / 1920));
+    display: block;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include xl {
+      width: calc(100vw * (159 / $xl));
+      height: calc(100vw * (87 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (130 / $lg));
+      height: calc(100vw * (73 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (130 / $sm));
+      height: calc(100vw * (73 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (100 / $xs-base));
+      height: calc(100vw * (48 / $xs-base));
+    }
+  }
+
+  &__wrapper {
+    margin-block: calc(100vw * (40 / 1920)) calc(100vw * (100 / 1920));
+    margin-inline: calc(100vw * (155 / 1920));
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-areas: 'buyers catalog company policy' 'buyers catalog social payment';
+    gap: calc(100vw * (60 / 1920)) calc(100vw * (120 / 1920));
+  }
+
+  &__caption {
+    font-size: calc(100vw * (22 / 1920));
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  &__link {
+    font-size: calc(100vw * (18 / 1920));
+    line-height: 1.2;
+  }
+
+  &__buyers {
+    grid-area: buyers;
+  }
+
+  &__catalog {
+    grid-area: catalog;
+    margin-inline: calc(100vw * (100 / 1920));
+  }
+
+  &__company {
+    grid-area: company;
+  }
+
+  &__policy {
+    grid-area: policy;
+  }
+
+  &__social {
+    grid-area: social;
+  }
+
+  &__payment {
+    grid-area: payment;
+  }
+
+  #temp_social_icons {
+    width: calc(100vw * (131 / 1920));
+    height: calc(100vw * (75 / 1920));
+  }
+
+  #temp_payment_icons {
+    width: calc(100vw * (252 / 1920));
+    height: calc(100vw * (51 / 1920));
+    margin-top: calc(100vw * (7 / 1920));
+  }
+
+  &__copyright {
+    font-size: calc(100vw * (20 / 1920));
+    line-height: 1.3;
+    text-align: center;
+  }
+}

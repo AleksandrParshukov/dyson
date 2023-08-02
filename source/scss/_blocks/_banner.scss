@@ -1,0 +1,103 @@
+.banner {
+  padding: calc(100vw * (200 / 1920)) calc(100vw * (250 / 1920)) calc(100vw * (220 / 1920));
+  background: #fafafa url('/img/banner.png') no-repeat top left;
+  background-size: 100% auto;
+
+  @include xl {
+    padding: calc(100vw * (200 / $xl)) calc(100vw * (155 / $xl)) calc(100vw * (220 / $xl));
+    background-image: url('/img/banner_xl.png');
+  }
+
+  @include lg {
+    padding: calc(100vw * (113 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (104 / $lg));
+    background-image: url('/img/banner_lg.png');
+  }
+
+  @include sm {
+    padding: calc(100vw * (86 / $sm)) calc(100vw * (57 / $sm)) calc(100vw * (88 / $sm));
+    background-image: url('/img/banner_sm.png');
+    background-position: top right;
+    background-size: 100% auto;
+  }
+
+  @include xs {
+    padding: calc(100vw * (35 / $xs-base)) calc(100vw * (48 / $xs-base)) calc(100vw * (25 / $xs-base));
+    background-image: url('/img/banner_xs.png');
+    background-position: bottom center;
+  }
+
+  &__title {
+    font-size: calc(100vw * (60 / 1920));
+    line-height: 1.2;
+    margin-bottom: calc(100vw * (40 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (60 / $xl));
+      margin-bottom: calc(100vw * (40 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (50 / $lg));
+      margin-bottom: calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (40 / $sm));
+      margin-bottom: calc(100vw * (34 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (30 / $xs-base));
+      margin-bottom: calc(100vw * (304 / $xs-base));
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: calc(100vw * (190 / 1920));
+    display: inline-block;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include xl {
+      width: calc(100vw * (190 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (132 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (120 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (101 / $xs-base));
+    }
+  }
+
+  &__text {
+    font-size: calc(100vw * (20 / 1920));
+    line-height: 1.2;
+  }
+
+  &__control {
+    margin-top: calc(100vw * (40 / 1920));
+  }
+
+  &__link {
+    margin-right: calc(100vw * (40 / 1920));
+
+    @include xs {
+      margin-inline: auto;
+    }
+  }
+
+  &__phone {
+    gap: calc(100vw * (15 / 1920));
+  }
+}

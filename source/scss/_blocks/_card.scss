@@ -1,0 +1,76 @@
+.card {
+  width: calc(100vw * (416 / 1920));
+  padding: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include xl {
+    width: calc(100vw * (358 / $xl));
+    padding: calc(100vw * (20 / $xl)) calc(100vw * (30 / $xl));
+  }
+
+  @include lg {
+    width: calc(100vw * (250 / $lg));
+    padding: calc(100vw * (70 / $lg)) calc(100vw * (70 / $lg));
+  }
+
+  @include sm {
+    width: calc(100vw * (25 / $sm));
+    padding: calc(100vw * (70 / $sm)) calc(100vw * (70 / $sm));
+  }
+
+  @include xs {
+    width: calc(100vw * (20 / $xs-base));
+    padding: calc(100vw * (70 / $xs-base)) calc(100vw * (70 / $xs-base));
+  }
+
+  &__sale {
+    font-size: calc(100vw * (20 / 1920));
+    line-height: 1;
+    color: $white;
+    padding: calc(100vw * (12 / 1920)) calc(100vw * (7 / 1920));
+    background-color: $special-light;
+    border-radius: calc(100vw * (14 / 1920));
+    position: absolute;
+    top: calc(100vw * (17 / 1920));
+    right: calc(100vw * (-17 / 1920));
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-bottom: calc(100vw * (10 / 1920));
+  }
+
+  &__name {
+    font-size: calc(100vw * (30 / 1920));
+    line-height: 1;
+    color: $gray;
+  }
+
+  &__desc {
+    font-size: calc(100vw * (24 / 1920));
+    line-height: 1.125;
+    text-align: left;
+    margin-block: calc(100vw * (15 / 1920)) calc(100vw * (25 / 1920));
+  }
+
+  &__prices {
+    font-family: sans-serif;
+    font-size: calc(100vw * (36 / 1920));
+    line-height: 1;
+    color: $special;
+    margin-left: auto;
+    gap: calc(100vw * (7 / 1920));
+    align-items: baseline;
+  }
+
+  &__old-price {
+    font-size: calc(100vw * (24 / 1920));
+    text-decoration: line-through;
+    color: $light;
+  }
+}

@@ -1,0 +1,63 @@
+.h2 {
+  font-size: calc(100vw * (36 / 1920));
+  line-height: 1;
+  font-weight: 400;
+  color: $black;
+  text-align: center;
+
+    @include xl {
+      font-size: calc(100vw * (36 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (25 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (25 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (25 / $xs-base));
+    }
+}
+
+.btn {
+  font-size: calc(100vw * (18 / 1920));
+  line-height: calc(100vw * (20 / 1920));
+  text-transform: lowercase;
+  color: $white;
+  width: max-content;
+  padding: calc(100vw * (14 / 1920)) calc(100vw * (36 / 1920)) calc(100vw * (16 / 1920));
+  background-color: $special;
+  border-radius: calc(100vw * (50 / 1920));
+  display: block;
+
+    @include xl {
+      font-size: calc(100vw * (18 / $xl));
+      line-height: calc(100vw * (20 / $xl));
+      padding: calc(100vw * (14 / $xl)) calc(100vw * (36 / $xl)) calc(100vw * (16 / $xl));
+      border-radius: calc(100vw * (50 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (18 / $lg));
+      line-height: calc(100vw * (20 / $lg));
+      padding: calc(100vw * (14 / $lg)) calc(100vw * (36 / $lg)) calc(100vw * (16 / $lg));
+      border-radius: calc(100vw * (50 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      line-height: calc(100vw * (20 / $sm));
+      padding: calc(100vw * (14 / $sm)) calc(100vw * (36 / $sm)) calc(100vw * (16 / $sm));
+      border-radius: calc(100vw * (50 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+      line-height: calc(100vw * (20 / $xs-base));
+      padding: calc(100vw * (14 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (16 / $xs-base));
+      border-radius: calc(100vw * (50 / $xs-base));
+    }
+}

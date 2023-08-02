@@ -1,0 +1,176 @@
+.header {
+  color: $white;
+  background-color: $black;
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
+
+  &__logo {
+    width: calc(100vw * (159 / 1920));
+    height: calc(100vw * (87 / 1920));
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include xl {
+      width: calc(100vw * (159 / $xl));
+      height: calc(100vw * (87 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (130 / $lg));
+      height: calc(100vw * (73 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (130 / $sm));
+      height: calc(100vw * (73 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (100 / $xs-base));
+      height: calc(100vw * (48 / $xs-base));
+    }
+  }
+
+  &__top {
+    padding: calc(100vw * (13 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (33 / 1920));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include xl {
+      padding: calc(100vw * (13 / $xl)) calc(100vw * (24 / $xl)) calc(100vw * (33 / $xl));
+    }
+
+    @include lg {
+      padding: calc(100vw * (11 / $lg)) calc(100vw * (28 / $lg)) calc(100vw * (53 / $lg));
+    }
+
+    @include sm {
+      padding: calc(100vw * (4 / $sm)) calc(100vw * (14 / $sm)) calc(100vw * (11 / $sm));
+    }
+
+    @include xs {
+      padding: calc(100vw * (16 / $xs-base)) calc(100vw * (20 / $xs-base));
+    }
+  }
+
+  &__search {
+    margin-inline: calc(100vw * (40 / 1920));
+    position: relative;
+
+    @include xl {
+      margin-inline: calc(100vw * (20 / $xl)) calc(100vw * (40 / $xl));
+    }
+
+    @include lg {
+      margin-inline: calc(100vw * (18 / $lg)) calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      margin-inline: calc(100vw * (40 / $sm)) calc(100vw * (30 / $sm));
+    }
+
+    @include xs {
+      margin-inline: calc(100vw * (21 / $xs-base)) calc(100vw * (15 / $xs-base));
+    }
+  }
+
+  &__search-input {
+    font-size: calc(100vw * (20 / 1920));
+    color: $black;
+    background: $white url("/img/search.png") no-repeat;
+    background-position: center right calc(100vw * (10 / 1920));
+    background-size: calc(100vw * (30 / 1920)) auto;
+    width: calc(100vw * (330 / 1920));
+    height: calc(100vw * (40 / 1920));
+    padding-inline: calc(100vw * (7 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+      background-position: center right calc(100vw * (10 / $xl));
+      background-size: calc(100vw * (30 / $xl)) auto;
+      width: calc(100vw * (271 / $xl));
+      height: calc(100vw * (40 / $xl));
+      padding-inline: calc(100vw * (7 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+      background-position: center right calc(100vw * (10 / $lg));
+      background-size: calc(100vw * (25 / $lg)) auto;
+      width: calc(100vw * (250 / $lg));
+      height: calc(100vw * (30 / $lg));
+      padding-inline: calc(100vw * (7 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+      background-position: center right calc(100vw * (10 / $xs-base));
+      background-size: calc(100vw * (25 / $xs-base)) auto;
+      width: calc(100vw * (256 / $sm));
+      height: calc(100vw * (30 / $sm));
+      padding-inline: calc(100vw * (7 / $sm));
+      position: absolute;
+      top: 0;
+      right: 100%;
+      display: none;
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+      background-position: center right calc(100vw * (10 / $xs-base));
+      background-size: calc(100vw * (27 / $xs-base)) auto;
+      width: calc(100vw * (234 / $xs-base));
+      height: calc(100vw * (40 / $xs-base));
+      padding-inline: calc(100vw * (7 / $xs-base));
+    }
+  }
+
+  &__search-btn {
+    width: calc(100vw * (25 / $sm));
+    height: calc(100vw * (25 / $sm));
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include xs {
+      width: calc(100vw * (25 / $xs-base));
+      height: calc(100vw * (25 / $xs-base));
+    }
+  }
+
+  &__cart {
+    width: calc(100vw * (34 / 1920));
+    height: calc(100vw * (32 / 1920));
+    position: relative;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include xl {
+      width: calc(100vw * (34 / $xl));
+      height: calc(100vw * (32 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (30 / $lg));
+      height: calc(100vw * (28 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (25 / $sm));
+      height: calc(100vw * (23 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (25 / $xs-base));
+      height: calc(100vw * (23 / $xs-base));
+    }
+  }
+}

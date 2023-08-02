@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'futura';
+    src: url('../fonts/futura-bt-for-dyson-w05-medium.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import '_defs/vars';
+@import '_defs/global';
+@import '_mixins/breakpoints';
+@import '_defs/resp_helpers';
+@import '_defs/util';
+
+
+@import '_blocks/header';
+@import '_blocks/catalog-select';
+@import '_blocks/main-nav';
+@import '_blocks/banner';
+@import '_blocks/about-sc';
+@import '_blocks/catalog-sc';
+@import '_blocks/delivery-sc';
+@import '_blocks/novelties-sc';
+@import '_blocks/card';
+@import '_blocks/uniqueness';
+@import '_blocks/faq';
+@import '_blocks/reviews';
+@import '_blocks/callback';
+@import '_blocks/quote';
+@import '_blocks/footer';
+

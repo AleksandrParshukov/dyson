@@ -1,0 +1,63 @@
+.from {
+	&-xl {
+		@include xl {
+			display: none !important;
+		}
+	}
+
+	&-lg {
+		@include lg {
+			display: none !important;
+		}
+	}
+
+	&-md {
+		@include md {
+			display: none !important;
+		}
+	}
+
+	&-sm {
+		@include sm {
+			display: none !important;
+		}
+	}
+
+	&-xs {
+		@include xs {
+			display: none !important;
+		}
+	}
+}
+
+.to {
+	&-xl {
+		@include xl-up {
+			display: none !important;
+		}
+	}
+
+	&-lg {
+		@include lg-up {
+			display: none !important;
+		}
+	}
+
+	&-md {
+		@include md-up {
+			display: none !important;
+		}
+	}
+
+	&-sm {
+		@include sm-up {
+			display: none !important;
+		}
+	}
+
+	&-xs {
+		@include xs-up {
+			display: none !important;
+		}
+	}
+}
