@@ -13,11 +13,11 @@
   }
 
   @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (50 / $sm)) calc(100vw * (37 / $sm));
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
   }
 
   @include xs {
-    padding:  calc(100vw * (40 / $xs-base)) 0 0;
+    padding: calc(100vw * (40 / $xs-base)) 0 0;
     background-color: $black;
   }
 
@@ -52,7 +52,7 @@
     }
 
     @include lg {
-      gap: calc(100vw * (90 / $lg));
+      gap: calc(100vw * (50 / $lg));
     }
 
     @include sm {
@@ -61,9 +61,9 @@
 
     @include xs {
       width: 100%;
-      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (28 / $xs-base));
+      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (20 / $xs-base));
       background-color: $white;
-      gap: calc(100vw * (20 / $xs-base));
+      gap: calc(100vw * (10 / $xs-base));
     }
   }
 
@@ -76,15 +76,15 @@
     }
 
     @include lg {
-      max-width: calc(100vw * (175 / $lg));
+      max-width: calc(100vw * (170 / $lg));
     }
 
     @include sm {
-      max-width: calc(100vw * (175 / $sm));
+      max-width: calc(100vw * (160 / $sm));
     }
 
     @include xs {
-      max-width: calc(100vw * (140 / $xs-base));
+      max-width: calc(100vw * (150 / $xs-base));
       margin-bottom: calc(100vw * (25 / $xs-base));
     }
   }
@@ -150,11 +150,11 @@
     }
 
     @include sm {
-      font-size: calc(100vw * (15 / $sm));
+      font-size: calc(100vw * (14 / $sm));
     }
 
     @include xs {
-      font-size: calc(100vw * (15 / $xs-base));
+      font-size: calc(100vw * (14 / $xs-base));
     }
   }
 }

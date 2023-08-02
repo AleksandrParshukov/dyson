@@ -1,25 +1,97 @@
 .callback {
   color: $white;
   padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
-  background: $black url('../img/callback_bg.png') no-repeat bottom left;
+  background: $black url('../img/callback_bg.png') no-repeat bottom center;
   background-size: 100% auto;
   box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
+
+  @include xl {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
+    background-image: url('../img/callback_bg_xl.png');
+  }
+
+  @include lg {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+    background-image: url('../img/callback_bg_lg.png');
+  }
+
+  @include sm {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
+    background-image: url('../img/callback_bg_sm.png');
+  }
+
+  @include xs {
+    padding: calc(100vw * (40 / $xs-base)) calc(100vw * (25 / $xs-base));
+    background-image: none;
+  }
 
   &__title {
     color: inherit;
     margin-bottom: calc(100vw * (20 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (25 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (20 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (20 / $sm));
+    }
+
+    @include xs {
+      margin-bottom:  calc(100vw * (25 / $xs-base)) 0;
+    }
   }
 
   &__form {
     width: calc(100vw * (570 / 1920));
     margin-inline: auto;
     gap: calc(100vw * (35 / 1920));
+
+    @include xl {
+      width: calc(100vw * (570 / $xl));
+      gap: calc(100vw * (35 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (490 / $lg));
+      gap: calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (490 / $sm));
+      gap: calc(100vw * (30 / $sm));
+    }
+
+    @include xs {
+      width: 100%;
+      gap: calc(100vw * (23 / $xs-base));
+    }
   }
 
   &__form-caption {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.5;
     text-align: center;
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (18 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+    }
   }
 
   &__input {
@@ -27,24 +99,36 @@
     color: $black;
     width: 100%;
     height: calc(100vw * (50 / 1920));
+    padding-inline: calc(100vw * (26 / 1920));
     border-radius: calc(100vw * (10 / 1920));
     background-color: $white;
-    padding-inline: calc(100vw * (26 / 1920));
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));
+      height: calc(100vw * (50 / $xl));
+      padding-inline: calc(100vw * (26 / $xl));
+      border-radius: calc(100vw * (10 / $xl));
     }
 
     @include lg {
       font-size: calc(100vw * (15 / $lg));
+      height: calc(100vw * (43 / $lg));
+      padding-inline: calc(100vw * (17 / $lg));
+      border-radius: calc(100vw * (10 / $lg));
     }
 
     @include sm {
       font-size: calc(100vw * (15 / $sm));
+      height: calc(100vw * (43 / $sm));
+      padding-inline: calc(100vw * (17 / $sm));
+      border-radius: calc(100vw * (10 / $sm));
     }
 
     @include xs {
       font-size: calc(100vw * (20 / $xs-base));
+      height: calc(100vw * (50 / $xs-base));
+      padding-inline: calc(100vw * (14 / $xs-base));
+      border-radius: calc(100vw * (10 / $xs-base));
     }
 
     &--textarea {
@@ -52,6 +136,30 @@
       padding-top: calc(100vw * (15 / 1920));
       border: none;
       border-radius: calc(100vw * (20 / 1920));
+
+      @include xl {
+        height: calc(100vw * (200 / $xl));
+        padding-top: calc(100vw * (15 / $xl));
+        border-radius: calc(100vw * (10 / $xl));
+      }
+
+      @include lg {
+        height: calc(100vw * (170 / $lg));
+        padding-top: calc(100vw * (13 / $lg));
+        border-radius: calc(100vw * (20 / $lg));
+      }
+
+      @include sm {
+        height: calc(100vw * (170 / $sm));
+        padding-top: calc(100vw * (13 / $sm));
+        border-radius: calc(100vw * (20 / $sm));
+      }
+
+      @include xs {
+        height: calc(100vw * (200 / $xs-base));
+        padding-top: calc(100vw * (15 / $xs-base));
+        border-radius: calc(100vw * (20 / $xs-base));
+      }
     }
   }
 

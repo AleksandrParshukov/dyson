@@ -5,6 +5,12 @@
     font-size: calc(100vw * (18 / 1920));
     line-height: 2.433;
     text-align: center;
+    cursor: pointer;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: $special;
+    }
 
     @include xl {
       font-size: calc(100vw * (18 / $xl));
@@ -40,6 +46,10 @@
     box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
     display: none;
     z-index: 1000;
+
+    &.open {
+      display: block;
+    }
 
     @include sm {
       width: calc(100vw * (360 / $sm));
@@ -103,6 +113,14 @@
       top: 100%;
       left: 0;
       opacity: 0;
+
+      @include xl {
+        height: calc(100vw * (3 / $xl));
+      }
+
+      @include lg {
+        height: calc(100vw * (3 / $lg));
+      }
 
       @include sm {
         content: none;

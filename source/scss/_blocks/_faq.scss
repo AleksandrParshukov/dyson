@@ -3,39 +3,164 @@
   background-color: #f1f1f1;
   box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
 
+  @include xl {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
+  }
+
+  @include xs {
+    padding: calc(100vw * (35 / $xs-base)) 0;
+    background-color: $black;
+  }
+
   &__title {
     margin-bottom: calc(100vw * (30 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (45 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (22 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (22 / $sm));
+    }
+
+    @include xs {
+      margin-bottom:  calc(100vw * (30 / $xs-base)) 0;
+    }
   }
 
   &__list {
     align-items: center;
     gap: calc(100vw * (20 / 1920));
+
+    @include xl {
+      gap: calc(100vw * (29 / $xl));
+    }
+
+    @include lg {
+      gap: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      gap: calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      gap: calc(100vw * (20 / $xs-base));
+    }
   }
 
   &__item {
+    width: 100%;
     padding: calc(100vw * (30 / 1920)) calc(100vw * (80 / 1920));
     background-color: $white;
     border: 1px solid rgb(232, 232, 232);
-    border-radius: 25px;
-  }
+    border-radius: calc(100vw * (25 / 1920));
 
-  &__item.open {
-    .faq__answer {
-      height: auto;
-      margin-top: calc(100vw * (25 / 1920));
+    @include xl {
+      padding: calc(100vw * (35 / $xl)) calc(100vw * (70 / $xl));
+      border-radius: calc(100vw * (25 / $xl));
+    }
+
+    @include lg {
+      padding: calc(100vw * (30 / $lg)) calc(100vw * (50 / $lg));
+      border-radius: calc(100vw * (25 / $lg));
+    }
+
+    @include sm {
+      padding: calc(100vw * (35 / $sm)) calc(100vw * (60 / $sm));
+      border-radius: calc(100vw * (20 / $sm));
+    }
+
+    @include xs {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      gap: calc(100vw * (20 / $xs-base));
     }
   }
 
   &__question {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.25;
+    cursor: pointer;
+
+    &.ui-state-active {
+      color: $special;
+
+      @include xs {
+        color: $white;
+      }
+    }
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+      color: $white;
+      width: calc(100vw * (340 / $xs-base));
+      padding: calc(100vw * (18 / $xs-base)) calc(100vw * (16 / $xs-base)) calc(100vw * (18 / $xs-base)) calc(100vw * (26 / $xs-base));
+      margin-right: auto;
+      border-radius: 0 calc(100vw * (20 / $sm)) calc(100vw * (20 / $sm)) 0;
+      background-color: $special;
+    }
   }
 
   &__answer {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.25;
     color: $gray;
-    height: 0;
     overflow: hidden;
+    padding-top: calc(100vw * (25 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+      padding-top: calc(100vw * (25 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+      padding-top: calc(100vw * (18 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      padding-top: calc(100vw * (20 / $lg));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+      color: $white;
+      text-align: justify;
+      width: calc(100vw * (340 / $xs-base));
+      padding: calc(100vw * (18 / $xs-base)) calc(100vw * (26 / $xs-base)) calc(100vw * (18 / $xs-base)) calc(100vw * (16 / $xs-base));
+      margin-left: auto;
+      border-radius: calc(100vw * (20 / $sm)) 0 0 calc(100vw * (20 / $sm)) ;
+      background-color: #1b1b48;
+    }
   }
 }

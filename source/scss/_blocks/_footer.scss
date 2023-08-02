@@ -3,6 +3,22 @@
   color: $white;
   background-color: $black;
 
+  @include xl {
+    padding: calc(100vw * (90 / $xl)) calc(100vw * (25 / $xl)) calc(100vw * (40 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (60 / $lg)) calc(100vw * (27 / $lg)) calc(100vw * (15 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (20 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (25 / $sm));
+  }
+
+  @include xs {
+    padding: calc(100vw * (16 / $xs-base)) calc(100vw * (25 / $xs-base)) calc(100vw * (185 / $xs-base));
+  }
+
   &__logo {
     width: calc(100vw * (159 / 1920));
     height: calc(100vw * (87 / 1920));
@@ -35,23 +51,80 @@
   }
 
   &__wrapper {
-    margin-block: calc(100vw * (40 / 1920)) calc(100vw * (100 / 1920));
-    margin-inline: calc(100vw * (155 / 1920));
+    margin: calc(100vw * (40 / 1920)) calc(100vw * (155 / 1920)) calc(100vw * (100 / 1920));
     display: grid;
     grid-template-columns: max-content;
     grid-template-areas: 'buyers catalog company policy' 'buyers catalog social payment';
     gap: calc(100vw * (60 / 1920)) calc(100vw * (120 / 1920));
+
+    @include xl {
+      margin: calc(100vw * (40 / $xl)) calc(100vw * (90 / $xl)) calc(100vw * (100 / $xl));
+      gap: calc(100vw * (100 / $xl));
+    }
+
+    @include lg {
+      margin: calc(100vw * (27 / $lg)) calc(100vw * (60 / $lg)) calc(100vw * (40 / $lg));
+      gap: calc(100vw * (80 / $lg));
+    }
+
+    @include sm {
+      margin: calc(100vw * (15 / $sm)) calc(100vw * (55 / $sm)) calc(100vw * (45 / $sm));
+      grid-template-areas: 'buyers catalog company' 
+      'buyers catalog social' 
+      'buyers policy social' 
+      'payment policy social' ;
+      gap: calc(100vw * (30 / $sm));
+    }
+
+    @include xs {
+      margin: calc(100vw * (40 / $xs-base)) calc(100vw * (25 / $xs-base)) calc(100vw * (50 / $xs-base));
+      display: flex;
+      flex-direction: column;
+      gap: calc(100vw * (25 / $xs-base));
+    }
   }
 
   &__caption {
     font-size: calc(100vw * (22 / 1920));
     line-height: 1.3;
     font-weight: 500;
+
+    @include xl {
+      font-size: calc(100vw * (22 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (18 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (20 / $xs-base));
+    }
   }
 
   &__link {
     font-size: calc(100vw * (18 / 1920));
     line-height: 1.2;
+
+    @include xl {
+      font-size: calc(100vw * (18 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+    }
   }
 
   &__buyers {
@@ -61,6 +134,18 @@
   &__catalog {
     grid-area: catalog;
     margin-inline: calc(100vw * (100 / 1920));
+
+    @include xl {
+      margin-inline: calc(100vw * (90 / $xl));
+    }
+
+    @include lg {
+      margin-inline: calc(100vw * (60 / $lg));
+    }
+
+    @include sm {
+      margin-inline: 0;
+    }
   }
 
   &__company {
@@ -82,17 +167,73 @@
   #temp_social_icons {
     width: calc(100vw * (131 / 1920));
     height: calc(100vw * (75 / 1920));
+
+    @include xl {
+      width: calc(100vw * (131 / $xl));
+      height: calc(100vw * (75 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (130 / $lg));
+      height: calc(100vw * (73 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (95 / $sm));
+      height: calc(100vw * (48 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (80 / $xs-base));
+      height: calc(100vw * (36 / $xs-base));
+    }
   }
 
   #temp_payment_icons {
     width: calc(100vw * (252 / 1920));
     height: calc(100vw * (51 / 1920));
     margin-top: calc(100vw * (7 / 1920));
+
+    @include xl {
+      width: calc(100vw * (252 / $xl));
+      height: calc(100vw * (51 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (200 / $lg));
+      height: calc(100vw * (40 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (160 / $sm));
+      height: calc(100vw * (30 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (150 / $xs-base));
+      height: calc(100vw * (27 / $xs-base));
+    }
   }
 
   &__copyright {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.3;
     text-align: center;
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (12 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (14 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (17 / $xs-base));
+    }
   }
 }

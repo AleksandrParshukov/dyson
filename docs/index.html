@@ -21,7 +21,7 @@
       </a>
       <div class="header__controls d-flex">
         <div class="header__catalog catalog-select">
-          <p class="catalog-select__caption d-none d-md-flex">Каталог</p>
+          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn">Каталог</p>
           <button class="catalog-select__btn js_top_menu_btn d-md-none" type="button"><img src="./img/burger.png" width="25" height="21" alt=""></button>
           <ul class="catalog-select__list">
             <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
@@ -178,7 +178,7 @@
 
       <ul class="novelties-sc__list d-flex">
         <li class="novelties-sc__item card">
-          <div class="card__sale">Sale 3%</div>
+          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card1.png" alt="">
 
@@ -195,7 +195,7 @@
           </div>
         </li>
         <li class="novelties-sc__item card">
-          <div class="card__sale">Sale 3%</div>
+          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card2.png" alt="">
 
@@ -212,7 +212,7 @@
           </div>
         </li>
         <li class="novelties-sc__item card from-sm">
-          <div class="card__sale">Sale 3%</div>
+          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card3.png" alt="">
 
@@ -223,7 +223,7 @@
             (медь)
           </p>
 
-          <div class="card__prices d-flex from-lg">
+          <div class="card__prices d-flex">
             <p class="card__cur-price"><span>44900</span>&nbsp;&#8381;</p>
             <p class="card__old-price"><span>70900</span>&#8381;</p>
           </div>
@@ -233,7 +233,7 @@
       <a class="novelties-sc__link btn from-sm" href="/catalog.html">Перейти в каталог Dyson</a>
     </section>
 
-    <section class="uniqueness">
+    <section class="uniqueness from-xs">
       <div class="uniqueness__wrapper">
         <h2 class="uniqueness__title h2">
           УНИКАЛЬНЫЕ ТЕХНОЛОГИИ<br>
@@ -249,9 +249,8 @@
 
     <section class="faq">
       <h2 class="faq__title h2">Частые вопросы</h2>
-
       <ul class="faq__list d-flex flex-column">
-        <li class="faq__item open">
+        <li class="faq__item">
           <p class="faq__question">Каким образом устройства для волос Dyson позволяют защитить волосы от повреждений?</p>
           <p class="faq__answer">
             Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
@@ -276,13 +275,14 @@
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title h2">Отзывы наших покупателей</h2>
+      <h2 class="reviews__title h2">Отзывы наших&nbsp;покупателей</h2>
 
-      <div class="owl-carousel owl-theme reviews__list">
+      <div class="reviews__wrapper">
+        <div class="owl-carousel owl-theme reviews__list js_reviews_carousel">
         <div class="item reviews__item">
           <p class="reviews__text">
             Дайсон и этим все сказано. Практично, продумано до мелочей, красиво и удобно. Самый качественный продукт на рынке, легкий и приятный в использовании,
-            эстетическое наслаждение! Может работать без провода на аккумуляторе. Три режима температуры.
+            эстетическое наслаждение! Может работать без провода на аккумуляторе. Три режима температуры.. Три режима температуры.. Три режима температуры.
           </p>
           <p class="reviews__author">Елена</p>
           <div class="reviews__rating d-flex">
@@ -348,6 +348,7 @@
           </div>
         </div>
       </div>
+      </div>
 
       <noscript>Включите JavaScript, чтобы увидеть отзывы</noscript>
     </section>
@@ -369,11 +370,11 @@
     <section class="quote">
       <div class="quote__wrapper">
         <img class="quote__img" src="./img/quote_img.png" width="580" height="327" alt="">
-        <p class="d-flex align-items-center">
+        <p class="quote__text d-flex align-items-center">
           <span class="quote__logo"><img src="./img/logo_violet.png" width="153" height="58" alt=""></span>
-          - созданы, чтобы служить долго!
+          <span>- созданы</span>,<br class="to-xs"> <span>чтобы служить долго!</span>
         </p>
-        <img class="quote__quotes" src="./img/quotes.png" width="158" height="130" alt="">
+        <img class="quote__quotes from-xs" src="./img/quotes.png" width="158" height="130" alt="">
       </div>
     </section>
 
@@ -410,7 +411,7 @@
           </ul>
         </div>
 
-        <div class="d-flex flex-column footer__catalog">
+        <div class="d-flex flex-column footer__catalog from-xs">
           <p class="footer__caption">Каталог</p>
           <ul class="footer__menu">
             <li class="footer__menu-item">
@@ -431,7 +432,7 @@
           </ul>
         </div>
 
-        <div class="d-flex flex-column footer__company">
+        <div class="d-flex flex-column footer__company from-xs">
           <p class="footer__caption">Компания</p>
           <ul class="footer__menu">
             <li class="footer__menu-item">
@@ -450,19 +451,19 @@
 
         </div>
         <div class="d-flex flex-column footer__policy">
-          <p class="footer__caption">Правовая информация</p>
+          <p class="footer__caption from-xs">Правовая информация</p>
           <ul class="footer__menu">
             <li class="footer__menu-item">
-              <a href="#" class="footer__link">Регистрация устройства</a>
+              <a href="#" class="footer__link from-xs">Регистрация устройства</a>
             </li>
             <li class="footer__menu-item">
-              <a href="#" class="footer__link">Условия и положения</a>
+              <a href="#" class="footer__link from-xs">Условия и положения</a>
             </li>
             <li class="footer__menu-item">
               <a href="#" class="footer__link">Политика конфиденциальности</a>
             </li>
             <li class="footer__menu-item">
-              <a href="#" class="footer__link">Оферта</a>
+              <a href="#" class="footer__link from-xs">Оферта</a>
             </li>
           </ul>
         </div>
@@ -481,7 +482,7 @@
         </div>
 
         <div class="d-flex flex-column footer__payment">
-          <p class="footer__caption">Принимаем к оплате</p>
+          <p class="footer__caption from-xs">Принимаем к оплате</p>
           <ul class="footer__menu">
             <li class="footer__menu-item d-flex">
               <a href="#" class="footer__icon"><img src="./img/payment.png" id="temp_payment_icons" width="252" height="51" alt=""></a>
@@ -498,6 +499,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/OwlCarousel/owl.carousel.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 

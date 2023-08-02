@@ -13,17 +13,17 @@
 
   @include lg {
     width: calc(100vw * (250 / $lg));
-    padding: calc(100vw * (70 / $lg)) calc(100vw * (70 / $lg));
+    padding: calc(100vw * (20 / $lg)) calc(100vw * (25 / $lg));
   }
 
   @include sm {
-    width: calc(100vw * (25 / $sm));
-    padding: calc(100vw * (70 / $sm)) calc(100vw * (70 / $sm));
+    width: calc(100vw * (225 / $sm));
+    padding: calc(100vw * (18 / $sm)) calc(100vw * (20 / $sm));
   }
 
   @include xs {
-    width: calc(100vw * (20 / $xs-base));
-    padding: calc(100vw * (70 / $xs-base)) calc(100vw * (70 / $xs-base));
+    width: calc(100vw * (287 / $xs-base));
+    padding: calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
   }
 
   &__sale {
@@ -36,6 +36,38 @@
     position: absolute;
     top: calc(100vw * (17 / 1920));
     right: calc(100vw * (-17 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (17 / $xl));
+      padding: calc(100vw * (10 / $xl)) calc(100vw * (6 / $xl));
+      border-radius: calc(100vw * (14 / $xl));
+      top: calc(100vw * (15 / $xl));
+      right: calc(100vw * (-15 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (12 / $lg));
+      padding: calc(100vw * (9 / $lg)) calc(100vw * (7 / $lg));
+      border-radius: calc(100vw * (14 / $lg));
+      top: calc(100vw * (10 / $lg));
+      right: calc(100vw * (-10 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      padding: calc(100vw * (6 / $sm)) calc(100vw * (10 / $sm));
+      border-radius: calc(100vw * (14 / $sm));
+      top: calc(100vw * (10 / $sm));
+      right: calc(100vw * (-10 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (17 / $xs-base));
+      padding: calc(100vw * (8 / $xs-base)) calc(100vw * (13 / $xs-base));
+      border-radius: calc(100vw * (14 / $xs-base));
+      top: calc(100vw * (20 / $xs-base));
+      right: calc(100vw * (-18 / $xs-base));
+    }
   }
 
   &__img {
@@ -43,12 +75,44 @@
     aspect-ratio: 1 / 1;
     object-fit: contain;
     margin-bottom: calc(100vw * (10 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (10 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (10 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (8 / $sm));
+    }
+
+    @include xs {
+      margin-bottom: calc(100vw * (10 / $xs-base));
+    }
   }
 
   &__name {
     font-size: calc(100vw * (30 / 1920));
     line-height: 1;
     color: $gray;
+
+    @include xl {
+      font-size: calc(100vw * (25 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (20 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (20 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (25 / $xs-base));
+    }
   }
 
   &__desc {
@@ -56,6 +120,27 @@
     line-height: 1.125;
     text-align: left;
     margin-block: calc(100vw * (15 / 1920)) calc(100vw * (25 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (22 / $xl));
+      margin-block: calc(100vw * (17 / $xl)) calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+      margin-block: calc(100vw * (11 / $lg)) calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+      margin-block: calc(100vw * (12 / $sm)) calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (15 / $xs-base));
+      text-align: center;
+      margin-block: calc(100vw * (16 / $xs-base)) calc(100vw * (20 / $xs-base));
+    }
   }
 
   &__prices {
@@ -66,11 +151,47 @@
     margin-left: auto;
     gap: calc(100vw * (7 / 1920));
     align-items: baseline;
+
+    @include xl {
+      font-size: calc(100vw * (30 / $xl));
+      gap: calc(100vw * (6 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (25 / $lg));
+      gap: calc(100vw * (5 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (25 / $sm));
+      gap: calc(100vw * (5 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (30 / $xs-base));
+      gap: calc(100vw * (6 / $xs-base));
+    }
   }
 
   &__old-price {
     font-size: calc(100vw * (24 / 1920));
     text-decoration: line-through;
     color: $light;
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (15 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (15 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+    }
   }
 }
