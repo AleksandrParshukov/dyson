@@ -1,0 +1,107 @@
+.equipment {
+  gap: calc(100vw * (30 / 1920)) calc(100vw * (100 / 1920));
+
+  @include xl {
+    gap: calc(100vw * (35 / $xl)) calc(100vw * (80 / $xl));
+  }
+
+  @include lg {
+    gap: calc(100vw * (25 / $lg)) calc(100vw * (45 / $lg));
+  }
+
+  @include sm {
+    gap: calc(100vw * (16 / $sm)) calc(100vw * (80 / $sm));
+  }
+
+  @include xs {
+    gap: calc(100vw * (15 / $xs-base));
+  }
+
+  &__item {
+    width: calc(100vw * (353 / 1920));
+
+    @include xl {
+      width: calc(100vw * (300 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (220 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (244 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (260 / $xs-base));
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: calc(100vw * (200 / 1920));
+    object-fit: contain;
+
+    @include xl {
+      height: calc(100vw * (200 / $xl));
+    }
+
+    @include lg {
+      height: calc(100vw * (142 / $lg));
+    }
+
+    @include sm {
+      height: calc(100vw * (140 / $sm));
+    }
+
+    @include xs {
+      height: calc(100vw * (140 / $xs-base));
+    }
+  }
+
+  &__name {
+    font-size: calc(100vw * (24 / 1920));
+    margin-block: calc(100vw * (8 / 1920)) calc(100vw * (30 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (24 / $xl));
+      margin-block: calc(100vw * (8 / $xl)) calc(100vw * (18 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (18 / $lg));
+      margin-block: calc(100vw * (6 / $lg)) calc(100vw * (13 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      margin-block: calc(100vw * (5 / $sm)) calc(100vw * (12 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+      margin-block: calc(100vw * (5 / $xs-base)) calc(100vw * (12 / $xs-base));
+    }
+  }
+
+  &__desc {
+    font-size: calc(100vw * (22 / 1920));
+    text-align: justify;
+
+    @include xl {
+      font-size: calc(100vw * (18 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (14 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (14 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (14 / $xs-base));
+    }
+  }
+}

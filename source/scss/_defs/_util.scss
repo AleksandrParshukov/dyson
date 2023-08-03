@@ -1,63 +1,203 @@
+.h1 {
+  font-size: calc(100vw * (40 / 1920));
+  line-height: 1;
+  font-weight: 400;
+  color: $black;
+  margin: 0;
+
+  @include xl {
+    font-size: calc(100vw * (36 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (25 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (22 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (22 / $xs-base));
+  }
+}
+
 .h2 {
   font-size: calc(100vw * (36 / 1920));
   line-height: 1;
   font-weight: 400;
   color: $black;
   text-align: center;
+  margin: 0;
 
-    @include xl {
-      font-size: calc(100vw * (36 / $xl));
-    }
+  @include xl {
+    font-size: calc(100vw * (36 / $xl));
+  }
 
-    @include lg {
-      font-size: calc(100vw * (25 / $lg));
-    }
+  @include lg {
+    font-size: calc(100vw * (25 / $lg));
+  }
 
-    @include sm {
-      font-size: calc(100vw * (25 / $sm));
-    }
+  @include sm {
+    font-size: calc(100vw * (25 / $sm));
+  }
 
-    @include xs {
-      font-size: calc(100vw * (25 / $xs-base));
-    }
+  @include xs {
+    font-size: calc(100vw * (30 / $xs-base));
+  }
 }
 
 .btn {
   font-size: calc(100vw * (18 / 1920));
   line-height: calc(100vw * (20 / 1920));
-  text-transform: lowercase;
   color: $white;
   width: max-content;
   padding: calc(100vw * (14 / 1920)) calc(100vw * (36 / 1920)) calc(100vw * (16 / 1920));
   background-color: $special;
+  border: none;
   border-radius: calc(100vw * (50 / 1920));
   display: block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @include xl {
+    font-size: calc(100vw * (18 / $xl));
+    line-height: calc(100vw * (20 / $xl));
+    padding: calc(100vw * (14 / $xl)) calc(100vw * (36 / $xl)) calc(100vw * (16 / $xl));
+    border-radius: calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (18 / $lg));
+    line-height: calc(100vw * (20 / $lg));
+    padding: calc(100vw * (14 / $lg)) calc(100vw * (36 / $lg)) calc(100vw * (16 / $lg));
+    border-radius: calc(100vw * (50 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (18 / $sm));
+    line-height: calc(100vw * (20 / $sm));
+    padding: calc(100vw * (14 / $sm)) calc(100vw * (36 / $sm)) calc(100vw * (16 / $sm));
+    border-radius: calc(100vw * (50 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (18 / $xs-base));
+    line-height: calc(100vw * (20 / $xs-base));
+    padding: calc(100vw * (14 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (16 / $xs-base));
+    border-radius: calc(100vw * (50 / $xs-base));
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #730243;
+    transition: 0.3s ease;
+    z-index: -1;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &:hover::before {
+    width: 150%;
+    height: 500%; /* 150% and 500% because div completely to be fill the space of the button.*/
+    transition: 0.5s ease;
+  }
+}
+
+.prices {
+  font-family: sans-serif;
+  font-size: calc(100vw * (36 / 1920));
+  line-height: 1;
+  color: $special;
+  gap: calc(100vw * (7 / 1920));
+  display: flex;
+  align-items: baseline;
+
+  @include xl {
+    font-size: calc(100vw * (30 / $xl));
+    gap: calc(100vw * (6 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (25 / $lg));
+    gap: calc(100vw * (5 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (25 / $sm));
+    gap: calc(100vw * (5 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (30 / $xs-base));
+    gap: calc(100vw * (6 / $xs-base));
+  }
+
+  
+
+  &__old-price {
+    font-size: calc(100vw * (24 / 1920));
+    text-decoration: line-through;
+    color: $light;
 
     @include xl {
-      font-size: calc(100vw * (18 / $xl));
-      line-height: calc(100vw * (20 / $xl));
-      padding: calc(100vw * (14 / $xl)) calc(100vw * (36 / $xl)) calc(100vw * (16 / $xl));
-      border-radius: calc(100vw * (50 / $xl));
+      font-size: calc(100vw * (20 / $xl));
     }
 
     @include lg {
-      font-size: calc(100vw * (18 / $lg));
-      line-height: calc(100vw * (20 / $lg));
-      padding: calc(100vw * (14 / $lg)) calc(100vw * (36 / $lg)) calc(100vw * (16 / $lg));
-      border-radius: calc(100vw * (50 / $lg));
+      font-size: calc(100vw * (15 / $lg));
     }
 
     @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (20 / $sm));
-      padding: calc(100vw * (14 / $sm)) calc(100vw * (36 / $sm)) calc(100vw * (16 / $sm));
-      border-radius: calc(100vw * (50 / $sm));
+      font-size: calc(100vw * (15 / $sm));
     }
 
     @include xs {
       font-size: calc(100vw * (18 / $xs-base));
-      line-height: calc(100vw * (20 / $xs-base));
-      padding: calc(100vw * (14 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (16 / $xs-base));
-      border-radius: calc(100vw * (50 / $xs-base));
     }
+  }
+}
+
+
+.sale {
+  font-size: calc(100vw * (20 / 1920));
+  line-height: 1;
+  color: $white;
+  padding: calc(100vw * (12 / 1920)) calc(100vw * (7 / 1920));
+  background-color: $special-light;
+  border-radius: calc(100vw * (14 / 1920));
+
+  @include xl {
+    font-size: calc(100vw * (17 / $xl));
+    padding: calc(100vw * (10 / $xl)) calc(100vw * (6 / $xl));
+    border-radius: calc(100vw * (14 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (12 / $lg));
+    padding: calc(100vw * (9 / $lg)) calc(100vw * (7 / $lg));
+    border-radius: calc(100vw * (14 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (18 / $sm));
+    padding: calc(100vw * (6 / $sm)) calc(100vw * (10 / $sm));
+    border-radius: calc(100vw * (14 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (17 / $xs-base));
+    padding: calc(100vw * (8 / $xs-base)) calc(100vw * (13 / $xs-base));
+    border-radius: calc(100vw * (14 / $xs-base));
+  }
 }

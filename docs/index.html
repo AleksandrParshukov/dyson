@@ -54,7 +54,7 @@
 
   <main class="main">
     <section class="banner">
-      <p class="banner__title h1">
+      <p class="banner__title">
         Техника для ухода<br>
         за волосами
         <span class="banner__logo">
@@ -173,12 +173,12 @@
       </ul>
     </section>
 
-    <section class="novelties-sc">
-      <h2 class="novelties-sc__title h2">Новые поступления</h2>
+    <section class="products-sc">
+      <h2 class="products-sc__title h2">Новые поступления</h2>
 
-      <ul class="novelties-sc__list d-flex">
-        <li class="novelties-sc__item card">
-          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
+      <ul class="products-sc__list d-flex">
+        <li class="products-sc__item card">
+          <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card1.png" alt="">
 
@@ -189,13 +189,13 @@
             (фуксия/яркий никель)
           </p>
 
-          <div class="card__prices d-flex">
-            <p class="card__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-            <p class="card__old-price"><span>70900</span>&#8381;</p>
+          <div class="card__prices prices d-flex">
+            <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+            <p class="prices__old-price"><span>70900</span>&#8381;</p>
           </div>
         </li>
-        <li class="novelties-sc__item card">
-          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
+        <li class="products-sc__item card">
+          <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card2.png" alt="">
 
@@ -206,13 +206,13 @@
             (берлинская лазурь/медь)
           </p>
 
-          <div class="card__prices d-flex">
-            <p class="card__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-            <p class="card__old-price"><span>70900</span>&#8381;</p>
+          <div class="card__prices prices d-flex">
+            <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+            <p class="prices__old-price"><span>70900</span>&#8381;</p>
           </div>
         </li>
-        <li class="novelties-sc__item card from-sm">
-          <div class="card__sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
+        <li class="products-sc__item card from-sm">
+          <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
           <img class="card__img" src="./img/card3.png" alt="">
 
@@ -223,14 +223,14 @@
             (медь)
           </p>
 
-          <div class="card__prices d-flex">
-            <p class="card__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-            <p class="card__old-price"><span>70900</span>&#8381;</p>
+          <div class="card__prices prices d-flex">
+            <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+            <p class="prices__old-price"><span>70900</span>&#8381;</p>
           </div>
         </li>
       </ul>
 
-      <a class="novelties-sc__link btn from-sm" href="/catalog.html">Перейти в каталог Dyson</a>
+      <a class="products-sc__link btn from-sm" href="/catalog.html">Перейти в каталог Dyson</a>
     </section>
 
     <section class="uniqueness from-xs">
@@ -363,7 +363,7 @@
         <input type="email" name="email" class="callback__input" placeholder="Email">
         <input type="text" name="phone" class="callback__input" placeholder="Телефон">
         <textarea name="message" class="callback__input callback__input--textarea" rows="10" placeholder="Сообщение"></textarea>
-        <input type="submit" class="callback__submit btn" value="Отправить">
+        <button type="submit" class="callback__submit btn">Отправить</button>
       </form>
     </section>
 

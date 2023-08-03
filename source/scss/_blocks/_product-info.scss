@@ -1,0 +1,124 @@
+.product-info {
+  padding: calc(100vw * (40 / 1920)) calc(100vw * (248 / 1920)) calc(100vw * (50 / 1920));
+  background-color: #f9f9f9;
+
+  @include xl {
+    padding: calc(100vw * (35 / $xl)) calc(100vw * (130 / $xl)) calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (30 / $lg)) calc(100vw * (50 / $lg)) calc(100vw * (40 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (25 / $sm)) calc(100vw * (45 / $sm)) calc(100vw * (45 / $sm));
+  }
+
+  @include xs {
+    padding: calc(100vw * (20 / $xs-base)) calc(100vw * (15 / $xs-base)) calc(100vw * (25 / $xs-base));
+  }
+
+  &__menu {
+    width: 90%;
+    margin-inline: auto;
+
+    @include xs {
+      width: 100%;
+    }
+  }
+
+  &__menu-item a {
+    font-size: calc(100vw * (24 / 1920));
+    width: calc(100vw * (350 / 1920));
+    height: calc(100vw * (45 / 1920));
+    background-color: #e8e8e8;
+    border-radius: calc(100vw * (20 / 1920)) calc(100vw * (20 / 1920))  0 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include xl {
+      font-size: calc(100vw * (24 / $xl));
+      width: calc(100vw * (328 / $xl));
+      height: calc(100vw * (45 / $xl));
+      border-radius: calc(100vw * (20 / $xl)) calc(100vw * (20 / $xl))  0 0;
+    }
+
+    @include lg {
+      font-size: calc(100vw * (17 / $lg));
+      width: calc(100vw * (235 / $lg));
+      height: calc(100vw * (32 / $lg));
+      border-radius: calc(100vw * (20 / $lg)) calc(100vw * (20 / $lg))  0 0;
+    }
+
+    @include sm {
+      font-size: calc(100vw * (17 / $sm));
+      width: calc(100vw * (170 / $sm));
+      height: calc(100vw * (30 / $sm));
+      border-radius: calc(100vw * (20 / $sm)) calc(100vw * (20 / $sm))  0 0;
+    }
+
+    @include xs {
+      font-size: calc(100vw * (13 / $xs-base));
+      width: calc(100vw * (105 / $xs-base));
+      height: calc(100vw * (30 / $xs-base));
+      border-radius: calc(100vw * (14 / $xs-base)) calc(100vw * (14 / $xs-base))  0 0;
+    }
+  }
+
+  &__menu-item {
+    &.ui-state-active {
+      a {
+        color: $white;
+        background-color: $special;
+      }
+    /* 
+      a::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #730243;
+        transition: 0.3s ease;
+        z-index: -1;
+        border-radius: 50%;
+      }
+
+      &:hover a {
+        color: $white;
+      }
+
+      &:hover a::before {
+        width: 150%;
+        height: 500%;
+        transition: 0.5s ease;
+      } 
+    */
+    }
+  }
+
+  &__tab {
+  padding: calc(100vw * (80 / 1920)) calc(100vw * (70 / 1920));
+  background-color: $white;
+  border: 1px solid #b9b9b9;
+
+  @include xl {
+    padding: calc(100vw * (50 / $xl)) calc(100vw * (90 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (40 / $lg)) calc(100vw * (75 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (25 / $sm)) calc(100vw * (50 / $sm));
+  }
+
+  @include xs {
+    padding: calc(100vw * (25 / $xs-base)) calc(100vw * (32 / $xs-base));
+  }
+  }
+}
