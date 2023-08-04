@@ -1,7 +1,8 @@
 .faq {
   padding: calc(100vw * (100 / 1920)) calc(100vw * (165 / 1920)) calc(100vw * (50 / 1920));
   background-color: #f1f1f1;
-  box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
+  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
+  z-index: 1;
 
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
@@ -36,7 +37,8 @@
     }
 
     @include xs {
-      margin-bottom:  calc(100vw * (30 / $xs-base)) 0;
+      color: $white;
+      margin-bottom: calc(100vw * (30 / $xs-base));
     }
   }
 
@@ -67,6 +69,7 @@
     background-color: $white;
     border: 1px solid rgb(232, 232, 232);
     border-radius: calc(100vw * (25 / 1920));
+    cursor: pointer;
 
     @include xl {
       padding: calc(100vw * (35 / $xl)) calc(100vw * (70 / $xl));
@@ -92,20 +95,16 @@
       flex-direction: column;
       gap: calc(100vw * (20 / $xs-base));
     }
+
+    &.collapsed .faq__question {
+      color: $black;
+    }
   }
 
   &__question {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.25;
-    cursor: pointer;
-
-    &.ui-state-active {
       color: $special;
-
-      @include xs {
-        color: $white;
-      }
-    }
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));
@@ -135,21 +134,21 @@
     line-height: 1.25;
     color: $gray;
     overflow: hidden;
-    padding-top: calc(100vw * (25 / 1920));
+    // padding-top: calc(100vw * (25 / 1920));
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));
-      padding-top: calc(100vw * (25 / $xl));
+      // padding-top: calc(100vw * (25 / $xl));
     }
 
     @include lg {
       font-size: calc(100vw * (15 / $lg));
-      padding-top: calc(100vw * (18 / $lg));
+      // padding-top: calc(100vw * (18 / $lg));
     }
 
     @include sm {
       font-size: calc(100vw * (18 / $sm));
-      padding-top: calc(100vw * (20 / $lg));
+      // padding-top: calc(100vw * (20 / $lg));
     }
 
     @include xs {

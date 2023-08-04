@@ -43,6 +43,7 @@
   &__main-img {
     width: calc(100vw * (550 / 1920));
     aspect-ratio: 1 / 1;
+    margin-bottom: auto;
 
     > img {
       width: 100%;
@@ -168,6 +169,7 @@
   }
 
   &__prices {
+    align-items: end;
     font-size: calc(100vw * (40 / 1920));
 
     @include xl {
@@ -211,6 +213,10 @@
         margin-right: calc(100vw * (7 / $xs-base));
       }
     }
+  }
+
+  &__sale {
+    transform: translateY(-5px);
   }
 
   &__long-desc {

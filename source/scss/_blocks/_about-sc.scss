@@ -22,7 +22,7 @@
   }
 
   @include xs {
-    padding: calc(100vw * (280 / $xs-base)) calc(100vw * (24 / $xs-base)) calc(100vw * (30 / $xs-base));
+    padding: calc(100vw * (280 / $xs-base)) calc(100vw * (24 / $xs-base)) calc(100vw * (5 / $xs-base));
     background-image: url('../img/about-sc_xs.png');
     background-position: top center;
   }
@@ -57,11 +57,11 @@
     }
 
     @include lg {
-      margin-bottom: calc(100vw * (42 / $xl));
+      margin-bottom: calc(100vw * (42 / $lg));
     }
 
     @include sm {
-      margin-bottom: calc(100vw * (45 / $xl));
+      margin-bottom: calc(100vw * (45 / $sm));
     }
 
     @include xs {

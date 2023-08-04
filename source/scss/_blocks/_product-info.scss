@@ -101,24 +101,30 @@
   }
 
   &__tab {
-  padding: calc(100vw * (80 / 1920)) calc(100vw * (70 / 1920));
-  background-color: $white;
-  border: 1px solid #b9b9b9;
+    font-size: calc(100vw * (22 / 1920));
+    text-align: justify;
+    padding: calc(100vw * (80 / 1920)) calc(100vw * (70 / 1920));
+    background-color: $white;
+    border: 1px solid #b9b9b9;
 
-  @include xl {
-    padding: calc(100vw * (50 / $xl)) calc(100vw * (90 / $xl));
-  }
+    @include xl {
+      font-size: calc(100vw * (18 / $xl));
+      padding: calc(100vw * (50 / $xl)) calc(100vw * (90 / $xl));
+    }
 
-  @include lg {
-    padding: calc(100vw * (40 / $lg)) calc(100vw * (75 / $lg));
-  }
+    @include lg {
+      font-size: calc(100vw * (14 / $lg));
+      padding: calc(100vw * (40 / $lg)) calc(100vw * (75 / $lg));
+    }
 
-  @include sm {
-    padding: calc(100vw * (25 / $sm)) calc(100vw * (50 / $sm));
-  }
+    @include sm {
+      font-size: calc(100vw * (14 / $sm));
+      padding: calc(100vw * (25 / $sm)) calc(100vw * (50 / $sm));
+    }
 
-  @include xs {
-    padding: calc(100vw * (25 / $xs-base)) calc(100vw * (32 / $xs-base));
-  }
+    @include xs {
+      font-size: calc(100vw * (14 / $xs-base));
+      padding: calc(100vw * (25 / $xs-base)) calc(100vw * (32 / $xs-base));
+    }
   }
 }

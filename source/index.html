@@ -19,7 +19,7 @@
       <a class="header__logo" href="/">
         <img src="./img/logo_white.png" width="159" height="89" alt="">
       </a>
-      <div class="header__controls d-flex">
+      <div class="header__controls d-flex align-items-center">
         <div class="header__catalog catalog-select">
           <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn">Каталог</p>
           <button class="catalog-select__btn js_top_menu_btn d-md-none" type="button"><img src="./img/burger.png" width="25" height="21" alt=""></button>
@@ -39,6 +39,7 @@
 
         <div class="header__cart">
           <img src="./img/cart.png" width="34" height="32" alt="">
+          <p class="header__cart-count">1</p>
         </div>
       </div>
     </div>
@@ -54,13 +55,13 @@
 
   <main class="main">
     <section class="banner">
-      <p class="banner__title">
+      <h1 class="banner__title">
         Техника для ухода<br>
         за волосами
         <span class="banner__logo">
           <img src="./img/logo_pink.png" width="190" height="72" alt="">
         </span>
-      </p>
+      </h1>
 
       <p class="banner__text d-none d-md-inline">
         Фены, стайлеры, выпрямители Dyson по лучшим ценам
@@ -250,26 +251,35 @@
     <section class="faq">
       <h2 class="faq__title h2">Частые вопросы</h2>
       <ul class="faq__list d-flex flex-column">
-        <li class="faq__item">
+        <li class="faq__item collapsed" data-bs-toggle="collapse" data-bs-target="#faq_1" aria-expanded="false" aria-controls="faq_1">
           <p class="faq__question">Каким образом устройства для волос Dyson позволяют защитить волосы от повреждений?</p>
-          <p class="faq__answer">
-            Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
-            Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
-          </p>
+          <div class="faq__answer collapse" id="faq_1">
+            <br>
+            <p>
+              Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
+              Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
+            </p>
+          </div>
         </li>
-        <li class="faq__item">
+        <li class="faq__item collapsed" data-bs-toggle="collapse" data-bs-target="#faq_2" aria-expanded="false" aria-controls="faq_2">
           <p class="faq__question">Каким образом устройства для волос Dyson позволяют защитить волосы от повреждений?</p>
-          <p class="faq__answer">
-            Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
-            Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
-          </p>
+          <div class="faq__answer collapse" id="faq_2">
+            <br>
+            <p>
+              Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
+              Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
+            </p>
+          </div>
         </li>
-        <li class="faq__item">
+        <li class="faq__item collapsed" data-bs-toggle="collapse" data-bs-target="#faq_3" aria-expanded="false" aria-controls="faq_3">
           <p class="faq__question">Каким образом устройства для волос Dyson позволяют защитить волосы от повреждений?</p>
-          <p class="faq__answer">
-            Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
-            Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
-          </p>
+          <div class="faq__answer collapse" id="faq_3">
+            <br>
+            <p>
+              Устройства для волос Dyson оснащены технологией интеллектуального контроля температуры, которая регулирует температуру потока воздуха более 40 раз в секунду.
+              Это позволяет избежать перегрева волос и сохранить их естественную влажность, что снижает риск повреждения волос. Кроме того, устройства Dyson имеют различные насадки, которые позволяют выбрать оптимальный режим для разных типов волос, что также способствует их сохранности и здоровью.
+            </p>
+          </div>
         </li>
       </ul>
     </section>
@@ -453,17 +463,17 @@
         <div class="d-flex flex-column footer__policy">
           <p class="footer__caption from-xs">Правовая информация</p>
           <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Регистрация устройства</a>
+            <li class="footer__menu-item from-xs">
+              <a href="#" class="footer__link">Регистрация устройства</a>
             </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Условия и положения</a>
+            <li class="footer__menu-item from-xs">
+              <a href="#" class="footer__link">Условия и положения</a>
             </li>
             <li class="footer__menu-item">
               <a href="#" class="footer__link">Политика конфиденциальности</a>
             </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Оферта</a>
+            <li class="footer__menu-item from-xs">
+              <a href="#" class="footer__link">Оферта</a>
             </li>
           </ul>
         </div>

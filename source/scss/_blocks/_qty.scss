@@ -1,0 +1,51 @@
+.qty {
+  margin-bottom: auto;
+  margin-inline: calc(100vw * (35 / 1920));
+  align-items: center;
+  height: auto;
+  flex-shrink: 0;
+
+  @include xl {
+    margin-inline: calc(100vw * (35 / $xl));
+  }
+
+  @include lg {
+    margin-inline: calc(100vw * (27 / $lg));
+  }
+
+  @include sm {
+    margin-inline: calc(100vw * (40 / $sm));
+  }
+
+  @include xs {
+    margin-inline: calc(100vw * (15 / $xs-base));
+  }
+
+  &__input {
+    text-align: center;
+    height: min-content;
+    padding-block: 0;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    -moz-appearance: textfield;
+
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+
+  .input-wrap {
+    position: relative;
+  }
+
+  .width-machine {
+    padding: 0 0.5rem;
+    opacity: 0;
+  }
+}

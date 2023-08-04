@@ -34,25 +34,41 @@
   }
 
   &__top {
-    padding: calc(100vw * (13 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (33 / 1920));
+    padding: calc(100vw * (15 / 1920)) calc(100vw * (100 / 1920));
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include xl {
-      padding: calc(100vw * (13 / $xl)) calc(100vw * (24 / $xl)) calc(100vw * (33 / $xl));
+      padding: calc(100vw * (15 / $xl)) calc(100vw * (24 / $xl));
     }
 
     @include lg {
-      padding: calc(100vw * (11 / $lg)) calc(100vw * (28 / $lg)) calc(100vw * (53 / $lg));
+      padding: calc(100vw * (15 / $lg)) calc(100vw * (28 / $lg)) calc(100vw * (23 / $lg));
     }
 
     @include sm {
-      padding: calc(100vw * (4 / $sm)) calc(100vw * (14 / $sm)) calc(100vw * (11 / $sm));
+      padding: calc(100vw * (4 / $sm)) calc(100vw * (14 / $sm));
     }
 
     @include xs {
       padding: calc(100vw * (16 / $xs-base)) calc(100vw * (20 / $xs-base));
+    }
+  }
+
+  &__bottom {
+    margin-top: calc(100vw * (18 / 1920));
+
+    @include xl {
+      margin-top: calc(100vw * (18 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (7 / $sm));
     }
   }
 
@@ -150,7 +166,7 @@
 
     > img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     @include xl {
@@ -171,6 +187,42 @@
     @include xs {
       width: calc(100vw * (25 / $xs-base));
       height: calc(100vw * (23 / $xs-base));
+    }
+  }
+
+  &__cart-count{
+    font-size: calc(100vw * (14 / $xl));
+    line-height: 1;
+    width: 1.2em;
+    aspect-ratio: 1 / 1;
+    color: $white;
+    background-color: $special;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -35%);
+    display: grid;
+    place-content: center;
+
+    @include xl {
+      font-size: calc(100vw * (14 / $xl));
+    transform: translate(50%, -30%);
+    }
+
+    @include lg {
+      font-size: calc(100vw * (14 / $lg));
+    transform: translate(50%, -20%);
+    }
+
+    @include sm {
+      font-size: calc(100vw * (10 / $sm));
+    transform: translate(50%, -10%);
+    }
+
+    @include xs {
+      font-size: calc(100vw * (10 / $xs-base));
+    transform: translate(50%, 0);
     }
   }
 }

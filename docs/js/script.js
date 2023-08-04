@@ -34,8 +34,13 @@ function init_carousel() {
 	});
 }
 
+function init_tabs() {
+	$('.product-info__tabs').tabs();
+}
+
 $('document').ready(function () {
 	init_menu();
 	init_faq();
 	init_carousel();
+	init_tabs();
 });
