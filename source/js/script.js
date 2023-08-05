@@ -20,7 +20,9 @@ function init_faq() {
 function init_carousel() {
 	$('.js_reviews_carousel').owlCarousel({
 		loop: true,
-		nav: false,
+		nav: true,
+		navText: ['<span class="reviews__nav reviews__nav--prev"></span>', '<span class="reviews__nav reviews__nav--next"></span>'],
+		navContainer: '.reviews__wrapper',
 		autoHeight: false,
 		responsive: {
 			0: {
@@ -90,10 +92,37 @@ function init_input_auto_width() {
 	});
 }
 
+function init_forms() {
+	$('input[name="phone"]').mask('+7 (000) 000-00-00');
+
+	$('form').validate({
+		rules: {
+			name: 'required',
+			email: {
+				required: true,
+				email: true,
+			},
+			phone: 'required',
+		},
+		messages: {
+			name: 'Введите ваше имя',
+			email: {
+				required: 'Введите адрес электронной почты',
+				email: 'Введите корректный адрес электронной почты',
+			},
+			phone: 'Введите ваш телефон',
+		},
+		submitHandler: function (form) {
+			form.submit();
+		},
+	});
+}
+
 $('document').ready(function () {
 	init_menu();
 	// init_faq();
 	init_carousel();
 	init_tabs();
 	init_qty();
+	init_forms();
 });

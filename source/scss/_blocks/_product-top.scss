@@ -11,7 +11,7 @@
   }
 
   @include sm {
-    padding: calc(100vw * (40 / $sm)) calc(100vw * (45 / $sm)) calc(100vw * (25 / $sm));
+    padding: calc(100vw * (40 / $sm)) calc(100vw * (35 / $sm)) calc(100vw * (25 / $sm));
   }
 
   @include xs {
@@ -221,7 +221,7 @@
 
   &__long-desc {
     font-size: calc(100vw * (20 / 1920));
-    line-height: 1;
+    line-height: 1.25;
     margin-block: calc(100vw * (45 / 1920)) calc(100vw * (50 / 1920));
 
     @include xl {

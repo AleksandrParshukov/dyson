@@ -27,7 +27,7 @@
     justify-content: center;
   }
 
-  .owl-theme .owl-nav.disabled + .owl-dots {
+  .owl-theme .owl-dots {
     margin-top: calc(100vw * (34 / 1920));
 
     @include xl {
@@ -88,6 +88,52 @@
       width: calc(100vw * (260 / $xs-base));
       margin-bottom: calc(100vw * (26 / $xs-base));
       margin-inline: auto;
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .owl-prev{
+      right: 100%;
+  }
+
+
+  .owl-next{
+      left: 100%;
+  }
+
+  &__nav {
+    width: calc(100vw * (44 / 1920));
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: block;
+    background: $special url('../img/reviews_chevron.png') no-repeat center;
+    background-size: auto;
+
+    &--next {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      background-color: #730243;
+    }
+
+    @include xl {
+      width: calc(100vw * (44 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (32 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (32 / $sm));
     }
   }
 

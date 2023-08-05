@@ -205,3 +205,37 @@
     border-radius: calc(100vw * (14 / $xs-base));
   }
 }
+
+.form-group {
+  position: relative;
+}
+
+.form-group input.error {
+  box-shadow: 0 0 3px 3px #da2525;
+}
+
+.form-group label.error {
+  font-size: calc(100vw * (15 / $sm));
+  color: #da2525;
+  width: max-content;
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include xl {
+    font-size: calc(100vw * (15 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (13 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (13 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (13 / $xs-base));
+  }
+}

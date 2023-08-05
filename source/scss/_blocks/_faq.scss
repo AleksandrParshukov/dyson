@@ -98,13 +98,49 @@
 
     &.collapsed .faq__question {
       color: $black;
+
+      &::after {
+        transform: rotate(180deg);
+      }
     }
   }
 
   &__question {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1.25;
-      color: $special;
+    color: $special;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      width: calc(100vw * (29 / 1920));
+      height: calc(100vw * (14 / 1920));
+      background: transparent url('../img/faq_chevron.png') no-repeat center;
+      background-size: contain;
+      margin-left: 0.5em;
+      transition: transform 0.3s ease;
+
+      @include xl {
+        width: calc(100vw * (29 / $xl));
+        height: calc(100vw * (14 / $xl));
+      }
+
+      @include lg {
+        width: calc(100vw * (17 / $lg));
+        height: calc(100vw * (8 / $lg));
+      }
+
+      @include sm {
+        width: calc(100vw * (17 / $sm));
+        height: calc(100vw * (8 / $sm));
+      }
+
+      @include xs {
+        content: none;
+      }
+    }
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));

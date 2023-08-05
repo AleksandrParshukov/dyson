@@ -21,9 +21,9 @@
       </a>
       <div class="header__controls d-flex align-items-center">
         <div class="header__catalog catalog-select">
-          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn">Каталог</p>
-          <button class="catalog-select__btn js_top_menu_btn d-md-none" type="button"><img src="./img/burger.png" width="25" height="21" alt=""></button>
-          <ul class="catalog-select__list">
+          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn collapsed" data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu">Каталог</p>
+          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"><img src="./img/burger.png" width="25" height="21" alt=""></button>
+          <ul class="catalog-select__list collapse" id="top_collapsing_menu">
             <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
             <li class="catalog-select__item active"><a href="#">Стайлеры Dyson</a></li>
             <li class="catalog-select__item"><a href="#">Выпрямители Dyson</a></li>
@@ -37,15 +37,27 @@
           <button class="header__search-btn d-md-none" type="button"><img src="./img/search_white.png" width="25" height="25" alt=""></button>
         </div>
 
-        <div class="header__cart">
+        <a href="./cart.html" class="header__cart">
           <img src="./img/cart.png" width="34" height="32" alt="">
           <p class="header__cart-count">1</p>
-        </div>
+        </a>
       </div>
     </div>
   </header>
 
   <main class="main">
+    <ul class="breadcrumbs d-flex flex-wrap align-items-center from-xs">
+      <li class="breadcrumbs__item d-flex">
+        <a href="/">Главная</a>
+      </li>
+      <li class="breadcrumbs__item d-flex">
+        <a href="./category.html">Фены Dyson Supersonic</a>
+      </li>
+      <li class="breadcrumbs__item d-flex">
+        <p>Фен Dyson Supersonic HD07 (красный) с 5 насадками и боксом красного оттенка</p>
+      </li>
+    </ul>
+
     <section class="product-top d-flex flex-wrap justify-content-between">
       <div class="product-top__img-wrapper d-flex flex-wrap">
         <div class="product-top__main-img">
@@ -56,7 +68,7 @@
           <div class="product-top__img"><img src="./img/product.png" width="105" height="105" alt=""></div>
           <div class="product-top__img"><img src="./img/product.png" width="105" height="105" alt=""></div>
           <div class="product-top__img"><img src="./img/product.png" width="105" height="105" alt=""></div>
-          <div class="product-top__img from-sm"><img src="./img/product.png" width="105" height="105" alt=""></div>
+          <div class="product-top__img from-xs"><img src="./img/product.png" width="105" height="105" alt=""></div>
         </div>
       </div>
 
@@ -430,6 +442,8 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/OwlCarousel/owl.carousel.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 

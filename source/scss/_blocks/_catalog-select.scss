@@ -1,12 +1,37 @@
 .catalog-select {
   position: relative;
 
+  @include xs {
+    position: static;
+  }
+
   &__caption {
     font-size: calc(100vw * (18 / 1920));
     line-height: 2.433;
     text-align: center;
     cursor: pointer;
     transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: calc(100vw * (12 / 1920));
+      height: calc(100vw * (10 / 1920));
+      background: transparent url('../img/catalog-select_chevron.png') no-repeat center;
+      background-size: contain;
+      margin-left: 0.5em;
+
+      @include xl {
+        width: calc(100vw * (12 / $xl));
+        height: calc(100vw * (10 / $xl));
+      }
+
+      @include lg {
+        width: calc(100vw * (10 / $lg));
+        height: calc(100vw * (8 / $lg));
+      }
+    }
 
     &:hover {
       color: $special;
@@ -44,12 +69,7 @@
     padding: 1.5em 1.75em;
     background-color: $white;
     box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
-    display: none;
     z-index: 1000;
-
-    &.open {
-      display: block;
-    }
 
     @include sm {
       width: calc(100vw * (360 / $sm));
@@ -57,14 +77,14 @@
       padding-block: 0;
       top: 0;
       left: auto;
-      right: 100%;
+      right: 110%;
     }
 
     @include xs {
       width: 100%;
       padding-inline: calc(100vw * (20 / $xs-base));
-      position: fixed;
-      top: calc(100vw * (64 / $xs-base));
+      position: absolute;
+      top: calc(100vw * (80 / $xs-base));
       left: 0;
       right: 0;
     }
