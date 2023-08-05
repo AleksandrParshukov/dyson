@@ -102,6 +102,10 @@
       &::after {
         transform: rotate(180deg);
       }
+
+      @include xs {
+      color: $white;
+      }
     }
   }
 

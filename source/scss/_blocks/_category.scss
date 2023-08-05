@@ -17,6 +17,12 @@
     padding: calc(100vw * (33 / $xs-base)) calc(100vw * (25 / $xs-base)) calc(100vw * (35 / $xs-base));
   }
 
+  &__title {
+    & > span {
+      color: #808081;
+    }
+  }
+
   &__list {
     margin-block: calc(100vw * (60 / 1920)) calc(100vw * (50 / 1920));
     gap: calc(100vw * (43 / 1920)) calc(100vw * (90 / 1920));

@@ -40,6 +40,10 @@
     @include xs {
       margin-bottom: calc(100vw * (53 / $xs-base));
       color: $white;
+
+      & > span {
+        font-size: calc(100vw * (20 / $xs-base));
+      }
     }
   }
 
@@ -62,7 +66,7 @@
 
     @include xs {
       width: 100%;
-      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (20 / $xs-base));
+      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (15 / $xs-base));
       background-color: $white;
       gap: calc(100vw * (10 / $xs-base));
     }

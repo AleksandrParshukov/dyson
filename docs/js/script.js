@@ -20,7 +20,9 @@ function init_faq() {
 function init_carousel() {
 	$('.js_reviews_carousel').owlCarousel({
 		loop: true,
-		nav: false,
+		nav: true,
+		navText: ['<span class="reviews__nav reviews__nav--prev"></span>', '<span class="reviews__nav reviews__nav--next"></span>'],
+		navContainer: '.reviews__wrapper',
 		autoHeight: false,
 		responsive: {
 			0: {
@@ -90,41 +92,28 @@ function init_input_auto_width() {
 	});
 }
 
-function validate_any_form($form) {
-	console.log($form);
+function init_forms() {
+	$('input[name="phone"]').mask('+7 (000) 000-00-00');
 
-	$form.validate({
+	$('form').validate({
 		rules: {
 			name: 'required',
 			email: {
 				required: true,
 				email: true,
 			},
-			phone: {
-				required: '#newsletter:checked',
-				minlength: 2,
-			},
-			agree: 'required',
+			phone: 'required',
 		},
 		messages: {
-			firstname: 'Please enter your firstname',
-			lastname: 'Please enter your lastname',
-			username: {
-				required: 'Please enter a username',
-				minlength: 'Your username must consist of at least 2 characters',
+			name: 'Введите ваше имя',
+			email: {
+				required: 'Введите адрес электронной почты',
+				email: 'Введите корректный адрес электронной почты',
 			},
-			password: {
-				required: 'Please provide a password',
-				minlength: 'Your password must be at least 5 characters long',
-			},
-			confirm_password: {
-				required: 'Please provide a password',
-				minlength: 'Your password must be at least 5 characters long',
-				equalTo: 'Please enter the same password as above',
-			},
-			email: 'Please enter a valid email address',
-			agree: 'Please accept our policy',
-			topic: 'Please select at least 2 topics',
+			phone: 'Введите ваш телефон',
+		},
+		submitHandler: function (form) {
+			form.submit();
 		},
 	});
 }
@@ -135,28 +124,5 @@ $('document').ready(function () {
 	init_carousel();
 	init_tabs();
 	init_qty();
-
-	var $element = $('input[name="phone"]');
-	/* var maskOptions = {
-		mask: '+7 (000) 000-00-00',
-		lazy: false,
-	};
-
-	$element.on('focus', function () {
-		var mask = new IMask($element[0], maskOptions);
-	}); */
-
-	const numberPatterns = ['+7 (NNN) NNN-NN-NN'];
-
-	$element.each(function () {
-		const formatterObject = new Freedom.PhoneFormatter(numberPatterns);
-		formatterObject.attachToInput($(this)[0]);
-	});
-
-	$('form').on('submit', function (evt) {
-		evt.preventDefault();
-		const $form = $(this);
-
-		validate_any_form($form);
-	});
+	init_forms();
 });

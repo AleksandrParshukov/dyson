@@ -134,7 +134,7 @@
   &__name {
     font-size: calc(100vw * (30 / 1920));
     line-height: 1;
-    color: $gray;
+    color: #8c8c8c;
     margin-bottom: calc(100vw * (32 / 1920));
 
     @include xl {

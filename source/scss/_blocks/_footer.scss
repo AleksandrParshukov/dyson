@@ -177,6 +177,10 @@
 
   &__company {
     grid-area: company;
+
+    @include lg {
+      text-align: right;
+    }
   }
 
   &__policy {
@@ -190,7 +194,12 @@
   &__social {
     grid-area: social;
 
+    @include lg {
+      text-align: right;
+    }
+
     @include xs {
+      text-align: left;
       margin-top: calc(100vw * (20 / $xs-base));
     }
   }
@@ -252,6 +261,10 @@
       width: calc(100vw * (150 / $xs-base));
       height: calc(100vw * (27 / $xs-base));
     }
+  }
+
+  &__icon {
+    width: 100%;
   }
 
   &__copyright {

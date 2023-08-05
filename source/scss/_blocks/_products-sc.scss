@@ -1,6 +1,6 @@
 .products-sc {
   padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
-  background-color: $white;
+  background-color: #fafafa;
 
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));

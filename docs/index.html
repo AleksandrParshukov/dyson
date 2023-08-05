@@ -53,8 +53,8 @@
     </div>
   </header>
 
-  <main class="main">
-    <section class="banner">
+  <main class="main d-flex flex-column">
+    <section class="banner order-1">
       <h1 class="banner__title">
         Техника для ухода<br>
         за волосами
@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <section class="about-sc d-flex">
+    <section class="about-sc d-flex order-1">
       <div class="about-sc__wrapper">
 
         <h2 class="about-sc__title h2">О нас</h2>
@@ -97,7 +97,7 @@
       </div>
     </section>
 
-    <section class="catalog-sc">
+    <section class="catalog-sc order-1">
       <h2 class="catalog-sc__title h2 from-sm">
         Откройте для себя технологии Dyson<br>
         по уходу за волосами
@@ -131,8 +131,8 @@
       </ul>
     </section>
 
-    <section class="delivery-sc">
-      <h2 class="delivery-sc__title h2">Закажите флагман Dyson прямо сейчас!</h2>
+    <section class="delivery-sc order-2 order-xs-1">
+      <h2 class="delivery-sc__title h2">Закажите <br class="to-xs"><span>флагман Dyson прямо сейчас!</span></h2>
 
       <ul class="delivery-sc__list d-flex flex-wrap">
         <li class="delivery-sc__item d-flex flex-column align-items-center">
@@ -174,21 +174,20 @@
       </ul>
     </section>
 
-    <section class="products-sc">
+    <section class="products-sc order-1">
       <h2 class="products-sc__title h2">Новые поступления</h2>
 
       <ul class="products-sc__list d-flex">
         <li class="products-sc__item card">
           <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
+<a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
 
-          <img class="card__img" src="./img/card1.png" alt="">
-
-          <p class="card__name">Dyson Supersonic</p>
-          <p class="card__desc">
+          <p class="card__category">Dyson Supersonic</p>
+          <a href="./product.html" class="card__name">
             Фен Dyson Supersonic HD07
             с подставкой и косметичкой
             (фуксия/яркий никель)
-          </p>
+          </a>
 
           <div class="card__prices prices d-flex">
             <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
@@ -197,15 +196,14 @@
         </li>
         <li class="products-sc__item card">
           <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
+<a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
 
-          <img class="card__img" src="./img/card2.png" alt="">
-
-          <p class="card__name">Dyson Airwrap</p>
-          <p class="card__desc">
+          <p class="card__category">Dyson Airwrap</p>
+          <a href="./product.html" class="card__name">
             Фен Dyson Airwrap HS05
             Complete с чехлом
             (берлинская лазурь/медь)
-          </p>
+          </a>
 
           <div class="card__prices prices d-flex">
             <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
@@ -215,14 +213,14 @@
         <li class="products-sc__item card from-sm">
           <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
 
-          <img class="card__img" src="./img/card3.png" alt="">
+          <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
 
-          <p class="card__name">Dyson Corrale</p>
-          <p class="card__desc">
+          <p class="card__category">Dyson Corrale</p>
+          <a href="./product.html" class="card__name">
             Фен Dyson Corrale с набором
             фирменных чехлов
             (медь)
-          </p>
+          </a>
 
           <div class="card__prices prices d-flex">
             <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
@@ -234,7 +232,7 @@
       <a class="products-sc__link btn from-sm" href="/catalog.html">Перейти в каталог Dyson</a>
     </section>
 
-    <section class="uniqueness from-xs">
+    <section class="uniqueness from-xs order-2">
       <div class="uniqueness__wrapper">
         <h2 class="uniqueness__title h2">
           УНИКАЛЬНЫЕ ТЕХНОЛОГИИ<br>
@@ -248,7 +246,7 @@
       </div>
     </section>
 
-    <section class="faq">
+    <section class="faq order-2">
       <h2 class="faq__title h2">Частые вопросы</h2>
       <ul class="faq__list d-flex flex-column">
         <li class="faq__item collapsed" data-bs-toggle="collapse" data-bs-target="#faq_1" aria-expanded="false" aria-controls="faq_1">
@@ -284,7 +282,7 @@
       </ul>
     </section>
 
-    <section class="reviews">
+    <section class="reviews order-2">
       <h2 class="reviews__title h2">Отзывы наших&nbsp;покупателей</h2>
 
       <div class="reviews__wrapper">
@@ -363,7 +361,7 @@
       <noscript>Включите JavaScript, чтобы увидеть отзывы</noscript>
     </section>
 
-    <section class="callback">
+    <section class="callback order-2">
       <h2 class="callback__title h2">Связаться с нами</h2>
 
       <form class="callback__form d-flex flex-column">
@@ -385,7 +383,7 @@
       </form>
     </section>
 
-    <section class="quote">
+    <section class="quote order-2">
       <div class="quote__wrapper">
         <img class="quote__img" src="./img/quote_img.png" width="580" height="327" alt="">
         <p class="quote__text d-flex align-items-center">
@@ -396,7 +394,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer order-2">
       <a href="/" class="footer__logo">
         <img src="./img/logo_white.png" width="159" height="89" alt="">
       </a>
@@ -494,7 +492,6 @@
             </li>
             <li class="footer__menu-item d-flex">
               <a href="#" class="footer__icon"><img src="./img/social.png" id="temp_social_icons" width="131" height="75" alt=""></a>
-              <a href="#" class="footer__icon"></a>
             </li>
           </ul>
         </div>
@@ -504,8 +501,6 @@
           <ul class="footer__menu">
             <li class="footer__menu-item d-flex">
               <a href="#" class="footer__icon"><img src="./img/payment.png" id="temp_payment_icons" width="252" height="51" alt=""></a>
-              <a href="#" class="footer__icon"></a>
-              <a href="#" class="footer__icon"></a>
             </li>
           </ul>
         </div>

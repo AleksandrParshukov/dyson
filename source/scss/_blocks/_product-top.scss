@@ -1,6 +1,5 @@
 .product-top {
   padding: calc(100vw * (112 / 1920)) calc(100vw * (248 / 1920)) calc(100vw * (40 / 1920));
-  background-color: #f9f9f9;
 
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (130 / $xl)) calc(100vw * (35 / $xl));
