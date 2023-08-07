@@ -55,17 +55,17 @@
       opacity: 0;
       transition: opacity 0.25s ease; 
 
-    @include xl {
-      height: calc(100vw * (5 / $xl));
-    }
+      @include xl {
+        height: calc(100vw * (5 / $xl));
+      }
 
-    @include lg {
-      height: calc(100vw * (5 / $lg));
-    }
+      @include lg {
+        height: calc(100vw * (5 / $lg));
+      }
 
-    @include sm {
-      height: calc(100vw * (3 / $sm));
-    }
+      @include sm {
+        height: calc(100vw * (3 / $sm));
+      }
     }
 
     &:hover,

@@ -1,31 +1,35 @@
 .card {
-  width: calc(100vw * (416 / 1920));
-  padding: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 
-  @include xl {
-    width: calc(100vw * (358 / $xl));
-    padding: calc(100vw * (20 / $xl)) calc(100vw * (30 / $xl));
-  }
+  &__content {
+    width: calc(100vw * (416 / 1920));
+    padding: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    
+    @include xl {
+      width: calc(100vw * (358 / $xl));
+      padding: calc(100vw * (20 / $xl)) calc(100vw * (30 / $xl));
+    }
 
-  @include lg {
-    width: calc(100vw * (250 / $lg));
-    padding: calc(100vw * (20 / $lg)) calc(100vw * (25 / $lg));
-  }
+    @include lg {
+      width: calc(100vw * (250 / $lg));
+      padding: calc(100vw * (20 / $lg)) calc(100vw * (25 / $lg));
+    }
 
-  @include sm {
-    width: calc(100vw * (225 / $sm));
-    padding: calc(100vw * (18 / $sm)) calc(100vw * (20 / $sm));
-  }
+    @include sm {
+      width: calc(100vw * (225 / $sm));
+      padding: calc(100vw * (18 / $sm)) calc(100vw * (20 / $sm));
+    }
 
-  @include xs {
-    width: calc(100vw * (287 / $xs-base));
-    padding: calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
-    margin-inline: auto;
+    @include xs {
+      width: calc(100vw * (287 / $xs-base));
+      padding: calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
+      margin-inline: auto;
+    }
   }
 
   &__sale {
@@ -135,5 +139,26 @@
 
   &__prices {
     margin-left: auto;
+  }
+
+  &__buy-btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    transition: opacity 0.1s ease, top 0.3s ease;
+  }
+
+  &:hover {
+    > .card__content {
+      opacity: 0.5;
+    }
+
+    .card__buy-btn {
+      opacity: 1;
+      top: 40%;
+    }
   }
 }

@@ -47,8 +47,33 @@
   }
 
   &__menu-link {
+    width: max-content;
+    margin-inline: auto;
+    position: relative;
+
     & > span {
       color: #808081;
+    }
+
+    &.active::after {
+      content: "";
+      height: calc(100vw * (5 / 1920));
+      background-color: $special;
+      position: absolute;
+      bottom:  calc(100vw * (-15 / 1920));
+      left: 0;
+      right: 0;
+      transition: opacity 0.25s ease; 
+
+      @include xl {
+        height: calc(100vw * (5 / $xl));
+        bottom: calc(100vw * (-12 / $xl));
+      }
+
+      @include lg {
+        height: calc(100vw * (5 / $lg));
+        bottom: calc(100vw * (-10 / $lg));
+      }
     }
 
 
@@ -57,7 +82,6 @@
       flex-direction: column;
       align-items: center;
     }
-    
   }
 
   &__list {
@@ -76,7 +100,7 @@
 
     @include sm {
       margin-block: calc(100vw * (40 / $sm)) calc(100vw * (25 / $sm));
-      gap: calc(100vw * (20 / $sm)) calc(100vw * (20 / $sm));
+      gap: calc(100vw * (20 / $sm)) calc(100vw * (16 / $sm));
     }
 
     @include xs {
