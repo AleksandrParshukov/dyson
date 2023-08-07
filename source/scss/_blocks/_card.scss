@@ -25,6 +25,7 @@
   @include xs {
     width: calc(100vw * (287 / $xs-base));
     padding: calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
+    margin-inline: auto;
   }
 
   &__sale {

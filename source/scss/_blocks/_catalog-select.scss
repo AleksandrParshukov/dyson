@@ -48,45 +48,62 @@
 
   &__btn {
     width: calc(100vw * (25 / $sm));
-    height: calc(100vw * (21 / $sm));
+    height: calc(100vw * (25 / $sm));
+    background: transparent url('../img/cross.png') no-repeat center;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+  
+    &.collapsed {
+      background-image: url('../img/burger.png');
+    }
 
-    > img { 
-      width: 100%;
-      height: auto;
+    @include sm {
+      width: calc(100vw * (25 / $sm));
+      height: calc(100vw * (25 / $sm));
     }
 
     @include xs {
       width: calc(100vw * (25 / $xs-base));
-      height: calc(100vw * (21 / $xs-base));
+      height: calc(100vw * (25 / $xs-base));
     }
   }
 
-  &__list {
-    color: $black;
+  &__list-wrapper {
     position: absolute;
     top: 100%;
     left: -1.75em;
-    padding: 1.5em 1.75em;
-    background-color: $white;
-    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 
     @include sm {
-      width: calc(100vw * (360 / $sm));
-      padding-inline: calc(100vw * (20 / $sm));
-      padding-block: 0;
       top: 0;
       left: auto;
       right: 110%;
     }
 
     @include xs {
-      width: 100%;
-      padding-inline: calc(100vw * (20 / $xs-base));
-      position: absolute;
       top: calc(100vw * (80 / $xs-base));
       left: 0;
       right: 0;
+    }
+  }
+
+  &__list {
+    color: $black;
+    padding: 1.5em 1.75em;
+    background-color: $white;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
+
+    @include sm {
+      width: calc(100vw * (360 / $sm));
+      padding-inline: calc(100vw * (20 / $sm));
+      padding-block: 0;
+    }
+
+    @include xs {
+      width: 100%;
+      padding-inline: calc(100vw * (20 / $xs-base));
+      position: absolute;
     }
   }
 

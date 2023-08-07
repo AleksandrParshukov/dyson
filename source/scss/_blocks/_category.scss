@@ -23,6 +23,43 @@
     }
   }
 
+  &__menu {
+    width: 100%;
+    margin-block: calc(100vw * (50 / 1920));
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include xl {
+      margin-top: calc(100vw * (50 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (35 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (25 / $sm));
+    }
+
+    @include xs {
+      margin-top: calc(100vw * (25 / $xs-base));
+    }
+  }
+
+  &__menu-link {
+    & > span {
+      color: #808081;
+    }
+
+
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+  }
+
   &__list {
     margin-block: calc(100vw * (60 / 1920)) calc(100vw * (50 / 1920));
     gap: calc(100vw * (43 / 1920)) calc(100vw * (90 / 1920));

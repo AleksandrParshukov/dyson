@@ -1,20 +1,11 @@
-function init_menu() {
-	const $menu_btns = $('.js_top_menu_btn');
+function init_search() {
+	const $search_btn = $('.js_search_btn');
 
-	$menu_btns.on('click', function (evt) {
+	$search_btn.on('click', function (evt) {
 		evt.preventDefault();
 
-		$(this).closest('.catalog-select').find('.catalog-select__list').toggleClass('open');
+		$(this).closest('.header__search').toggleClass('open');
 	});
-}
-
-function init_faq() {
-	$('.faq__list').accordion({
-		heightStyle: 'content',
-		collapsible: true,
-		active: false,
-	});
-	$('.selector').accordion('option', 'header', '.faq__item');
 }
 
 function init_carousel() {
@@ -119,7 +110,7 @@ function init_forms() {
 }
 
 $('document').ready(function () {
-	init_menu();
+	init_search();
 	// init_faq();
 	init_carousel();
 	init_tabs();

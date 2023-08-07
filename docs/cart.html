@@ -22,19 +22,21 @@
       <div class="header__controls d-flex align-items-center">
         <div class="header__catalog catalog-select">
           <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn collapsed" data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu">Каталог</p>
-          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"><img src="./img/burger.png" width="25" height="21" alt=""></button>
-          <ul class="catalog-select__list collapse" id="top_collapsing_menu">
-            <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
-            <li class="catalog-select__item active"><a href="#">Стайлеры Dyson</a></li>
-            <li class="catalog-select__item"><a href="#">Выпрямители Dyson</a></li>
-            <li class="catalog-select__item"><a href="#">Аксессуары для фенов</a></li>
-            <li class="catalog-select__item"><a href="#">Аксессуары для стайлеров</a></li>
-          </ul>
+          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"></button>
+          <div class="catalog-select__list-wrapper collapse" id="top_collapsing_menu">
+            <ul class="catalog-select__list">
+              <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
+              <li class="catalog-select__item active"><a href="#">Стайлеры Dyson</a></li>
+              <li class="catalog-select__item"><a href="#">Выпрямители Dyson</a></li>
+              <li class="catalog-select__item"><a href="#">Аксессуары для фенов</a></li>
+              <li class="catalog-select__item"><a href="#">Аксессуары для стайлеров</a></li>
+            </ul>
+          </div>
         </div>
 
         <div class="header__search">
           <input class="header__search-input" type="text" id="">
-          <button class="header__search-btn d-md-none" type="button"><img src="./img/search_white.png" width="25" height="25" alt=""></button>
+          <button class="header__search-btn js_search_btn d-md-none" type="button"></button>
         </div>
 
         <a href="./cart.html" class="header__cart">
@@ -71,7 +73,8 @@
               </p>
               <div class="cart-products__qty qty d-flex">
                 <button type="button" class="qty__decrement">-</button>
-                <span class="input-wrap"><span class="width-machine" aria-hidden="true">0</span><input type="number" class="qty__input js_input_auto_width" value="0"></span>
+                <!-- Данная конструкция используется для автоматического изменения ширины input при вводе -->
+                <span class="input-wrap"><span class="width-machine" aria-hidden="true">1</span><input type="number" class="qty__input js_input_auto_width" value="1"></span>
 
                 <button type="button" class="qty__increment">+</button>
               </div>

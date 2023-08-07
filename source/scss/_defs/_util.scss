@@ -51,6 +51,31 @@
   }
 }
 
+.h3 {
+  font-size: calc(100vw * (30 / 1920));
+  line-height: 1;
+  font-weight: 400;
+  color: $black;
+  text-align: center;
+  margin: 0;
+
+  @include xl {
+    font-size: calc(100vw * (30 / $xl));
+  }
+
+  @include lg {
+    font-size: calc(100vw * (22 / $lg));
+  }
+
+  @include sm {
+    font-size: calc(100vw * (22 / $sm));
+  }
+
+  @include xs {
+    font-size: calc(100vw * (20 / $xs-base));
+  }
+}
+
 .btn {
   font-size: calc(100vw * (18 / 1920));
   line-height: calc(100vw * (20 / 1920));
