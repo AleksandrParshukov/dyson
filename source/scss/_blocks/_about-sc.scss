@@ -1,29 +1,29 @@
 .about-sc {
   color: $primary;
   padding: calc(100vw * (90 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
-  background: $black url('../img/about-sc.png') no-repeat top left;
+  background: $black url('../img/about-sc.webp') no-repeat top left;
   background-size: 100% auto;
 
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (155 / $xl)) calc(100vw * (50 / $xl));
-    background-image: url('../img/about-sc_xl.png');
+    background-image: url('../img/about-sc_xl.webp');
   }
 
   @include lg {
     padding: calc(100vw * (70 / $lg)) calc(100vw * (60 / $lg)) calc(100vw * (35 / $lg));
-    background-image: url('../img/about-sc_lg.png');
+    background-image: url('../img/about-sc_lg.webp');
   }
 
   @include sm {
     padding: calc(100vw * (50 / $sm)) calc(100vw * (64 / $sm)) calc(100vw * (35 / $sm));
-    background-image: url('../img/about-sc_sm.png');
+    background-image: url('../img/about-sc_sm.webp');
     background-position: bottom right;
     background-size: 100% auto;
   }
 
   @include xs {
     padding: calc(100vw * (280 / $xs-base)) calc(100vw * (24 / $xs-base)) calc(100vw * (5 / $xs-base));
-    background-image: url('../img/about-sc_xs.png');
+    background-image: url('../img/about-sc_xs.webp');
     background-position: top center;
   }
 

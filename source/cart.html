@@ -34,10 +34,13 @@
           </div>
         </div>
 
-        <div class="header__search">
-          <input class="header__search-input" type="text">
-          <button class="header__search-btn js_search_btn d-md-none" type="button"></button>
-        </div>
+        <form class="header__search">
+          <div class="header__search-wrapper">
+            <input class="header__search-input" type="text">
+            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25" alt=""></button>
+            </div>
+          <button class="header__search-btn js_search_btn to-lg" type="button"></button>
+          </form>
 
         <a href="./cart.html" class="header__cart">
           <img src="./img/cart.png" width="34" height="32" alt="">
@@ -50,14 +53,14 @@
   <main class="main">
     <section class="cart">
       <h1 class="cart__title h2">Ваша корзина</h1>
-      <form class="cart__form">
+      <form class="cart__form js_contact_form">
         <div class="cart__inputs d-flex flex-column">
           <p class="cart__caption h3">Оплата и доставка</p>
-          <input type="text" name="name" class="cart__input" placeholder="Имя">
-          <input type="email" name="email" class="cart__input" placeholder="Email">
-          <input type="email" name="city" class="cart__input" placeholder="Город">
-          <input type="email" name="address" class="cart__input" placeholder="Адрес">
-          <input type="text" name="phone" class="cart__input" placeholder="Телефон">
+          <div class="form-group"><input type="text" name="name" class="cart__input" placeholder="Имя"></div>
+          <div class="form-group"><input type="email" name="email" class="cart__input" placeholder="Email"></div>
+          <div class="form-group"><input type="email" name="city" class="cart__input" placeholder="Город"></div>
+          <div class="form-group"><input type="email" name="address" class="cart__input" placeholder="Адрес"></div>
+          <div class="form-group"><input type="text" name="phone" class="cart__input" placeholder="Телефон"></div>
         </div>
 
         <div class="cart__products d-flex flex-column align-items-center">
@@ -65,7 +68,7 @@
           <ul class="cart__products cart-products d-flex flex-column">
             <li class="cart-products__item d-flex justify-content-between  align-items-start">
               <div class="cart-products__img">
-                <img src="./img/product.png" width="90" height="90" alt="">
+                <img src="./img/product.webp" width="90" height="90" alt="">
               </div>
               <p class="cart-products__name">
                 Фен Dyson Supersonic HD07 с насадками, дорожным чехлом и подставка
@@ -83,7 +86,7 @@
                 
                 <li class="cart-products__item d-flex justify-content-between  align-items-start">
                   <div class="cart-products__img">
-                    <img src="./img/product.png" width="90" height="90" alt="">
+                    <img src="./img/product.webp" width="90" height="90" alt="">
                   </div>
                   <p class="cart-products__name">
                     Фен Dyson Supersonic HD07 с насадками, дорожным чехлом и подставка
@@ -101,7 +104,7 @@
                 
                 <li class="cart-products__item d-flex justify-content-between  align-items-start">
                   <div class="cart-products__img">
-                    <img src="./img/product.png" width="90" height="90" alt="">
+                    <img src="./img/product.webp" width="90" height="90" alt="">
                   </div>
                   <p class="cart-products__name">
                     Фен Dyson Supersonic HD07 с насадками, дорожным чехлом и подставка
@@ -261,7 +264,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.min.js"></script>

@@ -1,23 +1,23 @@
 .callback {
   color: $white;
   padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
-  background: $black url('../img/callback_bg.png') no-repeat bottom center;
+  background: $black url('../img/callback_bg.webp') no-repeat bottom center;
   background-size: 100% auto;
   box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
 
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
-    background-image: url('../img/callback_bg_xl.png');
+    background-image: url('../img/callback_bg_xl.webp');
   }
 
   @include lg {
     padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-    background-image: url('../img/callback_bg_lg.png');
+    background-image: url('../img/callback_bg_lg.webp');
   }
 
   @include sm {
     padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
-    background-image: url('../img/callback_bg_sm.png');
+    background-image: url('../img/callback_bg_sm.webp');
   }
 
   @include xs {

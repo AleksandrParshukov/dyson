@@ -1,6 +1,6 @@
 .cart {
   padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (105 / 1920));
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 
   @include xl {
     padding: calc(100vw * (115 / $xl)) calc(100vw * (55 / $xl)) calc(100vw * (240 / $xl));
@@ -102,6 +102,10 @@
     }
   } 
 
+  .form-group:last-child .cart__input {
+      margin-bottom: 0;
+    }
+
   &__input {
     font-size: calc(100vw * (20 / 1920));
     color: $black;
@@ -112,10 +116,6 @@
     background-color: $white;
     border-radius: calc(100vw * (10 / 1920));
     border: 1px solid #b8b8b8;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));

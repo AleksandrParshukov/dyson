@@ -2,25 +2,25 @@
   color: $white;
   height: calc(100vw * (670 / 1920));
   padding: calc(100vw * (220 / 1920)) calc(100vw * (245 / 1920)) 0;
-  background: $black url('../img/uniqueness.png') no-repeat top left;
+  background: $black url('../img/uniqueness.webp') no-repeat top left;
   background-size: 100% 100%;
 
   @include xl {
     height: calc(100vw * (670 / $xl));
     padding: calc(100vw * (224 / $xl)) calc(100vw * (155 / $xl)) 0;
-    background-image: url('../img/uniqueness_xl.png');
+    background-image: url('../img/uniqueness_xl.webp');
   }
 
   @include lg {
     height: calc(100vw * (450 / $lg));
     padding: calc(100vw * (138 / $lg)) calc(100vw * (97 / $lg)) 0;
-    background-image: url('../img/uniqueness_lg.png');
+    background-image: url('../img/uniqueness_lg.webp');
   }
 
   @include sm {
     height: calc(100vw * (360 / $sm));
     padding: calc(100vw * (54 / $sm)) calc(100vw * (61 / $sm)) 0;
-    background-image: url('../img/uniqueness_sm.png');
+    background-image: url('../img/uniqueness_sm.webp');
   }
 
   &__wrapper {
