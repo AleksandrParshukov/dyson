@@ -84,7 +84,16 @@ function init_input_auto_width() {
 }
 
 function init_forms() {
-	$('input[name="phone"]').mask('+7 (000) 000-00-00');
+	$('input[name="phone"]').on('keydown', function (evt) {
+		if ($(this).val() == '' && evt.originalEvent.key == '8') {
+			evt.preventDefault();
+
+			$(this).val('+7 (');
+		}
+
+		$('input[name="phone"]').mask('+7 (000) 000-00-00');
+	});
+
 
 	$('form').validate({
 		rules: {

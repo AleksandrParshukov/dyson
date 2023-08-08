@@ -1,34 +1,45 @@
 .qty {
+  height: calc(100vw * (25 / 1920));
   margin-bottom: auto;
   margin-inline: calc(100vw * (35 / 1920));
   align-items: center;
-  height: auto;
   flex-shrink: 0;
 
+  > * {
+    height: 100%;
+  }
+
   @include xl {
+    height: calc(100vw * (25 / $xl));
     margin-inline: calc(100vw * (35 / $xl));
   }
 
   @include lg {
+    height: calc(100vw * (25 / $lg));
     margin-inline: calc(100vw * (27 / $lg));
   }
 
   @include sm {
+    height: calc(100vw * (25 / $sm));
     margin-inline: calc(100vw * (40 / $sm));
   }
 
   @include xs {
+    height: calc(100vw * (25 / $xs-base));
     margin-inline: calc(100vw * (15 / $xs-base));
   }
 
   &__input {
     text-align: center;
-    height: min-content;
+    width: 100%;
+    height: 100%;
     padding-block: 0;
     background-color: transparent;
     position: absolute;
-    width: 100%;
+    top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     -moz-appearance: textfield;
 
 
@@ -41,6 +52,7 @@
   }
 
   .input-wrap {
+    display: flex;
     position: relative;
   }
 

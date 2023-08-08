@@ -115,7 +115,9 @@
     text-align: justify;
     margin-top: calc(100vw * (65 / 1920));
 
-    > p + p{
+    > p + p {
+      margin-top: calc(100vw * (20 / $xl));
+
       @include xl {
         margin-top: calc(100vw * (20 / $xl));
       }

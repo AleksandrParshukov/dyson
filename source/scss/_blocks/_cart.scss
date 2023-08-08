@@ -152,7 +152,7 @@
 
   &__products {
     font-size: calc(100vw * (20 / 1920));
-    line-height: 1;
+    line-height: 1.1;
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));
@@ -172,7 +172,7 @@
   }
 
   &__cost, 
-  &__delivery{
+  &__delivery {
     font-size: calc(100vw * (20 / 1920));
     line-height: 1;
     width: 100%;
@@ -200,6 +200,10 @@
       padding-bottom: calc(100vw * (11 / $xs-base));
       margin-top: calc(100vw * (11 / $xs-base));
     }
+  }
+
+  &__delivery {
+    border-bottom: 1px solid $black;
   }
 
   &__total {

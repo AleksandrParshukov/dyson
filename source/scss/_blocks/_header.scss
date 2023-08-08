@@ -113,20 +113,28 @@
     }
   }
 
+  &__search-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    @include sm {
+      position: absolute;
+      top: 50%;
+      right: 150%;
+      transform: translateY(-50%);
+    }
+  }
+  
   &__search-input {
     font-size: calc(100vw * (20 / 1920));
     color: $black;
-    background: $white url("../img/search.png") no-repeat;
-    background-position: center right calc(100vw * (10 / 1920));
-    background-size: calc(100vw * (30 / 1920)) auto;
+    background-color: $white;
     width: calc(100vw * (330 / 1920));
     height: calc(100vw * (40 / 1920));
     padding-inline: calc(100vw * (7 / 1920));
 
     @include xl {
       font-size: calc(100vw * (20 / $xl));
-      background-position: center right calc(100vw * (10 / $xl));
-      background-size: calc(100vw * (30 / $xl)) auto;
       width: calc(100vw * (271 / $xl));
       height: calc(100vw * (40 / $xl));
       padding-inline: calc(100vw * (7 / $xl));
@@ -134,8 +142,6 @@
 
     @include lg {
       font-size: calc(100vw * (15 / $lg));
-      background-position: center right calc(100vw * (10 / $lg));
-      background-size: calc(100vw * (25 / $lg)) auto;
       width: calc(100vw * (250 / $lg));
       height: calc(100vw * (30 / $lg));
       padding-inline: calc(100vw * (7 / $lg));
@@ -143,23 +149,45 @@
 
     @include sm {
       font-size: calc(100vw * (15 / $sm));
-      background-position: center right calc(100vw * (10 / $sm));
-      background-size: calc(100vw * (25 / $sm)) auto;
       width: 0;
       height: calc(100vw * (30 / $sm));
       padding: 0;
-      position: absolute;
-      top: 50%;
-      right: 150%;
-      transform: translateY(-50%);
       transition: all 0.3s ease;
     }
 
     @include xs {
       font-size: calc(100vw * (20 / $xs-base));
-      background-position: center right calc(100vw * (10 / $xs-base));
-      background-size: calc(100vw * (27 / $xs-base)) auto;
       height: calc(100vw * (40 / $xs-base));
+    }
+  }
+
+  &__search-submit {
+    width: calc(100vw * (30 / 1920));
+    aspect-ratio: 1 / 1;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: calc(100vw * (10 / 1920));
+    transform: translateY(-50%);
+
+    @include xl {
+      width: calc(100vw * (30 / $xl));
+      right: calc(100vw * (10 / $xl));
+    }
+
+    @include lg {
+      width: calc(100vw * (25 / $lg));
+      right: calc(100vw * (10 / $lg));
+    }
+
+    @include sm {
+      width: calc(100vw * (25 / $sm));
+      right: calc(100vw * (10 / $sm));
+    }
+
+    @include xs {
+      width: calc(100vw * (27 / $xs-base));
+      right: calc(100vw * (10 / $xs-base));
     }
   }
 

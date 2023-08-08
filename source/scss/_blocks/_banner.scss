@@ -54,7 +54,11 @@
     }
   }
 
-  &__logo {
+  &__logo { 
+    color: $special;
+  }
+
+  /* &__logo {
     width: calc(100vw * (190 / 1920));
     display: inline-block;
 
@@ -78,7 +82,7 @@
     @include xs {
       width: calc(100vw * (101 / $xs-base));
     }
-  }
+  } */
 
   &__text {
     font-size: calc(100vw * (20 / 1920));
@@ -89,16 +93,34 @@
     }
 
     @include lg {
-      font-size: calc(100vw * (18 / $lg));
+      font-size: calc(100vw * (20 / $lg));
+      width: calc(100vw * (350 / $lg));
     }
 
     @include sm {
-      font-size: calc(100vw * (15 / $sm));
+      font-size: calc(100vw * (20 / $sm));
+      width: calc(100vw * (290 / $sm));
     }
   }
 
   &__control {
     margin-top: calc(100vw * (40 / 1920));
+
+    @include xl {
+      margin-top: calc(100vw * (40 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (30 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (34 / $sm));
+    }
+
+    @include xs {
+      margin-top: calc(100vw * (304 / $xs-base));
+    }
   }
 
   &__link {

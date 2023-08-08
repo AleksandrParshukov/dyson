@@ -11,7 +11,7 @@
   }
 
   @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (50 / $sm)) calc(100vw * (37 / $sm));
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (37 / $sm));
   }
 
   @include xs {

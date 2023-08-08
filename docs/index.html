@@ -10,6 +10,7 @@
   <link href="./css/owl.carousel.min.css" rel="stylesheet">
   <link href="./css/owl.theme.default.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+  <meta name="yandex-verification" content="a2251bfb5a763ba7" />
   <title>Dyson</title>
 </head>
 
@@ -34,10 +35,13 @@
           </div>
         </div>
 
-        <div class="header__search">
-          <input class="header__search-input" type="text">
-          <button class="header__search-btn js_search_btn d-md-none" type="button"></button>
-        </div>
+        <form class="header__search">
+          <div class="header__search-wrapper">
+            <input class="header__search-input" type="text">
+            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25" alt=""></button>
+            </div>
+          <button class="header__search-btn js_search_btn to-lg" type="button"></button>
+          </form>
 
         <a href="./cart.html" class="header__cart">
           <img src="./img/cart.png" width="34" height="32" alt="">
@@ -61,17 +65,18 @@
         Техника для ухода<br>
         за волосами
         <span class="banner__logo">
-          <img src="./img/logo_pink.png" width="190" height="72" alt="">
+          <!-- <img src="./img/logo_pink.png" width="190" height="72" alt=""> -->
+          DYSON
         </span>
       </h1>
 
-      <p class="banner__text d-none d-md-inline">
+      <p class="banner__text from-xs">
         Фены, стайлеры, выпрямители Dyson по лучшим ценам
       </p>
 
       <div class="banner__control d-flex align-items-center">
         <a href="/catalog.html" class="banner__link btn">Каталог</a>
-        <a href="tel:+79999999999" class="banner__phone d-none d-md-flex align-items-center">
+        <a href="tel:+79999999999" class="banner__phone from-xs align-items-center">
           <img src="./img/phone_icon.png" width="22" height="22" alt="">
           Обратный звонок
         </a>

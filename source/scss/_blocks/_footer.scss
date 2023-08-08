@@ -72,6 +72,8 @@
       grid-template-areas: 'buyers catalog company' 
       'buyers catalog social' 
       'buyers policy social' 
+      'payment policy social'
+      'payment policy social'
       'payment policy social' ;
       gap: calc(100vw * (30 / $sm));
     }
@@ -178,7 +180,7 @@
   &__company {
     grid-area: company;
 
-    @include lg {
+    @include sm {
       text-align: right;
     }
   }
@@ -194,7 +196,7 @@
   &__social {
     grid-area: social;
 
-    @include lg {
+    @include sm {
       text-align: right;
     }
 
@@ -212,7 +214,7 @@
     }
   }
 
-  #temp_social_icons {
+  /* #temp_social_icons {
     width: calc(100vw * (131 / 1920));
     height: calc(100vw * (75 / 1920));
 
@@ -222,8 +224,8 @@
     }
 
     @include lg {
-      width: calc(100vw * (130 / $lg));
-      height: calc(100vw * (73 / $lg));
+      width: calc(100vw * (95 / $lg));
+      height: calc(100vw * (48 / $lg));
     }
 
     @include sm {
@@ -232,7 +234,7 @@
     }
 
     @include xs {
-      width: calc(100vw * (80 / $xs-base));
+      width: calc(100vw * (70 / $xs-base));
       height: calc(100vw * (36 / $xs-base));
     }
   }
@@ -248,8 +250,8 @@
     }
 
     @include lg {
-      width: calc(100vw * (200 / $lg));
-      height: calc(100vw * (40 / $lg));
+      width: calc(100vw * (180 / $lg));
+      height: calc(100vw * (37 / $lg));
     }
 
     @include sm {
@@ -258,13 +260,35 @@
     }
 
     @include xs {
-      width: calc(100vw * (150 / $xs-base));
+      width: calc(100vw * (130 / $xs-base));
       height: calc(100vw * (27 / $xs-base));
     }
-  }
+  } */
 
   &__icon {
     width: 100%;
+    height: calc(100vw * (51 / 1920));
+
+    > img {
+      width: auto;
+      height: 100%;
+    }
+
+    @include xl {
+      height: calc(100vw * (51 / $xl));
+    }
+
+    @include lg {
+      height: calc(100vw * (34 / $lg));
+    }
+
+    @include sm {
+      height: calc(100vw * (34 / $sm));
+    }
+
+    @include xs {
+      height: calc(100vw * (30 / $xs-base));
+    }
   }
 
   &__copyright {
