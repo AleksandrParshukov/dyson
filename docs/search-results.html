@@ -34,11 +34,14 @@
           </div>
         </div>
 
-        <div class="header__search">
-          <input class="header__search-input" type="text">
-          <button class="header__search-btn js_search_btn d-md-none" type="button"></button>
-        </div>
-
+        <form class="header__search">
+          <div class="header__search-wrapper">
+            <input class="header__search-input" type="text">
+            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25" alt=""></button>
+            </div>
+          <button class="header__search-btn js_search_btn to-lg" type="button"></button>
+          </form>
+        
         <a href="./cart.html" class="header__cart">
           <img src="./img/cart.png" width="34" height="32" alt="">
           <p class="header__cart-count">1</p>
@@ -55,7 +58,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -74,7 +77,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -93,7 +96,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -112,7 +115,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -131,7 +134,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -150,7 +153,7 @@
         <li class="category__item card">
           <div class="card__content">
             <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.png" alt=""></a>
+            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
             <p class="card__category">Dyson Supersonic</p>
             <a href="./product.html" class="card__name">
               Фен Dyson Supersonic HD07
@@ -181,7 +184,7 @@
     <section class="callback">
       <h2 class="callback__title h2">Связаться с нами</h2>
 
-      <form class="callback__form d-flex flex-column">
+      <form class="callback__form js_contact_form d-flex flex-column">
         <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
 
         <input type="text" name="name" class="callback__input" placeholder="Имя">
@@ -322,7 +325,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.min.js"></script>

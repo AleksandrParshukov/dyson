@@ -84,9 +84,18 @@ function init_input_auto_width() {
 }
 
 function init_forms() {
-	$('input[name="phone"]').mask('+7 (000) 000-00-00');
+	$('input[name="phone"]').on('keydown', function (evt) {
+		if ($(this).val() == '' && evt.originalEvent.key == '8') {
+			evt.preventDefault();
 
-	$('form').validate({
+			$(this).val('+7 (');
+		}
+
+		$('input[name="phone"]').mask('+7 (000) 000-00-00');
+	});
+
+
+	$('.callback__form').validate({
 		rules: {
 			name: 'required',
 			email: {
@@ -102,6 +111,32 @@ function init_forms() {
 				email: 'Введите корректный адрес электронной почты',
 			},
 			phone: 'Введите ваш телефон',
+		},
+		submitHandler: function (form) {
+			form.submit();
+		},
+	});
+
+	$('.cart__form').validate({
+		rules: {
+			name: 'required',
+			email: {
+				required: true,
+				email: true,
+			},
+			phone: 'required',
+			city: 'required',
+			address: 'required',
+		},
+		messages: {
+			name: 'Введите ваше имя',
+			email: {
+				required: 'Введите адрес электронной почты',
+				email: 'Введите корректный адрес электронной почты',
+			},
+			phone: 'Введите ваш телефон',
+			city: 'Введите ваш город',
+			address: 'Введите ваш адрес',
 		},
 		submitHandler: function (form) {
 			form.submit();
