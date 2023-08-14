@@ -69,18 +69,22 @@
   }
 
   &__images {
+    width: calc(100vw * (105 / 1920));
     flex-direction: column;
     gap: calc(100vw * (8 / 1920));
 
     @include xl {
+      width: calc(100vw * (87 / $xl));
       gap: calc(100vw * (12 / $xl));
     }
 
     @include lg {
+      width: calc(100vw * (70 / $lg));
       gap: calc(100vw * (7 / $lg));
     }
 
     @include sm {
+      width: calc(100vw * (48 / $sm));
       gap: calc(100vw * (11 / $sm));
     }
 
@@ -117,7 +121,7 @@
     }
 
     @include xs {
-      width: calc(100vw * (73 / $xs-base));
+      width: calc(100vw * (73 / $xs-base)) !important;
     }
   }
 

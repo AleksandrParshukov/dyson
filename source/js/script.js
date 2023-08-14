@@ -26,6 +26,48 @@ function init_carousel() {
 			},
 		},
 	});
+
+	/* $('.js_product_preview_slider').owlCarousel({
+		loop: true,
+		nav: true,
+		dots: true,
+		autoHeight: false,
+		responsive: {
+			0: {
+				items: 4,
+			},
+			420: {
+				items: 5,
+			},
+		},
+	}); */
+
+	$('.js_product_preview_slider').slick({
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		autoplay: false,
+		arrows: false,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 420,
+				settings: {
+					slidesToShow: 4,
+					slidesToscroll: 4,
+					vertical: false,
+					verticalSwiping: false,
+				},
+			},
+		],
+	});
+
+	$('.product-top__img').on('click', function () {
+		const img = $(this).find('img').attr('src');
+
+		$('.product-top__main-img img').attr('src', img);
+	});
 }
 
 function init_tabs() {
@@ -94,7 +136,6 @@ function init_forms() {
 		$('input[name="phone"]').mask('+7 (000) 000-00-00');
 	});
 
-
 	$('.callback__form').validate({
 		rules: {
 			name: 'required',
@@ -151,4 +192,5 @@ $('document').ready(function () {
 	init_tabs();
 	init_qty();
 	init_forms();
+	init_sync_sliders();
 });
