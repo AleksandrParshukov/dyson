@@ -167,3 +167,93 @@
     margin-inline: auto;
   }
 }
+
+.callback--contacts {
+  background: $black url('../img/callback-contacts.webp') no-repeat left bottom 22px;
+  background-size: calc(100vw * (757 / 1920)) calc(100vw * (534 / 1920));
+  
+  .callback {
+
+    &__form {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        width: calc(100vw * (755 / 1920));
+        background-image: linear-gradient(to left, #000000, #000000 62%, transparent);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@include xl {
+  .callback--contacts {
+    background-size: calc(100vw * (757 / $xl)) calc(100vw * (534 / $xl));
+    
+    .callback {
+
+      &__form {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          width: calc(100vw * (755 / $xl));
+          background-image: linear-gradient(to left, #000000, #000000 62%, transparent);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .callback--contacts {
+    background-size: calc(100vw * (658 / $lg)) calc(100vw * (464 / $lg));
+    
+    .callback {
+      &__form {
+        &::before {
+          width: calc(100vw * (755 / $lg));
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .callback--contacts {
+  
+    .callback {
+      &__form {
+        &::before {
+          width: calc(100vw * (650 / $sm));
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .callback--contacts {
+    background-image: none;
+    
+    .callback {
+      &__form {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+}

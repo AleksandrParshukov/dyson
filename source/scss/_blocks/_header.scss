@@ -3,7 +3,7 @@
   background-color: $black;
   box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
   position: relative;
-  z-index: 1;
+  z-index: 1000;
   
   &__logo {
     width: calc(100vw * (159 / 1920));

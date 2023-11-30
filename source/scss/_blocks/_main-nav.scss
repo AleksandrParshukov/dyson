@@ -38,10 +38,12 @@
     }
 
     @include sm {
-      width: calc(100vw * (145 / $sm));
+      width: max-content;
       font-size: calc(100vw * (18 / $sm));
       padding-bottom: calc(100vw * (18 / $sm));
-      padding-inline: calc(100vw * (10 / $sm));
+      padding-inline: calc(100vw * (9 / $sm));
+      display: flex;
+      flex-direction: column;
     }
 
     &::after {
@@ -70,7 +72,7 @@
 
     &:hover,
     &.active {
-      color: $special;
+      color: $white;
     }
 
     &:hover::after,

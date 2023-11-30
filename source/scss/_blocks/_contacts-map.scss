@@ -1,0 +1,56 @@
+.contacts-map {
+  padding: calc(100vw * (100 / 1920)) calc(100vw * (147 / 1920)) calc(100vw * (100 / 1920));
+  background-color: #ffffff;
+
+  &__text {
+    font-size: calc(100vw * (20 / 1920));
+    text-align: center;
+    margin-block: 1em;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@include xl {
+  .contacts-map {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl));
+  
+    &__text {
+      font-size: calc(100vw * (20 / $xl));
+    }
+  }
+}
+
+@include lg {
+  .contacts-map {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  
+    &__text {
+      font-size: calc(100vw * (16 / $lg));
+    }
+  }
+}
+
+@include sm {
+  .contacts-map {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (37 / $sm));
+  
+    &__text {
+      font-size: calc(100vw * (16 / $sm));
+    }
+  }
+}
+
+@include xs {
+  .contacts-map {
+    padding: calc(100vw * (42 / $xs-base)) calc(100vw * (15 / $xs-base)) calc(100vw * (30 / $xs-base));
+  
+    &__text {
+      font-size: calc(100vw * (14 / $xs-base));
+    }
+  }
+}

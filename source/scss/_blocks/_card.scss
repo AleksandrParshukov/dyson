@@ -3,6 +3,7 @@
 
   &__content {
     width: calc(100vw * (416 / 1920));
+    height: 100%;
     padding: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
     background-color: $white;
     display: flex;
@@ -115,6 +116,10 @@
     text-align: left;
     margin-block: calc(100vw * (15 / 1920)) calc(100vw * (25 / 1920));
 
+    &:hover {
+      color: inherit;
+    }
+
     @include xl {
       font-size: calc(100vw * (22 / $xl));
       margin-block: calc(100vw * (17 / $xl)) calc(100vw * (20 / $xl));
@@ -138,8 +143,36 @@
   }
 
   &__prices {
-    margin-left: auto;
+    margin-top: auto;
+    margin-inline: auto;
+    position: relative;
+    text-align: center;
   }
+
+
+  .prices__old-price {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    margin-left: calc(100vw * (7 / 1920));
+
+    @include xl {
+      margin-left: calc(100vw * (6 / $xl));
+    }
+
+    @include lg {
+      margin-left: calc(100vw * (5 / $lg));
+    }
+
+    @include sm {
+      margin-left: calc(100vw * (5 / $sm));
+    }
+
+    @include xs {
+      margin-left: calc(100vw * (6 / $xs-base));
+    }
+  }
+  
 
   &__buy-btn {
     opacity: 0;
@@ -151,14 +184,16 @@
     transition: opacity 0.1s ease, top 0.3s ease;
   }
 
-  &:hover {
-    > .card__content {
-      opacity: 0.5;
-    }
+  @include sm-up {
+    &:hover {
+      > .card__content {
+        opacity: 0.5;
+      }
 
-    .card__buy-btn {
-      opacity: 1;
-      top: 40%;
+      .card__buy-btn {
+        opacity: 1;
+        top: 40%;
+      }
     }
   }
 }

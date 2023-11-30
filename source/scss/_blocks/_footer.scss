@@ -198,11 +198,18 @@
 
     @include sm {
       text-align: right;
+      .footer__menu-item {
+        justify-content: end;
+      }
     }
 
     @include xs {
       text-align: left;
       margin-top: calc(100vw * (20 / $xs-base));
+
+      .footer__menu-item {
+        justify-content: start;
+      }
     }
   }
 
@@ -213,57 +220,6 @@
       order: 2;
     }
   }
-
-  /* #temp_social_icons {
-    width: calc(100vw * (131 / 1920));
-    height: calc(100vw * (75 / 1920));
-
-    @include xl {
-      width: calc(100vw * (131 / $xl));
-      height: calc(100vw * (75 / $xl));
-    }
-
-    @include lg {
-      width: calc(100vw * (95 / $lg));
-      height: calc(100vw * (48 / $lg));
-    }
-
-    @include sm {
-      width: calc(100vw * (95 / $sm));
-      height: calc(100vw * (48 / $sm));
-    }
-
-    @include xs {
-      width: calc(100vw * (70 / $xs-base));
-      height: calc(100vw * (36 / $xs-base));
-    }
-  }
-
-  #temp_payment_icons {
-    width: calc(100vw * (252 / 1920));
-    height: calc(100vw * (51 / 1920));
-    margin-top: calc(100vw * (7 / 1920));
-
-    @include xl {
-      width: calc(100vw * (252 / $xl));
-      height: calc(100vw * (51 / $xl));
-    }
-
-    @include lg {
-      width: calc(100vw * (180 / $lg));
-      height: calc(100vw * (37 / $lg));
-    }
-
-    @include sm {
-      width: calc(100vw * (160 / $sm));
-      height: calc(100vw * (30 / $sm));
-    }
-
-    @include xs {
-      width: calc(100vw * (130 / $xs-base));
-      height: calc(100vw * (27 / $xs-base));
-    }
-  } */
 
   &__icon {
     width: auto;

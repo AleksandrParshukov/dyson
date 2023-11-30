@@ -90,6 +90,8 @@
   z-index: 1;
   overflow: hidden;
 
+
+
   @include xl {
     font-size: calc(100vw * (18 / $xl));
     line-height: calc(100vw * (20 / $xl));
@@ -141,6 +143,11 @@
     height: 500%; /* 150% and 500% because div completely to be fill the space of the button.*/
     transition: 0.5s ease;
   }
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: none;
 }
 
 .prices {

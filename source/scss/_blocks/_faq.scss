@@ -4,6 +4,10 @@
   box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
   z-index: 1;
 
+  &--white {
+    background-color: $white;
+  }
+
   @include xl {
     padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
   }
@@ -19,6 +23,28 @@
   @include xs {
     padding: calc(100vw * (35 / $xs-base)) 0;
     background-color: $black;
+  }
+
+  &__top-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: calc(100vw * (75 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (70 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (50 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (45 / $sm));
+    }
+
+    @include xs {
+      margin-bottom: calc(100vw * (25 / $xs-base));
+    }
   }
 
   &__title {
@@ -200,6 +226,28 @@
       margin-left: auto;
       border-radius: calc(100vw * (20 / $sm)) 0 0 calc(100vw * (20 / $sm)) ;
       background-color: #1b1b48;
+    }
+  }
+
+  &__link {
+    margin-top: calc(100vw * (60 / 1920));
+    margin-inline: auto;
+    
+
+    @include xl {
+      margin-top: calc(100vw * (60 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (50 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (40 / $lg));
+    }
+
+    @include xs {
+      margin-top: calc(100vw * (20 / $xs-base));
     }
   }
 }

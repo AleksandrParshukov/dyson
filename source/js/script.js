@@ -48,14 +48,16 @@ function init_carousel() {
 		slidesToShow: 5,
 		slidesToScroll: 5,
 		autoplay: false,
-		arrows: false,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
 		infinite: false,
 		responsive: [
 			{
 				breakpoint: 420,
 				settings: {
-					slidesToShow: 4,
-					slidesToscroll: 4,
+					slidesToShow: 3,
+					slidesToscroll: 3,
 					vertical: false,
 					verticalSwiping: false,
 				},

@@ -89,7 +89,7 @@
   }
 
   &__list {
-    color: $black;
+    color: #2b2b2b;
     padding: 1.5em 1.75em;
     background-color: $white;
     box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
@@ -110,7 +110,9 @@
   &__item {
     font-size: calc(100vw * (20 / 1920));
     line-height: 2.5;
-    width: max-content;
+    min-width: max-content;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
     position: relative;
 
     @include xl {
@@ -126,7 +128,6 @@
       line-height: 1.2;
       width: 100%;
       padding-block: calc(100vw * (20 / $sm));
-      border-bottom: 1px solid $light;
       display: flex;
       justify-content: center;
       align-items: center;

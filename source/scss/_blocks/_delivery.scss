@@ -1,0 +1,149 @@
+.delivery {
+  padding: calc(100vw * (100 / 1920)) calc(100vw * (450 / 1920)) calc(100vw * (50 / 1920));
+  background-color: #ffffff;
+  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
+  z-index: 1;
+
+  @include xl {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (200 / $xl)) calc(100vw * (50 / $xl));
+  }
+
+  @include lg {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  }
+
+  @include sm {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
+  }
+
+  @include xs {
+    padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base));
+  }
+
+  
+  &__title {
+    margin-bottom: calc(100vw * (70 / 1920));
+
+    @include xl {
+      margin-bottom: calc(100vw * (60 / $xl));
+    }
+
+    @include lg {
+      margin-bottom: calc(100vw * (45 / $lg));
+    }
+
+    @include sm {
+      margin-bottom: calc(100vw * (40 / $sm));
+    }
+
+    @include xs {
+      margin-bottom: calc(100vw * (30 / $xs-base));
+    }
+  }
+
+  &__list {
+    margin-top: calc(100vw * (35 / 1920));
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(100vw * (55 / 1920));
+
+    @include xl {
+      margin-top: calc(100vw * (30 / $xl));
+      gap: calc(100vw * (50 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (25 / $lg));
+      gap: calc(100vw * (40 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (25 / $sm));
+      gap: calc(100vw * (30 / $sm));
+    }
+
+    @include xs {
+      margin-top: calc(100vw * (20 / $xs-base));
+      gap: calc(100vw * (20 / $xs-base));
+    }
+  }
+
+  &__caption {
+    font-size: calc(100vw * (30 / 1920));
+    line-height: calc(100vw * (26 / 1920));
+    color: $special;
+    margin-bottom: calc(100vw * (35 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (30 / $xl));
+      line-height: calc(100vw * (26 / $xl));
+      margin-bottom: calc(100vw * (30 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (30 / $lg));
+      line-height: calc(100vw * (26 / $lg));
+      margin-bottom: calc(100vw * (25 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (26 / $sm));
+      line-height: calc(100vw * (24 / $sm));
+      margin-bottom: calc(100vw * (25 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (18 / $xs-base));
+      line-height: calc(100vw * (18 / $xs-base));
+      margin-bottom: calc(100vw * (20 / $xs-base));
+    }
+  }
+
+  &__text {
+    font-size: calc(100vw * (20 / 1920));
+    line-height: calc(100vw * (26 / 1920));
+
+    @include xl {
+      font-size: calc(100vw * (20 / $xl));
+      line-height: calc(100vw * (26 / $xl));
+    }
+
+    @include lg {
+      font-size: calc(100vw * (20 / $lg));
+      line-height: calc(100vw * (26 / $lg));
+    }
+
+    @include sm {
+      font-size: calc(100vw * (18 / $sm));
+      line-height: calc(100vw * (24 / $sm));
+    }
+
+    @include xs {
+      font-size: calc(100vw * (14 / $xs-base));
+      line-height: calc(100vw * (18 / $xs-base));
+    }
+  }
+
+  &__link {
+    margin-top: calc(100vw * (100 / 1920));
+    margin-inline: auto;
+    
+
+    @include xl {
+      margin-top: calc(100vw * (100 / $xl));
+    }
+
+    @include lg {
+      margin-top: calc(100vw * (70 / $lg));
+    }
+
+    @include sm {
+      margin-top: calc(100vw * (50 / $sm));
+    }
+
+    @include xs {
+      margin-top: calc(100vw * (30 / $xs-base));
+    }
+  }
+}
