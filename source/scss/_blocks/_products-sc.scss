@@ -1,84 +1,92 @@
 .products-sc {
-  padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
-  background-color: #fafafa;
+	padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
+	background-color: #fafafa;
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
-  }
+	&__title {
+		margin-bottom: calc(100vw * (55 / 1920));
+	}
 
-  @include lg {
-    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-  }
+	&__list {
+		width: max-content;
+		margin-inline: auto;
+		gap: calc(100vw * (90 / 1920));
+	}
 
-  @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (37 / $sm));
-  }
+	&__link {
+		margin: calc(100vw * (55 / 1920)) auto 0;
+	}
+}
 
-  @include xs {
-    padding: calc(100vw * (42 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (30 / $xs-base));
-    background-color: #f0f0f0;
-  }
+@include xl {
+	.products-sc {
+		padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
 
-  &__title {
-    margin-bottom: calc(100vw * (55 / 1920));
+		&__title {
+			margin-bottom: calc(100vw * (55 / $xl));
+		}
 
-    @include xl {
-      margin-bottom: calc(100vw * (55 / $xl));
-    }
+		&__list {
+			gap: calc(100vw * (70 / $xl));
+		}
 
-    @include lg {
-      margin-bottom: calc(100vw * (45 / $lg));
-    }
+		&__link {
+			margin-top: calc(100vw * (55 / $xl));
+		}
+	}
+}
 
-    @include sm {
-      margin-bottom: calc(100vw * (40 / $sm));
-    }
+@include lg {
+	.products-sc {
+		padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
 
-    @include xs {
-      margin-bottom: calc(100vw * (35 / $xs-base));
-    }
-  }
+		&__title {
+			margin-bottom: calc(100vw * (45 / $lg));
+		}
 
-  &__list {
-    width: max-content;
-    margin-inline: auto;
-    gap: calc(100vw * (90 / 1920));
+		&__list {
+			gap: calc(100vw * (50 / $lg));
+		}
 
-    @include xl {
-      gap: calc(100vw * (70 / $xl));
-    }
+		&__link {
+			margin-top: calc(100vw * (30 / $lg));
+		}
+	}
+}
 
-    @include lg {
-      gap: calc(100vw * (50 / $lg));
-    }
+@include sm {
+	.products-sc {
+		padding: calc(100vw * (64 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (37 / $sm));
 
-    @include sm {
-      gap: calc(100vw * (25 / $sm));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (40 / $sm));
+		}
 
-    @include xs {
-      gap: calc(100vw * (20 / $xs-base));
-      flex-direction: column;
-    }
-  }
+		&__list {
+			gap: calc(100vw * (25 / $sm));
+		}
 
-  &__link {
-    margin: calc(100vw * (55 / 1920)) auto 0;
+		&__link {
+			margin-top: calc(100vw * (25 / $sm));
+		}
+	}
+}
 
-    @include xl {
-      margin-top: calc(100vw * (55 / $xl));
-    }
+@include xs {
+	.products-sc {
+		padding: calc(100vw * (42 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (30 / $xs-base));
+		background-color: #f0f0f0;
 
-    @include lg {
-      margin-top: calc(100vw * (30 / $lg));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (35 / $xs-base));
+		}
 
-    @include sm {
-      margin-top: calc(100vw * (25 / $sm));
-    }
+		&__list {
+			gap: calc(100vw * (20 / $xs-base));
+			flex-direction: column;
+		}
 
-    @include xs {
-      margin-top: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__link {
+			margin-top: calc(100vw * (20 / $xs-base));
+		}
+	}
 }

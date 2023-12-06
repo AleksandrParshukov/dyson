@@ -1,240 +1,185 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('./_header.html')
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
-  <link href="./css/owl.carousel.min.css" rel="stylesheet">
-  <link href="./css/owl.theme.default.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Dyson</title>
-</head>
+<main class="main d-flex flex-column">
+  <section class="callback callback--contacts">
+    <h2 class="callback__title h2">Связаться с нами</h2>
 
-<body>
-  <header class="header d-flex flex-column">
-    <div class="header__top">
-      <a class="header__logo" href="/">
-        <img src="./img/logo_white.png" width="159" height="89" alt="">
-      </a>
-      <div class="header__controls d-flex align-items-center">
-        <div class="header__catalog catalog-select">
-          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn collapsed" data-bs-toggle="collapse"
-            data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"
-            role="button">Каталог</p>
-          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button"
-            data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false"
-            aria-controls="top_collapsing_menu"></button>
-          <div class="catalog-select__list-wrapper collapse" id="top_collapsing_menu">
-            <ul class="catalog-select__list">
-              <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
-              <li class="catalog-select__item active"><a href="#">Стайлеры Dyson</a></li>
-              <li class="catalog-select__item"><a href="#">Выпрямители Dyson</a></li>
-              <li class="catalog-select__item"><a href="#">Аксессуары для фенов</a></li>
-              <li class="catalog-select__item"><a href="#">Аксессуары для стайлеров</a></li>
-            </ul>
-          </div>
-        </div>
+    <form class="callback__form d-flex flex-column">
+      <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
 
-        <form class="header__search">
-          <div class="header__search-wrapper">
-            <input class="header__search-input" type="text">
-            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25"
-                alt=""></button>
-          </div>
-          <button class="header__search-btn js_search_btn to-sm" type="button"></button>
-        </form>
+      <div class="form-group">
+        <input type="text" name="name" class="callback__input" placeholder="Имя">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="callback__input" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" class="callback__input" placeholder="Телефон">
+      </div>
+      <div class="form-group">
+        <textarea name="message" class="callback__input callback__input--textarea" rows="10"
+          placeholder="Сообщение"></textarea>
+      </div>
+      <button type="submit" class="callback__submit btn">Отправить</button>
+    </form>
+  </section>
 
-        <a href="./cart.html" class="header__cart">
-          <img src="./img/cart.png" width="34" height="32" alt="">
-          <p class="header__cart-count">1</p>
+  <section class="contacts">
+    <ul class="contacts__list">
+      <li>
+        <a class="contacts__link" href="">
+          <img src="./img/phone.png" alt="">
+          +7(495)106-57-69
         </a>
+      </li>
+      <li>
+        <a class="contacts__link" href="">
+          <img src="./img/whatsapp.png" alt="">
+          WhatsApp
+        </a>
+      </li>
+      <li>
+        <a class="contacts__link" href="">
+          <img src="./img/telegram.png" alt="">
+          Telegram
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contacts-map">
+    <h2 class="contacts-map__title h2">Доставка</h2>
+
+    <p class="contacts-map__text">Осуществляется по всей территории России.</p>
+
+    <img class="contacts-map__img" src="./img/map.webp" alt="">
+  </section>
+
+  <footer class="footer order-2">
+    <a href="/" class="footer__logo">
+      <img src="./img/logo_white.png" width="159" height="89" alt="">
+    </a>
+
+    <div class="footer__wrapper">
+      <div class="d-flex flex-column footer__buyers">
+        <p class="footer__caption">Покупателям</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Вопрос-ответ</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Доставка</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Самовывоз</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Оплата</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Возврат и обмен</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Акции</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Новости</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex flex-column footer__catalog from-xs">
+        <p class="footer__caption">Каталог</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Фены Dyson Supersonic</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Подарочная коллекция</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Специальное предложение</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex flex-column footer__company from-xs">
+        <p class="footer__caption">Компания</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">О нас</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Контакты</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Сотрудничество</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Карта сайта</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="d-flex flex-column footer__policy">
+        <p class="footer__caption from-xs">Правовая информация</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item from-xs">
+            <a href="#" class="footer__link">Регистрация устройства</a>
+          </li>
+          <li class="footer__menu-item from-xs">
+            <a href="#" class="footer__link">Условия и положения</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+          </li>
+          <li class="footer__menu-item from-xs">
+            <a href="#" class="footer__link">Оферта</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex flex-column footer__social">
+        <p class="footer__caption">Связаться с нами</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="tel:+74951065769" class="footer__link">+74951065769</a>
+          </li>
+          <li class="footer__menu-item d-flex">
+            <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
+            <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex flex-column footer__payment">
+        <p class="footer__caption from-xs">Принимаем к оплате</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item d-flex">
+            <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="67" height="51" alt=""></a>
+            <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="80" height="51" alt=""></a>
+            <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="170" height="51" alt=""></a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
 
-  <main class="main d-flex flex-column">
-    <section class="callback callback--contacts">
-      <h2 class="callback__title h2">Связаться с нами</h2>
+    <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
+  </footer>
+</main>
 
-      <form class="callback__form d-flex flex-column">
-        <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
-
-        <div class="form-group">
-          <input type="text" name="name" class="callback__input" placeholder="Имя">
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" class="callback__input" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <input type="text" name="phone" class="callback__input" placeholder="Телефон">
-        </div>
-        <div class="form-group">
-          <textarea name="message" class="callback__input callback__input--textarea" rows="10"
-            placeholder="Сообщение"></textarea>
-        </div>
-        <button type="submit" class="callback__submit btn">Отправить</button>
-      </form>
-    </section>
-
-    <section class="contacts">
-      <ul class="contacts__list">
-        <li>
-          <a class="contacts__link" href="">
-            <img src="./img/phone.png" alt="">
-            +7(495)106-57-69
-          </a>
-        </li>
-        <li>
-          <a class="contacts__link" href="">
-            <img src="./img/whatsapp.png" alt="">
-            WhatsApp
-          </a>
-        </li>
-        <li>
-          <a class="contacts__link" href="">
-            <img src="./img/telegram.png" alt="">
-            Telegram
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="contacts-map">
-      <h2 class="contacts-map__title h2">Доставка</h2>
-
-      <p class="contacts-map__text">Осуществляется по всей территории России.</p>
-
-      <img class="contacts-map__img" src="./img/map.webp" alt="">
-    </section>
-
-    <footer class="footer order-2">
-      <a href="/" class="footer__logo">
-        <img src="./img/logo_white.png" width="159" height="89" alt="">
-      </a>
-
-      <div class="footer__wrapper">
-        <div class="d-flex flex-column footer__buyers">
-          <p class="footer__caption">Покупателям</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Вопрос-ответ</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Доставка</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Самовывоз</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Оплата</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Возврат и обмен</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Акции</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Новости</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex flex-column footer__catalog from-xs">
-          <p class="footer__caption">Каталог</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Фены Dyson Supersonic</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Подарочная коллекция</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Специальное предложение</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex flex-column footer__company from-xs">
-          <p class="footer__caption">Компания</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">О нас</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Контакты</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Сотрудничество</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Карта сайта</a>
-            </li>
-          </ul>
-
-        </div>
-        <div class="d-flex flex-column footer__policy">
-          <p class="footer__caption from-xs">Правовая информация</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Регистрация устройства</a>
-            </li>
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Условия и положения</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Политика конфиденциальности</a>
-            </li>
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Оферта</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex flex-column footer__social">
-          <p class="footer__caption">Связаться с нами</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="tel:+74951065769" class="footer__link">+74951065769</a>
-            </li>
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex flex-column footer__payment">
-          <p class="footer__caption from-xs">Принимаем к оплате</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="67" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="80" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="170" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
-    </footer>
-  </main>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/script.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/OwlCarousel/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 
 </html>

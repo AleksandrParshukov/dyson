@@ -1,181 +1,179 @@
 .catalog-select {
-  position: relative;
+	position: relative;
 
-  @include xs {
-    position: static;
-  }
+	&__caption {
+		font-size: calc(100vw * (15 / 1920));
+		line-height: 2.433;
+		text-align: center;
+		color: $white;
+		cursor: pointer;
+		transition: color 0.25s ease;
+		display: flex;
+		align-items: center;
 
-  &__caption {
-    font-size: calc(100vw * (18 / 1920));
-    line-height: 2.433;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.25s ease;
-    display: flex;
-    align-items: center;
+		> svg {
+			transition: rotate 0.3s ease;
+			margin-left: 5px;
+		}
 
-    &::after {
-      content: "";
-      width: calc(100vw * (12 / 1920));
-      height: calc(100vw * (10 / 1920));
-      background: transparent url('../img/catalog-select_chevron.png') no-repeat center;
-      background-size: contain;
-      margin-left: 0.5em;
+		&:not(.collapsed) {
+			> svg {
+				rotate: -180deg;
+			}
+		}
 
-      @include xl {
-        width: calc(100vw * (12 / $xl));
-        height: calc(100vw * (10 / $xl));
-      }
+		&:hover {
+			color: $special;
+		}
+	}
 
-      @include lg {
-        width: calc(100vw * (10 / $lg));
-        height: calc(100vw * (8 / $lg));
-      }
-    }
+	&__list-wrapper {
+		position: absolute;
+		top: 100%;
+		left: -1.75em;
+		z-index: 1000;
+	}
 
-    &:hover {
-      color: $special;
-    }
+	&__list {
+		color: #2b2b2b;
+		padding: 1.5em 1.75em;
+		background-color: $white;
+		box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
+	}
 
-    @include xl {
-      font-size: calc(100vw * (18 / $xl));
-    }
+	&__item {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 2.5;
+		text-align: center;
+		min-width: max-content;
+		width: 100%;
+		border-bottom: 1px solid #e3e3e3;
+		position: relative;
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
-  }
+		&:last-child {
+			border: none;
+		}
 
-  &__btn {
-    width: calc(100vw * (25 / $sm));
-    height: calc(100vw * (25 / $sm));
-    background: transparent url('../img/cross.png') no-repeat center;
-    background-size: 100% auto;
-    display: flex;
-    align-items: center;
-  
-    &.collapsed {
-      background-image: url('../img/burger.png');
-    }
+		&::after {
+			content: '';
+			width: 105%;
+			height: calc(100vw * (3 / 1920));
+			background-color: $special;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			opacity: 0;
+		}
 
-    @include sm {
-      width: calc(100vw * (25 / $sm));
-      height: calc(100vw * (25 / $sm));
-    }
+		&:hover a,
+		&.active a {
+			color: $special;
+			transition: all 0.25s ease;
+		}
 
-    @include xs {
-      width: calc(100vw * (25 / $xs-base));
-      height: calc(100vw * (25 / $xs-base));
-    }
-  }
+		&:hover::after,
+		&.active::after {
+			opacity: 1;
+			transition: opacity 0.25s ease;
+		}
+	}
+}
 
-  &__list-wrapper {
-    position: absolute;
-    top: 100%;
-    left: -1.75em;
-    z-index: 1000;
+@include xl {
+	.catalog-select {
+		&__caption {
+			font-size: calc(100vw * (15 / $xl));
+		}
 
-    @include sm {
-      top: 0;
-      left: auto;
-      right: 110%;
-    }
+		&__item {
+			font-size: calc(100vw * (20 / $xl));
 
-    @include xs {
-      top: calc(100vw * (80 / $xs-base));
-      left: 0;
-      right: 0;
-    }
-  }
+			&::after {
+				height: calc(100vw * (3 / $xl));
+			}
+		}
+	}
+}
 
-  &__list {
-    color: #2b2b2b;
-    padding: 1.5em 1.75em;
-    background-color: $white;
-    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
+@include lg {
+	.catalog-select {
+		&__caption {
+			font-size: calc(100vw * (15 / $lg));
+		}
 
-    @include sm {
-      width: calc(100vw * (360 / $sm));
-      padding-inline: calc(100vw * (20 / $sm));
-      padding-block: 0;
-    }
+		&__item {
+			font-size: calc(100vw * (18 / $lg));
 
-    @include xs {
-      width: 100%;
-      padding-inline: calc(100vw * (20 / $xs-base));
-      position: absolute;
-    }
-  }
+			&::after {
+				height: calc(100vw * (3 / $lg));
+			}
+		}
+	}
+}
 
-  &__item {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 2.5;
-    min-width: max-content;
-    width: 100%;
-    border-bottom: 1px solid #e3e3e3;
-    position: relative;
+@include sm {
+	.catalog-select {
+		&__list-wrapper {
+			top: 0;
+			left: auto;
+			right: 110%;
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-    }
+		&__list {
+			width: calc(100vw * (360 / $sm));
+			padding-inline: calc(100vw * (20 / $sm));
+			padding-block: 0;
+		}
 
-    @include lg {
-      font-size: calc(100vw * (18 / $lg));
-    }
+		&__item {
+			font-size: calc(100vw * (18 / $sm));
+			line-height: 1.2;
+			width: 100%;
+			padding-block: calc(100vw * (20 / $sm));
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: 1.2;
-      width: 100%;
-      padding-block: calc(100vw * (20 / $sm));
-      display: flex;
-      justify-content: center;
-      align-items: center;
+			&::after {
+				content: none;
+			}
+		}
+	}
+}
 
-      &:last-child {
-        border: none;
-      }
-    }
+@include xs {
+	.catalog-select {
+		position: static;
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-      padding-block: calc(100vw * (20 / $xs-base));
-    }
+		&__btn {
+			width: calc(100vw * (18 / $xs-base));
+			aspect-ratio: 1 / 1;
+			background: transparent url('../img/cross.png') no-repeat center;
+			background-size: 100% auto;
+			display: flex;
+			align-items: center;
 
-    &::after {
-      content: "";
-      width: 105%;
-      height: calc(100vw * (3 / 1920));
-      background-color: $special;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      opacity: 0;
+			&.collapsed {
+				background-image: url('../img/burger.png');
+			}
+		}
 
-      @include xl {
-        height: calc(100vw * (3 / $xl));
-      }
+		&__list-wrapper {
+			top: calc(100vw * (47 / $xs-base));
+			left: 0;
+			right: 0;
+			transition: all 0.3s ease;
+		}
 
-      @include lg {
-        height: calc(100vw * (3 / $lg));
-      }
+		&__list {
+			width: 100%;
+			padding-inline: calc(100vw * (20 / $xs-base));
+			position: absolute;
+		}
 
-      @include sm {
-        content: none;
-      }
-
-    }
-
-    &:hover a,
-    &.active a {
-      color: $special;
-      transition: all 0.25s ease;
-    }
-
-    &:hover::after,
-    &.active::after {
-      opacity: 1;
-      transition: opacity 0.25s ease; 
-    }
-  }
+		&__item {
+			font-size: calc(100vw * (18 / $xs-base));
+			padding-block: calc(100vw * (20 / $xs-base));
+		}
+	}
 }

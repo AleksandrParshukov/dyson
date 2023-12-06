@@ -181,19 +181,7 @@
       </nav>
     </section>
 
-    <section class="callback">
-      <h2 class="callback__title h2">Связаться с нами</h2>
-
-      <form class="callback__form js_contact_form d-flex flex-column">
-        <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
-
-        <input type="text" name="name" class="callback__input" placeholder="Имя">
-        <input type="email" name="email" class="callback__input" placeholder="Email">
-        <input type="text" name="phone" class="callback__input" placeholder="Телефон">
-        <textarea name="message" class="callback__input callback__input--textarea" rows="10" placeholder="Сообщение"></textarea>
-        <button type="submit" class="callback__submit btn">Отправить</button>
-      </form>
-    </section>
+    @@include('./_callback.html', { "class": "" })
 
     <section class="quote">
       <div class="quote__wrapper">

@@ -1,119 +1,139 @@
 .contacts {
-  padding-block: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
-  background-color: $black;
+	padding-block: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
+	background-color: $black;
 
-  &__list {
-    display: flex;
-    gap: calc(100vw * (60 / 1920));
-    justify-content: center;
-  }
+	&__list {
+		display: flex;
+		gap: calc(100vw * (60 / 1920));
+		justify-content: center;
+	}
 
-  &__link {
-    font-size: calc(100vw * (30 / 1920));
-    line-height: calc(100vw * (32 / 1920));
-    color: $white;
-    display: flex;
-    gap: calc(100vw * (10 / 1920));
-    align-items: center;
+	&__link {
+		font-size: calc(100vw * (30 / 1920));
+		line-height: calc(100vw * (32 / 1920));
+		color: $white;
+		display: flex;
+		gap: calc(100vw * (10 / 1920));
+		align-items: center;
 
-    > img {
-      width: calc(100vw * (60 / 1920));
-      aspect-ratio: 1 / 1;
-      flex-shrink: 0;
-    }
-  }
+		> img {
+			width: calc(100vw * (60 / 1920));
+			aspect-ratio: 1 / 1;
+			flex-shrink: 0;
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.contacts {
+		padding-block: 20px 40px;
+
+		&__list {
+			gap: 60px;
+		}
+
+		&__link {
+			font-size: 30px;
+			line-height: 32px;
+			gap: 10px;
+
+			> img {
+				width: 60px;
+			}
+		}
+	}
 }
 
 @include xl {
-  .contacts {
-    padding-block: calc(100vw * (20 / $xl)) calc(100vw * (40 / $xl));
+	.contacts {
+		padding-block: calc(100vw * (20 / $xl)) calc(100vw * (40 / $xl));
 
-    &__list {
-      gap: calc(100vw * (60 / $xl));
-    }
+		&__list {
+			gap: calc(100vw * (60 / $xl));
+		}
 
-    &__link {
-      font-size: calc(100vw * (30 / $xl));
-      line-height: calc(100vw * (32 / $xl));
-      gap: calc(100vw * (10 / $xl));
+		&__link {
+			font-size: calc(100vw * (30 / $xl));
+			line-height: calc(100vw * (32 / $xl));
+			gap: calc(100vw * (10 / $xl));
 
-      > img {
-        width: calc(100vw * (60 / $xl));
-      }
-    }
-  }
+			> img {
+				width: calc(100vw * (60 / $xl));
+			}
+		}
+	}
 }
 
 @include lg {
-  .contacts {
-    padding-block: calc(100vw * (15 / $lg)) calc(100vw * (30 / $lg));
+	.contacts {
+		padding-block: calc(100vw * (15 / $lg)) calc(100vw * (30 / $lg));
 
-    &__list {
-      gap: calc(100vw * (40 / $lg));
-    }
+		&__list {
+			gap: calc(100vw * (40 / $lg));
+		}
 
-    &__link {
-      font-size: calc(100vw * (24 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-      gap: calc(100vw * (10 / $lg));
+		&__link {
+			font-size: calc(100vw * (24 / $lg));
+			line-height: calc(100vw * (26 / $lg));
+			gap: calc(100vw * (10 / $lg));
 
-      > img {
-        width: calc(100vw * (50 / $lg));
-      }
-    }
-  }
+			> img {
+				width: calc(100vw * (50 / $lg));
+			}
+		}
+	}
 }
 
 @include sm {
-  .contacts {
-    padding-block: calc(100vw * (15 / $sm)) calc(100vw * (30 / $sm));
-    background-color: $black;
+	.contacts {
+		padding-block: calc(100vw * (15 / $sm)) calc(100vw * (30 / $sm));
+		background-color: $black;
 
-    &__list {
-      gap: calc(100vw * (35 / $sm));
-    }
+		&__list {
+			gap: calc(100vw * (35 / $sm));
+		}
 
-    &__link {
-      font-size: calc(100vw * (20 / $sm));
-      line-height: calc(100vw * (22 / $sm));
-      gap: calc(100vw * (10 / $sm));
+		&__link {
+			font-size: calc(100vw * (20 / $sm));
+			line-height: calc(100vw * (22 / $sm));
+			gap: calc(100vw * (10 / $sm));
 
-      > img {
-        width: calc(100vw * (45 / $sm));
-      }
-    }
-  }
+			> img {
+				width: calc(100vw * (45 / $sm));
+			}
+		}
+	}
 }
 
 @include xs {
-  .contacts {
-    padding-block: 0 calc(100vw * (20 / $xs-base));
-    padding-inline: calc(100vw * (15 / $xs-base));
-    background-color: $black;
+	.contacts {
+		padding-block: 0 calc(100vw * (20 / $xs-base));
+		padding-inline: calc(100vw * (15 / $xs-base));
+		background-color: $black;
 
-    &__list {
-      display: flex;
-      flex-direction: column;
-      gap: calc(100vw * (20 / $xs-base));
-      align-items: center;
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: calc(100vw * (20 / $xs-base));
+			align-items: center;
 
-      > li {
-        width: max-content;
-      }
-    }
+			> li {
+				width: max-content;
+			}
+		}
 
-    &__link {
-      font-size: calc(100vw * (18 / $xs-base));
-      line-height: calc(100vw * (20 / $xs-base));
-      color: $white;
-      width: max-content;
-      display: flex;
-      gap: calc(100vw * (10 / $xs-base));
-      align-items: center;
+		&__link {
+			font-size: calc(100vw * (18 / $xs-base));
+			line-height: calc(100vw * (20 / $xs-base));
+			color: $white;
+			width: max-content;
+			display: flex;
+			gap: calc(100vw * (10 / $xs-base));
+			align-items: center;
 
-      > img {
-        width: calc(100vw * (30 / $xs-base));
-      }
-    }
-  }
+			> img {
+				width: calc(100vw * (30 / $xs-base));
+			}
+		}
+	}
 }

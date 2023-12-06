@@ -1,169 +1,211 @@
 .delivery-sc {
-  color: $gray;
-  padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
-  background-color: $white;
-  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
-  z-index: 1;
+	color: $gray;
+	padding: calc(100vw * (70 / 1920)) calc(100vw * (100 / 1920));
+	background-color: $white;
+	box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.1);
+	z-index: 1;
 
-  &--light {
-    background-color: #f9f9f9;
-  }
+	&--light {
+		background-color: #f9f9f9;
+	}
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
-  }
+	&__title {
+		margin-bottom: calc(100vw * (50 / 1920));
+	}
 
-  @include lg {
-    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-  }
+	&__list {
+		width: max-content;
+		margin-inline: auto;
+		gap: calc(100vw * (100 / 1920));
+	}
 
-  @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
-  }
+	&__item {
+		text-align: center;
+		max-width: calc(100vw * (200 / 1920));
+	}
 
-  @include xs {
-    padding: calc(100vw * (40 / $xs-base)) 0 0;
-    background-color: $black;
-  }
+	&__img {
+		max-width: calc(100vw * (90 / 1920));
+		height: auto;
+		margin-bottom: auto;
+	}
 
-  &__title {
-    margin-bottom: calc(100vw * (50 / 1920));
+	&__name {
+		max-width: 100px;
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 1;
+		margin-block: calc(100vw * (20 / 1920)) calc(100vw * (12 / 1920));
+	}
 
-    @include xl {
-      margin-bottom: calc(100vw * (50 / $xl));
-    }
+	&__desc {
+		font-size: calc(100vw * (15 / 1920));
+		line-height: 1.3;
+	}
+}
 
-    @include lg {
-      margin-bottom: calc(100vw * (38 / $lg));
-    }
+@media (min-width: 1920px) {
+	.delivery-sc {
+		padding: 70px 100px;
 
-    @include sm {
-      margin-bottom: calc(100vw * (38 / $sm));
-    }
+		&__title {
+			margin-bottom: 50px;
+		}
 
-    @include xs {
-      margin-bottom: calc(100vw * (53 / $xs-base));
-      color: $white;
+		&__list {
+			gap: 100px;
+		}
 
-      & > span {
-        font-size: calc(100vw * (20 / $xs-base));
-      }
-    }
-  }
+		&__item {
+			max-width: 200px;
+		}
 
-  &__list {
-    width: max-content;
-    margin-inline: auto;
-    gap: calc(100vw * (100 / 1920));
+		&__img {
+			max-width: 90px;
+		}
 
-    @include xl {
-      gap: calc(100vw * (100 / $xl));
-    }
+		&__name {
+			font-size: 20px;
+			margin-block: 20px 12px;
+		}
 
-    @include lg {
-      gap: calc(100vw * (50 / $lg));
-    }
+		&__desc {
+			font-size: 15px;
+		}
+	}
+}
 
-    @include sm {
-      gap: calc(100vw * (25 / $sm));
-    }
+@include xl {
+	.delivery-sc {
+		padding: calc(100vw * (75 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (65 / $xl));
 
-    @include xs {
-      width: 100%;
-      padding: calc(100vw * (36 / $xs-base)) calc(100vw * (15 / $xs-base));
-      background-color: $white;
-      gap: calc(100vw * (10 / $xs-base));
-    }
-  }
+		&__title {
+			margin-bottom: calc(100vw * (50 / $xl));
+		}
 
-  &__item {
-    text-align: center;
-    max-width: calc(100vw * (200 / 1920));
+		&__list {
+			gap: calc(100vw * (100 / $xl));
+		}
 
-    @include xl {
-      max-width: calc(100vw * (200 / $xl));
-    }
+		&__item {
+			max-width: calc(100vw * (200 / $xl));
+		}
 
-    @include lg {
-      max-width: calc(100vw * (170 / $lg));
-    }
+		&__img {
+			max-width: calc(100vw * (90 / $xl));
+		}
 
-    @include sm {
-      max-width: calc(100vw * (160 / $sm));
-    }
+		&__name {
+			font-size: calc(100vw * (20 / $xl));
+			margin-block: calc(100vw * (20 / $xl)) calc(100vw * (12 / $xl));
+		}
 
-    @include xs {
-      max-width: calc(100vw * (150 / $xs-base));
-      margin-bottom: calc(100vw * (25 / $xs-base));
-    }
-  }
+		&__desc {
+			font-size: calc(100vw * (15 / $xl));
+		}
+	}
+}
 
-  &__img {
-    max-width: calc(100vw * (100 / 1920));
-    height: auto;
-    margin-bottom: auto;
+@include lg {
+	.delivery-sc {
+		padding: calc(100vw * (48 / $lg)) calc(100vw * (100 / $lg));
 
-    @include xl {
-      max-width: calc(100vw * (100 / $xl));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (38 / $lg));
+		}
 
-    @include lg {
-      max-width: calc(100vw * (65 / $lg));
-    }
+		&__list {
+			gap: calc(100vw * (50 / $lg));
+		}
 
-    @include sm {
-      max-width: calc(100vw * (60 / $sm));
-    }
+		&__item {
+			max-width: calc(100vw * (170 / $lg));
+		}
 
-    @include xs {
-      max-width: calc(100vw * (75 / $xs-base));
-    }
-  }
+		&__img {
+			max-width: calc(100vw * (80 / $lg));
+		}
 
-  &__name {
-    font-size: calc(100vw * (26 / 1920));
-    line-height: 1.3;
-    margin-block: calc(100vw * (40 / 1920)) calc(100vw * (16 / 1920));
+		&__name {
+			font-size: calc(100vw * (18 / $lg));
+			margin-block: calc(100vw * (12 / $lg));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (26 / $xl));
-      margin-block: calc(100vw * (26 / $xl)) calc(100vw * (26 / $xl));
-    }
+		&__desc {
+			font-size: calc(100vw * (14 / $lg));
+		}
+	}
+}
 
-    @include lg {
-      font-size: calc(100vw * (18 / $lg));
-      margin-block: calc(100vw * (26 / $lg)) calc(100vw * (26 / $lg));
-    }
+@include sm {
+	.delivery-sc {
+		padding: calc(100vw * (55 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (35 / $sm));
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      margin-block: calc(100vw * (26 / $sm)) calc(100vw * (26 / $sm));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (38 / $sm));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-      margin-block: calc(100vw * (26 / $xs-base)) calc(100vw * (26 / $xs-base));
-    }
-  }
+		&__list {
+			gap: calc(100vw * (25 / $sm));
+		}
 
-  &__desc {
-    font-size: calc(100vw * (18 / 1920));
-    line-height: 1.3;
+		&__item {
+			max-width: calc(100vw * (160 / $sm));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (18 / $xl));
-    }
+		&__img {
+			max-width: calc(100vw * (80 / $sm));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
+		&__name {
+			font-size: calc(100vw * (15 / $sm));
+			margin-block: calc(100vw * (12 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (14 / $sm));
-    }
+		&__desc {
+			font-size: calc(100vw * (13 / $sm));
+		}
+	}
+}
 
-    @include xs {
-      font-size: calc(100vw * (14 / $xs-base));
-    }
-  }
+@include xs {
+	.delivery-sc {
+		padding: calc(100vw * (40 / $xs-base)) 0 0;
+		background-color: $black;
+
+		&__title {
+			margin-bottom: calc(100vw * (53 / $xs-base));
+			color: $white;
+
+			& > span {
+				font-size: calc(100vw * (20 / $xs-base));
+			}
+		}
+
+		&__list {
+			width: 100%;
+			padding: calc(100vw * (36 / $xs-base)) calc(100vw * (15 / $xs-base));
+			background-color: $white;
+			gap: calc(100vw * (10 / $xs-base));
+		}
+
+		&__item {
+			max-width: calc(100vw * (150 / $xs-base));
+			margin-bottom: calc(100vw * (25 / $xs-base));
+			margin-inline: auto;
+			flex-grow: 1;
+		}
+
+		&__img {
+			max-width: calc(100vw * (80 / $xs-base));
+		}
+
+		&__name {
+			font-size: calc(100vw * (15 / $xs-base));
+			margin-block: calc(100vw * (10 / $xs-base));
+		}
+
+		&__desc {
+			font-size: calc(100vw * (13 / $xs-base));
+		}
+	}
 }

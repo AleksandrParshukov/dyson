@@ -119,28 +119,7 @@
       </ul>
     </section>
 
-    <section class="callback">
-      <h2 class="callback__title h2">Связаться с нами</h2>
-
-      <form class="callback__form d-flex flex-column">
-        <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
-
-        <div class="form-group">
-          <input type="text" name="name" class="callback__input" placeholder="Имя">
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" class="callback__input" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <input type="text" name="phone" class="callback__input" placeholder="Телефон">
-        </div>
-        <div class="form-group">
-          <textarea name="message" class="callback__input callback__input--textarea" rows="10"
-            placeholder="Сообщение"></textarea>
-        </div>
-        <button type="submit" class="callback__submit btn">Отправить</button>
-      </form>
-    </section>
+    @@include('./_callback.html', { "class": "" })
 
     <section class="quote">
       <div class="quote__wrapper">

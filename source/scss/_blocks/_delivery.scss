@@ -1,149 +1,262 @@
 .delivery {
-  padding: calc(100vw * (100 / 1920)) calc(100vw * (450 / 1920)) calc(100vw * (50 / 1920));
-  background-color: #ffffff;
-  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
-  z-index: 1;
+	padding: calc(100vw * (100 / 1920)) calc(100vw * (450 / 1920)) calc(100vw * (50 / 1920));
+	background-color: #ffffff;
+	box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.1);
+	z-index: 1;
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (200 / $xl)) calc(100vw * (50 / $xl));
-  }
+	&__title {
+		margin-bottom: calc(100vw * (70 / 1920));
+	}
 
-  @include lg {
-    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-  }
+	&__list {
+		margin-top: calc(100vw * (70 / 1920));
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: calc(100vw * (55 / 1920));
+	}
 
-  @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
-  }
+	&__item {
+		display: grid;
+		grid-template-columns: calc(100vw * (147 / 1920)) 1fr;
+		grid-template-rows: min-content min-content;
+		gap: calc(100vw * (20 / 1920)) calc(100vw * (64 / 1920));
+	}
 
-  @include xs {
-    padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base));
-  }
+	&__img {
+		width: calc(100vw * (125 / 1920));
+		height: calc(100vw * (141 / 1920));
+		margin: auto;
+		background: transparent no-repeat center / contain;
+		grid-row: span 2;
 
-  
-  &__title {
-    margin-bottom: calc(100vw * (70 / 1920));
+		&--msk {
+			background-image: url('../img/delivery_msk_def.webp');
 
-    @include xl {
-      margin-bottom: calc(100vw * (60 / $xl));
-    }
+			&:hover {
+				background-image: url('../img/delivery_msk_hover.webp');
+			}
+		}
 
-    @include lg {
-      margin-bottom: calc(100vw * (45 / $lg));
-    }
+		&--mo {
+			background-image: url('../img/delivery_mo_def.webp');
 
-    @include sm {
-      margin-bottom: calc(100vw * (40 / $sm));
-    }
+			&:hover {
+				background-image: url('../img/delivery_mo_hover.webp');
+			}
+		}
 
-    @include xs {
-      margin-bottom: calc(100vw * (30 / $xs-base));
-    }
-  }
+		&--rf {
+			width: calc(100vw * (147 / 1920));
+			height: calc(100vw * (161 / 1920));
+			background-image: url('../img/delivery_rf_def.webp');
 
-  &__list {
-    margin-top: calc(100vw * (35 / 1920));
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    gap: calc(100vw * (55 / 1920));
+			&:hover {
+				background-image: url('../img/delivery_rf_hover.webp');
+			}
+		}
+	}
 
-    @include xl {
-      margin-top: calc(100vw * (30 / $xl));
-      gap: calc(100vw * (50 / $xl));
-    }
+	&__caption {
+		font-size: calc(100vw * (30 / 1920));
+		line-height: calc(100vw * (26 / 1920));
+		color: $special;
+	}
 
-    @include lg {
-      margin-top: calc(100vw * (25 / $lg));
-      gap: calc(100vw * (40 / $lg));
-    }
+	&__text {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: calc(100vw * (26 / 1920));
+	}
 
-    @include sm {
-      margin-top: calc(100vw * (25 / $sm));
-      gap: calc(100vw * (30 / $sm));
-    }
+	&__link {
+		margin-top: calc(100vw * (100 / 1920));
+		margin-inline: auto;
+	}
+}
 
-    @include xs {
-      margin-top: calc(100vw * (20 / $xs-base));
-      gap: calc(100vw * (20 / $xs-base));
-    }
-  }
+@media (min-width: 1920px) {
+	.delivery {
+		padding: 100px 0 50px;
+		display: grid;
+		grid-template-columns: 1fr [content-start] 1020px [content-end] 1fr;
 
-  &__caption {
-    font-size: calc(100vw * (30 / 1920));
-    line-height: calc(100vw * (26 / 1920));
-    color: $special;
-    margin-bottom: calc(100vw * (35 / 1920));
+		> * {
+			grid-column: content;
+		}
 
-    @include xl {
-      font-size: calc(100vw * (30 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-      margin-bottom: calc(100vw * (30 / $xl));
-    }
+		&__title {
+			margin-bottom: 70px;
+		}
 
-    @include lg {
-      font-size: calc(100vw * (30 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-      margin-bottom: calc(100vw * (25 / $lg));
-    }
+		&__list {
+			margin-top: 70px;
+			gap: 55px;
+		}
 
-    @include sm {
-      font-size: calc(100vw * (26 / $sm));
-      line-height: calc(100vw * (24 / $sm));
-      margin-bottom: calc(100vw * (25 / $sm));
-    }
+		&__item {
+			grid-template-columns: 147px 1fr;
+			gap: 20px 64px;
+		}
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-      margin-bottom: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__img {
+			width: 125px;
+			height: 141px;
 
-  &__text {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: calc(100vw * (26 / 1920));
+			&--rf {
+				width: 147px;
+				height: 161px;
+			}
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-    }
+		&__caption {
+			font-size: 30px;
+			line-height: 26px;
+		}
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-    }
+		&__text {
+			font-size: 20px;
+			line-height: 26px;
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (24 / $sm));
-    }
+		&__link {
+			margin-top: 100px;
+		}
+	}
+}
 
-    @include xs {
-      font-size: calc(100vw * (14 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-    }
-  }
+@include xl {
+	.delivery {
+		padding: calc(100vw * (100 / $xl)) calc(100vw * (200 / $xl)) calc(100vw * (50 / $xl));
 
-  &__link {
-    margin-top: calc(100vw * (100 / 1920));
-    margin-inline: auto;
-    
+		&__title {
+			margin-bottom: calc(100vw * (60 / $xl));
+		}
 
-    @include xl {
-      margin-top: calc(100vw * (100 / $xl));
-    }
+		&__list {
+			margin-top: calc(100vw * (70 / $xl));
+			gap: calc(100vw * (50 / $xl));
+		}
 
-    @include lg {
-      margin-top: calc(100vw * (70 / $lg));
-    }
+		&__item {
+			grid-template-columns: calc(100vw * (147 / $xl)) 1fr;
+			gap: calc(100vw * (20 / $xl)) calc(100vw * (42 / $xl));
+		}
 
-    @include sm {
-      margin-top: calc(100vw * (50 / $sm));
-    }
+		&__caption {
+			font-size: calc(100vw * (30 / $xl));
+			line-height: calc(100vw * (26 / $xl));
+		}
 
-    @include xs {
-      margin-top: calc(100vw * (30 / $xs-base));
-    }
-  }
+		&__text {
+			font-size: calc(100vw * (20 / $xl));
+			line-height: calc(100vw * (26 / $xl));
+		}
+
+		&__link {
+			margin-top: calc(100vw * (100 / $xl));
+		}
+	}
+}
+
+@include lg {
+	.delivery {
+		padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+
+		&__title {
+			margin-bottom: calc(100vw * (45 / $lg));
+		}
+
+		&__list {
+			margin-top: calc(100vw * (40 / $lg));
+			gap: calc(100vw * (40 / $lg));
+		}
+
+		&__item {
+			grid-template-columns: calc(100vw * (147 / $lg)) 1fr;
+			gap: calc(100vw * (16 / $lg)) calc(100vw * (24 / $lg));
+		}
+
+		&__caption {
+			font-size: calc(100vw * (30 / $lg));
+			line-height: calc(100vw * (26 / $lg));
+		}
+
+		&__text {
+			font-size: calc(100vw * (20 / $lg));
+			line-height: calc(100vw * (26 / $lg));
+		}
+
+		&__link {
+			margin-top: calc(100vw * (70 / $lg));
+		}
+	}
+}
+
+@include sm {
+	.delivery {
+		padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
+
+		&__title {
+			margin-bottom: calc(100vw * (40 / $sm));
+		}
+
+		&__list {
+			margin-top: calc(100vw * (35 / $sm));
+			gap: calc(100vw * (30 / $sm));
+		}
+
+		&__item {
+			grid-template-columns: calc(100vw * (147 / $sm)) 1fr;
+			gap: calc(100vw * (12 / $sm)) calc(100vw * (56 / $sm));
+		}
+
+		&__caption {
+			font-size: calc(100vw * (26 / $sm));
+			line-height: calc(100vw * (24 / $sm));
+		}
+
+		&__text {
+			font-size: calc(100vw * (18 / $sm));
+			line-height: calc(100vw * (24 / $sm));
+		}
+
+		&__link {
+			margin-top: calc(100vw * (50 / $sm));
+		}
+	}
+}
+
+@include xs {
+	.delivery {
+		padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base));
+
+		&__title {
+			margin-bottom: calc(100vw * (30 / $xs-base));
+		}
+
+		&__list {
+			margin-top: calc(100vw * (20 / $xs-base));
+			gap: calc(100vw * (20 / $xs-base));
+		}
+
+		&__item {
+			grid-template-columns: 100%;
+			gap: calc(100vw * (16 / $xs-base));
+		}
+
+		&__caption {
+			margin-inline: auto;
+			font-size: calc(100vw * (30 / $xs-base));
+			line-height: calc(100vw * (30 / $xs-base));
+		}
+
+		&__text {
+			font-size: calc(100vw * (15 / $xs-base));
+			line-height: calc(100vw * (18 / $xs-base));
+		}
+
+		&__link {
+			margin-top: calc(100vw * (30 / $xs-base));
+		}
+	}
 }

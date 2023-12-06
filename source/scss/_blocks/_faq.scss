@@ -1,253 +1,372 @@
 .faq {
-  padding: calc(100vw * (100 / 1920)) calc(100vw * (165 / 1920)) calc(100vw * (50 / 1920));
-  background-color: #f1f1f1;
-  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
-  z-index: 1;
+	padding: 0 0 calc(100vw * (50 / 1920));
+	background-color: #f1f1f1;
+	display: grid;
+	grid-template-columns:
+		[full-width-start]
+		calc(100vw * (155 / 1920))
+		[content-start] 1fr [content-end]
+		calc(100vw * (155 / 1920))
+		[full-width-end];
+	z-index: 1;
 
-  &--white {
-    background-color: $white;
-  }
+	&--sc {
+		box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.1);
+		padding-top: calc(100vw * (100 / 1920));
+	}
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
-  }
+	&--white {
+		background-color: $white;
+	}
 
-  @include lg {
-    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-  }
+	> * {
+		grid-column: content;
+	}
 
-  @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
-  }
+	> picture {
+		grid-column: full-width;
+	}
 
-  @include xs {
-    padding: calc(100vw * (35 / $xs-base)) 0;
-    background-color: $black;
-  }
+	&__breadcrumbs {
+		background-color: $white;
+	}
 
-  &__top-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: calc(100vw * (75 / 1920));
+	&__top-img {
+		width: 100%;
+		height: auto;
+		margin-bottom: calc(100vw * (75 / 1920));
+	}
 
-    @include xl {
-      margin-bottom: calc(100vw * (70 / $xl));
-    }
+	&__title {
+		margin-bottom: calc(100vw * (30 / 1920));
+	}
 
-    @include lg {
-      margin-bottom: calc(100vw * (50 / $lg));
-    }
+	&__list {
+		align-items: center;
+		gap: calc(100vw * (20 / 1920));
+	}
 
-    @include sm {
-      margin-bottom: calc(100vw * (45 / $sm));
-    }
+	&__item {
+		width: 100%;
+		padding: calc(100vw * (30 / 1920)) calc(100vw * (80 / 1920));
+		background-color: $white;
+		border: 1px solid rgb(232, 232, 232);
+		border-radius: calc(100vw * (25 / 1920));
+		cursor: pointer;
 
-    @include xs {
-      margin-bottom: calc(100vw * (25 / $xs-base));
-    }
-  }
+		&.collapsed .faq__question {
+			color: $black;
 
-  &__title {
-    margin-bottom: calc(100vw * (30 / 1920));
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
 
-    @include xl {
-      margin-bottom: calc(100vw * (45 / $xl));
-    }
+	&__question {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 1.25;
+		color: $special;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-    @include lg {
-      margin-bottom: calc(100vw * (22 / $lg));
-    }
+		&::after {
+			content: '';
+			width: calc(100vw * (29 / 1920));
+			height: calc(100vw * (14 / 1920));
+			background: transparent url('../img/faq_chevron.png') no-repeat center;
+			background-size: contain;
+			margin-left: 0.5em;
+			transition: transform 0.3s ease;
+		}
+	}
 
-    @include sm {
-      margin-bottom: calc(100vw * (22 / $sm));
-    }
+	&__answer {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 1.25;
+		color: $gray;
+		overflow: hidden;
+		// padding-top: calc(100vw * (25 / 1920));
+	}
 
-    @include xs {
-      color: $white;
-      margin-bottom: calc(100vw * (30 / $xs-base));
-    }
-  }
+	&__link {
+		margin-top: calc(100vw * (60 / 1920));
+		margin-inline: auto;
+	}
+}
 
-  &__list {
-    align-items: center;
-    gap: calc(100vw * (20 / 1920));
+@media (min-width: 1920px) {
+	.faq {
+		padding: 0 0 50px;
+		grid-template-columns:
+			1fr
+			[full-width-start]
+			155px
+			[content-start] 1610px [content-end]
+			155px
+			[full-width-end]
+			1fr;
 
-    @include xl {
-      gap: calc(100vw * (29 / $xl));
-    }
+		&--sc {
+			padding-top: 100px;
+		}
 
-    @include lg {
-      gap: calc(100vw * (15 / $lg));
-    }
+		&__top-img {
+			margin-bottom: 75px;
+		}
 
-    @include sm {
-      gap: calc(100vw * (15 / $sm));
-    }
+		&__title {
+			margin-bottom: 30px;
+		}
 
-    @include xs {
-      gap: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__list {
+			gap: 20px;
+		}
 
-  &__item {
-    width: 100%;
-    padding: calc(100vw * (30 / 1920)) calc(100vw * (80 / 1920));
-    background-color: $white;
-    border: 1px solid rgb(232, 232, 232);
-    border-radius: calc(100vw * (25 / 1920));
-    cursor: pointer;
+		&__item {
+			padding: 30px 80px;
+			border-radius: 25px;
+		}
 
-    @include xl {
-      padding: calc(100vw * (35 / $xl)) calc(100vw * (70 / $xl));
-      border-radius: calc(100vw * (25 / $xl));
-    }
+		&__question {
+			font-size: 20px;
 
-    @include lg {
-      padding: calc(100vw * (30 / $lg)) calc(100vw * (50 / $lg));
-      border-radius: calc(100vw * (25 / $lg));
-    }
+			&::after {
+				width: 29px;
+				height: 14px;
+			}
+		}
 
-    @include sm {
-      padding: calc(100vw * (35 / $sm)) calc(100vw * (60 / $sm));
-      border-radius: calc(100vw * (20 / $sm));
-    }
+		&__answer {
+			font-size: 20px;
+		}
 
-    @include xs {
-      padding: 0;
-      background-color: transparent;
-      border: none;
-      border-radius: 0;
-      display: flex;
-      flex-direction: column;
-      gap: calc(100vw * (20 / $xs-base));
-    }
+		&__link {
+			margin-top: 60px;
+		}
+	}
+}
 
-    &.collapsed .faq__question {
-      color: $black;
+@include xl {
+	.faq {
+		padding: 0 0 calc(100vw * (50 / $xl));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (122 / $xl))
+			[content-start] 1fr [content-end]
+			calc(100vw * (122 / $xl))
+			[full-width-end];
 
-      &::after {
-        transform: rotate(180deg);
-      }
+		&--sc {
+			padding-top: calc(100vw * (100 / $xl));
+		}
 
-      @include xs {
-      color: $white;
-      }
-    }
-  }
+		&__top-img {
+			margin-bottom: calc(100vw * (70 / $xl));
+		}
 
-  &__question {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.25;
-    color: $special;  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+		&__title {
+			margin-bottom: calc(100vw * (45 / $xl));
+		}
 
-    &::after {
-      content: "";
-      width: calc(100vw * (29 / 1920));
-      height: calc(100vw * (14 / 1920));
-      background: transparent url('../img/faq_chevron.png') no-repeat center;
-      background-size: contain;
-      margin-left: 0.5em;
-      transition: transform 0.3s ease;
+		&__list {
+			gap: calc(100vw * (29 / $xl));
+		}
 
-      @include xl {
-        width: calc(100vw * (29 / $xl));
-        height: calc(100vw * (14 / $xl));
-      }
+		&__item {
+			padding: calc(100vw * (35 / $xl)) calc(100vw * (70 / $xl));
+			border-radius: calc(100vw * (25 / $xl));
+		}
 
-      @include lg {
-        width: calc(100vw * (17 / $lg));
-        height: calc(100vw * (8 / $lg));
-      }
+		&__question {
+			font-size: calc(100vw * (20 / $xl));
 
-      @include sm {
-        width: calc(100vw * (17 / $sm));
-        height: calc(100vw * (8 / $sm));
-      }
+			&::after {
+				width: calc(100vw * (29 / $xl));
+				height: calc(100vw * (14 / $xl));
+			}
+		}
 
-      @include xs {
-        content: none;
-      }
-    }
+		&__answer {
+			font-size: calc(100vw * (20 / $xl));
+			// padding-top: calc(100vw * (25 / $xl));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-    }
+		&__link {
+			margin-top: calc(100vw * (60 / $xl));
+		}
+	}
+}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
+@include lg {
+	.faq {
+		padding: 0 0 calc(100vw * (35 / $lg));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (100 / $lg))
+			[content-start] 1fr [content-end]
+			calc(100vw * (100 / $lg))
+			[full-width-end];
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-    }
+		&--sc {
+			padding-top: calc(100vw * (76 / $lg));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (20 / $xs-base));
-      color: $white;
-      width: calc(100vw * (340 / $xs-base));
-      padding: calc(100vw * (18 / $xs-base)) calc(100vw * (16 / $xs-base)) calc(100vw * (18 / $xs-base)) calc(100vw * (26 / $xs-base));
-      margin-right: auto;
-      border-radius: 0 calc(100vw * (20 / $sm)) calc(100vw * (20 / $sm)) 0;
-      background-color: $special;
-    }
-  }
+		&__top-img {
+			margin-bottom: calc(100vw * (50 / $lg));
+		}
 
-  &__answer {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.25;
-    color: $gray;
-    overflow: hidden;
-    // padding-top: calc(100vw * (25 / 1920));
+		&__title {
+			margin-bottom: calc(100vw * (22 / $lg));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      // padding-top: calc(100vw * (25 / $xl));
-    }
+		&__list {
+			gap: calc(100vw * (15 / $lg));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-      // padding-top: calc(100vw * (18 / $lg));
-    }
+		&__item {
+			padding: calc(100vw * (30 / $lg)) calc(100vw * (50 / $lg));
+			border-radius: calc(100vw * (25 / $lg));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      // padding-top: calc(100vw * (20 / $lg));
-    }
+		&__question {
+			font-size: calc(100vw * (15 / $lg));
 
-    @include xs {
-      font-size: calc(100vw * (20 / $xs-base));
-      color: $white;
-      text-align: justify;
-      width: calc(100vw * (340 / $xs-base));
-      padding: calc(100vw * (18 / $xs-base)) calc(100vw * (26 / $xs-base)) calc(100vw * (18 / $xs-base)) calc(100vw * (16 / $xs-base));
-      margin-left: auto;
-      border-radius: calc(100vw * (20 / $sm)) 0 0 calc(100vw * (20 / $sm)) ;
-      background-color: #1b1b48;
-    }
-  }
+			&::after {
+				width: calc(100vw * (17 / $lg));
+				height: calc(100vw * (8 / $lg));
+			}
+		}
 
-  &__link {
-    margin-top: calc(100vw * (60 / 1920));
-    margin-inline: auto;
-    
+		&__answer {
+			font-size: calc(100vw * (15 / $lg));
+			// padding-top: calc(100vw * (18 / $lg));
+		}
 
-    @include xl {
-      margin-top: calc(100vw * (60 / $xl));
-    }
+		&__link {
+			margin-top: calc(100vw * (50 / $lg));
+		}
+	}
+}
 
-    @include lg {
-      margin-top: calc(100vw * (50 / $lg));
-    }
+@include sm {
+	.faq {
+		padding: 0 0 calc(100vw * (37 / $sm));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (25 / $sm))
+			[content-start] 1fr [content-end]
+			calc(100vw * (25 / $sm))
+			[full-width-end];
 
-    @include sm {
-      margin-top: calc(100vw * (40 / $lg));
-    }
+		&--sc {
+			padding-top: calc(100vw * (64 / $sm));
+		}
 
-    @include xs {
-      margin-top: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__top-img {
+			margin-bottom: calc(100vw * (45 / $sm));
+		}
+
+		&__title {
+			margin-bottom: calc(100vw * (22 / $sm));
+		}
+
+		&__list {
+			gap: calc(100vw * (15 / $sm));
+		}
+
+		&__item {
+			padding: calc(100vw * (35 / $sm)) calc(100vw * (60 / $sm));
+			border-radius: calc(100vw * (20 / $sm));
+		}
+
+		&__question {
+			font-size: calc(100vw * (18 / $sm));
+
+			&::after {
+				width: calc(100vw * (17 / $sm));
+				height: calc(100vw * (8 / $sm));
+			}
+		}
+
+		&__answer {
+			font-size: calc(100vw * (18 / $sm));
+			// padding-top: calc(100vw * (20 / $lg));
+		}
+
+		&__link {
+			margin-top: calc(100vw * (40 / $lg));
+		}
+	}
+}
+
+@include xs {
+	.faq {
+		padding: 0 0 calc(100vw * (35 / $xs-base));
+		background-color: $black;
+		grid-template-columns: [content-start] 100% [content-end];
+
+		&--sc {
+			padding-top: calc(100vw * (35 / $xs-base));
+		}
+
+		&__top-img {
+			margin-bottom: calc(100vw * (25 / $xs-base));
+		}
+
+		&__title {
+			color: $white;
+			margin-bottom: calc(100vw * (30 / $xs-base));
+		}
+
+		&__list {
+			gap: calc(100vw * (20 / $xs-base));
+		}
+
+		&__item {
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+			display: flex;
+			flex-direction: column;
+			gap: calc(100vw * (20 / $xs-base));
+
+			&.collapsed .faq__question {
+				color: $white;
+			}
+		}
+
+		&__question {
+			font-size: calc(100vw * (20 / $xs-base));
+			color: $white;
+			width: calc(100vw * (340 / $xs-base));
+			padding: calc(100vw * (18 / $xs-base)) calc(100vw * (16 / $xs-base)) calc(100vw * (18 / $xs-base))
+				calc(100vw * (26 / $xs-base));
+			margin-right: auto;
+			border-radius: 0 calc(100vw * (20 / $sm)) calc(100vw * (20 / $sm)) 0;
+			background-color: $special;
+
+			&::after {
+				content: none;
+			}
+		}
+
+		&__answer {
+			font-size: calc(100vw * (20 / $xs-base));
+			color: $white;
+			text-align: justify;
+			width: calc(100vw * (340 / $xs-base));
+			padding: calc(100vw * (18 / $xs-base)) calc(100vw * (26 / $xs-base)) calc(100vw * (18 / $xs-base))
+				calc(100vw * (16 / $xs-base));
+			margin-left: auto;
+			border-radius: calc(100vw * (20 / $sm)) 0 0 calc(100vw * (20 / $sm));
+			background-color: #1b1b48;
+		}
+
+		&__link {
+			margin-top: calc(100vw * (20 / $xs-base));
+		}
+	}
 }

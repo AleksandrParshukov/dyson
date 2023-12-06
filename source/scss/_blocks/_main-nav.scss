@@ -1,83 +1,105 @@
 .main-nav {
-  width: min-content;
-  margin-inline: auto;
-  gap: calc(100vw * (40 / 1920));
+	width: min-content;
+	margin-inline: auto;
+	gap: calc(100vw * (170 / 1920));
 
-  @include xl {
-    gap: calc(100vw * (60 / $xl));
-  }
+	&__link {
+		font-size: calc(100vw * (18 / 1920));
+		line-height: 1.4;
+		text-align: center;
+		width: max-content;
+		padding-bottom: calc(100vw * (15 / 1920));
+		padding-inline: calc(100vw * (6 / 1920));
+		position: relative;
+		transition: color 0.25s ease;
 
-  @include lg {
-    gap: calc(100vw * (70 / $lg));
-  }
+		&::after {
+			content: '';
+			height: calc(100vw * (5 / 1920));
+			background-color: $special;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transition: opacity 0.25s ease;
+		}
 
-  @include sm {
-    gap: calc(100vw * (60 / $sm));
-  }
+		&:hover,
+		&.active {
+			color: $white;
+		}
 
-  &__link {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 2.19;
-    text-align: center;
-    width: max-content;
-    padding-bottom: calc(100vw * (23 / 1920));
-    padding-inline: calc(100vw * (15 / 1920));
-    position: relative;
-    transition: color 0.25s ease;
+		&:hover::after,
+		&.active::after {
+			opacity: 1;
+		}
+	}
+}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      padding-bottom: calc(100vw * (23 / $xl));
-      padding-inline: calc(100vw * (15 / $xl));
-    }
+@media (min-width: 1920px) {
+	.main-nav {
+		gap: 170px;
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      padding-bottom: calc(100vw * (23 / $lg));
-      padding-inline: calc(100vw * (13 / $lg));
-    }
+		&__link {
+			font-size: 18px;
+			padding-bottom: 15px;
+			padding-inline: 6px;
 
-    @include sm {
-      width: max-content;
-      font-size: calc(100vw * (18 / $sm));
-      padding-bottom: calc(100vw * (18 / $sm));
-      padding-inline: calc(100vw * (9 / $sm));
-      display: flex;
-      flex-direction: column;
-    }
+			&::after {
+				height: 5px;
+			}
+		}
+	}
+}
 
-    &::after {
-      content: "";
-      height: calc(100vw * (5 / 1920));
-      background-color: $special;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.25s ease; 
+@include xl {
+	.main-nav {
+		gap: calc(100vw * (170 / $xl));
 
-      @include xl {
-        height: calc(100vw * (5 / $xl));
-      }
+		&__link {
+			font-size: calc(100vw * (18 / $xl));
+			padding-bottom: calc(100vw * (15 / $xl));
+			padding-inline: calc(100vw * (5 / $xl));
 
-      @include lg {
-        height: calc(100vw * (5 / $lg));
-      }
+			&::after {
+				height: calc(100vw * (5 / $xl));
+			}
+		}
+	}
+}
 
-      @include sm {
-        height: calc(100vw * (3 / $sm));
-      }
-    }
+@include lg {
+	.main-nav {
+		gap: calc(100vw * (70 / $lg));
 
-    &:hover,
-    &.active {
-      color: $white;
-    }
+		&__link {
+			font-size: calc(100vw * (20 / $lg));
+			padding-bottom: calc(100vw * (23 / $lg));
+			padding-inline: calc(100vw * (13 / $lg));
 
-    &:hover::after,
-    &.active::after {
-      opacity: 1;
-    }
-  }
+			&::after {
+				height: calc(100vw * (5 / $lg));
+			}
+		}
+	}
+}
+
+@include sm {
+	.main-nav {
+		gap: calc(100vw * (100 / $sm));
+
+		&__link {
+			width: max-content;
+			font-size: calc(100vw * (18 / $sm));
+			padding-bottom: calc(100vw * (15 / $sm));
+			padding-inline: calc(100vw * (5 / $sm));
+			display: flex;
+			flex-direction: column;
+
+			&::after {
+				height: calc(100vw * (3 / $sm));
+			}
+		}
+	}
 }

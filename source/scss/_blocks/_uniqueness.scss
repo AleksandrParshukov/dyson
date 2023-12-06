@@ -1,82 +1,114 @@
 .uniqueness {
-  color: $white;
-  height: calc(100vw * (670 / 1920));
-  padding: calc(100vw * (220 / 1920)) calc(100vw * (245 / 1920)) 0;
-  background: $black url('../img/uniqueness.webp') no-repeat top left;
-  background-size: 100% 100%;
+	color: $white;
+	height: calc(100vw * (670 / 1920));
+	padding: calc(100vw * (220 / 1920)) calc(100vw * (245 / 1920)) 0;
+	background: $black url('../img/uniqueness.webp') no-repeat top left;
+	background-size: 100% 100%;
 
-  @include xl {
-    height: calc(100vw * (670 / $xl));
-    padding: calc(100vw * (224 / $xl)) calc(100vw * (155 / $xl)) 0;
-    background-image: url('../img/uniqueness_xl.webp');
-  }
+	&__wrapper {
+		width: calc(100vw * (570 / 1920));
+		margin-left: auto;
+	}
 
-  @include lg {
-    height: calc(100vw * (450 / $lg));
-    padding: calc(100vw * (138 / $lg)) calc(100vw * (97 / $lg)) 0;
-    background-image: url('../img/uniqueness_lg.webp');
-  }
+	&__title {
+		color: inherit;
+		text-transform: uppercase;
+		margin-bottom: calc(100vw * (30 / 1920));
+	}
 
-  @include sm {
-    height: calc(100vw * (360 / $sm));
-    padding: calc(100vw * (54 / $sm)) calc(100vw * (61 / $sm)) 0;
-    background-image: url('../img/uniqueness_sm.webp');
-  }
+	&__logo {
+		color: $special;
+	}
 
-  &__wrapper {
-    width: calc(100vw * (570 / 1920));
-    margin-left: auto;
+	&__text {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 1.3;
+		text-align: justify;
+	}
+}
 
-    @include xl {
-      width: calc(100vw * (520 / $xl));
-    }
+@media (min-width: 1920px) {
+	.uniqueness {
+		color: $white;
+		height: 670px;
+		padding: 220px 0 0;
+		background: $black url('../img/uniqueness.webp') no-repeat center;
+		background-size: auto 100%;
+		display: grid;
+		// 1920 - 245*2 (padding-inline: 245px)
+		grid-template-columns: 1fr [content-start] 1430px [content-end] 1fr;
 
-    @include lg {
-      width: calc(100vw * (370 / $lg));
-    }
+		&__wrapper {
+			width: 570px;
+			margin-left: auto;
+			grid-column: content;
+		}
 
-    @include sm {
-      width: calc(100vw * (270 / $sm));
-    }
-  }
+		&__title {
+			margin-bottom: 30px;
+		}
 
-  &__title {
-    color: inherit;
-    text-transform: uppercase;
-    margin-bottom: calc(100vw * (30 / 1920));
+		&__text {
+			font-size: 20px;
+		}
+	}
+}
 
-    @include xl {
-      margin-bottom: calc(100vw * (35 / $xl));
-    }
+@include xl {
+	.uniqueness {
+		height: calc(100vw * (670 / $xl));
+		padding: calc(100vw * (224 / $xl)) calc(100vw * (155 / $xl)) 0;
+		background-image: url('../img/uniqueness_xl.webp');
 
-    @include lg {
-      margin-bottom: calc(100vw * (25 / $lg));
-    }
+		&__wrapper {
+			width: calc(100vw * (520 / $xl));
+		}
 
-    @include sm {
-      margin-bottom: calc(100vw * (30 / $sm));
-    }
-  }
+		&__title {
+			margin-bottom: calc(100vw * (35 / $xl));
+		}
 
-  &__logo {
-    color: $special;
-  }
+		&__text {
+			font-size: calc(100vw * (20 / $xl));
+		}
+	}
+}
 
-  &__text {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.3;
-    text-align: justify;
+@include lg {
+	.uniqueness {
+		height: calc(100vw * (450 / $lg));
+		padding: calc(100vw * (138 / $lg)) calc(100vw * (97 / $lg)) 0;
+		background-image: url('../img/uniqueness_lg.webp');
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-    }
+		&__wrapper {
+			width: calc(100vw * (370 / $lg));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (25 / $lg));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (15 / $sm));
-    }
-  }
+		&__text {
+			font-size: calc(100vw * (15 / $lg));
+		}
+	}
+}
+
+@include sm {
+	.uniqueness {
+		height: calc(100vw * (360 / $sm));
+		padding: calc(100vw * (54 / $sm)) calc(100vw * (61 / $sm)) 0;
+		background-image: url('../img/uniqueness_sm.webp');
+		&__wrapper {
+			width: calc(100vw * (270 / $sm));
+		}
+
+		&__title {
+			margin-bottom: calc(100vw * (30 / $sm));
+		}
+
+		&__text {
+			font-size: calc(100vw * (15 / $sm));
+		}
+	}
 }

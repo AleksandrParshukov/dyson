@@ -1,272 +1,317 @@
 .header {
-  color: $white;
-  background-color: $black;
-  box-shadow: 0 4px 5px 3px rgba(0,0,0,.25);
-  position: relative;
-  z-index: 1000;
-  
-  &__logo {
-    width: calc(100vw * (159 / 1920));
-    height: calc(100vw * (87 / 1920));
+	color: $white;
+	background-color: $black;
+	box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 1000;
 
-    > img {
-      width: 100%;
-      height: auto;
-    }
+	&__logo {
+		width: calc(100vw * (133 / 1920));
+		height: calc(100vw * (59 / 1920));
 
-    @include xl {
-      width: calc(100vw * (159 / $xl));
-      height: calc(100vw * (87 / $xl));
-    }
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 
-    @include lg {
-      width: calc(100vw * (130 / $lg));
-      height: calc(100vw * (73 / $lg));
-    }
+	&__top {
+		padding: calc(100vw * (10 / 1920)) calc(100vw * (35 / 1920));
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-    @include sm {
-      width: calc(100vw * (130 / $sm));
-      height: calc(100vw * (73 / $sm));
-    }
+	&__bottom {
+		margin-top: calc(100vw * (10 / 1920));
+	}
 
-    @include xs {
-      width: calc(100vw * (100 / $xs-base));
-      height: calc(100vw * (48 / $xs-base));
-    }
-  }
+	&__search {
+		margin-inline: calc(100vw * (22 / 1920));
+		position: relative;
+		border-bottom: 1px solid $white;
 
-  &__top {
-    padding: calc(100vw * (15 / 1920)) calc(100vw * (100 / 1920));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+		&.open {
+			.header__search-btn {
+				background-image: url('../img/cross.png');
+			}
+		}
+	}
 
-    @include xl {
-      padding: calc(100vw * (15 / $xl)) calc(100vw * (24 / $xl));
-    }
+	&__search-wrapper {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+	}
 
-    @include lg {
-      padding: calc(100vw * (15 / $lg)) calc(100vw * (28 / $lg)) calc(100vw * (23 / $lg));
-    }
+	&__search-input {
+		font-size: calc(100vw * (18 / 1920));
+		color: $white;
+		background-color: transparent;
+		width: calc(100vw * (166 / 1920));
+		height: calc(100vw * (22 / 1920));
+		padding-inline: calc(100vw * (7 / 1920));
+	}
 
-    @include sm {
-      padding: calc(100vw * (4 / $sm)) calc(100vw * (14 / $sm));
-    }
+	&__search-submit {
+		width: calc(100vw * (18 / 1920));
+		aspect-ratio: 1 / 1;
+		display: flex;
 
-    @include xs {
-      padding: calc(100vw * (16 / $xs-base)) calc(100vw * (20 / $xs-base));
-    }
-  }
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 
-  &__bottom {
-    margin-top: calc(100vw * (18 / 1920));
+	&__cart {
+		width: calc(100vw * (23 / 1920));
+		aspect-ratio: 1 / 1;
+		position: relative;
+		display: flex;
+		align-items: center;
 
-    @include xl {
-      margin-top: calc(100vw * (18 / $xl));
-    }
+		> img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-    @include lg {
-      margin-top: calc(100vw * (30 / $lg));
-    }
+	&__cart-count {
+		font-size: calc(100vw * (12 / 1920));
+		line-height: 1;
+		width: 1.2em;
+		aspect-ratio: 1 / 1;
+		color: $white;
+		background-color: $special;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+		display: grid;
+		place-content: center;
+	}
+}
 
-    @include sm {
-      margin-top: calc(100vw * (7 / $sm));
-    }
-  }
+@media (min-width: 1920px) {
+	.header {
+		display: grid;
+		grid-template-columns: 1fr [content-start] 1920px [content-end] 1fr;
 
-  &__search {
-    margin-inline: calc(100vw * (40 / 1920));
-    position: relative;
-    display: flex;
-    align-items: center;
+		> * {
+			grid-column: content;
+		}
 
-    &.open {
-      .header__search-btn {
-        background-image: url('../img/cross.png');
-      }
+		&__logo {
+			width: 133px;
+			height: 59px;
+		}
 
-      .header__search-input {
-        @include sm {
-          width: calc(100vw * (256 / $sm));
-          padding-inline: calc(100vw * (7 / $sm));
-        }
+		&__top {
+			padding: 10px 35px;
+		}
 
-        @include xs {
-          width: calc(100vw * (240 / $xs-base));
-          padding-inline: calc(100vw * (7 / $xs-base));
-        }
-      }
-    }
+		&__bottom {
+			margin-top: 10px;
+		}
 
-    @include xl {
-      margin-inline: calc(100vw * (20 / $xl)) calc(100vw * (40 / $xl));
-    }
+		&__search {
+			margin-inline: 22px;
+		}
 
-    @include lg {
-      margin-inline: calc(100vw * (18 / $lg)) calc(100vw * (30 / $lg));
-    }
+		&__search-input {
+			font-size: 18px;
+			width: 166px;
+			height: 22px;
+			padding-inline: 7px;
+		}
 
-    @include sm {
-      margin-inline: calc(100vw * (40 / $sm)) calc(100vw * (30 / $sm));
-    }
+		&__search-submit {
+			width: 18px;
+		}
 
-    @include xs {
-      margin-inline: calc(100vw * (21 / $xs-base)) calc(100vw * (15 / $xs-base));
-    }
-  }
+		&__cart {
+			width: 23px;
+		}
 
-  &__search-wrapper {
-    position: relative;
-    overflow: hidden;
+		&__cart-count {
+			font-size: 12px;
+		}
+	}
+}
 
-    @include sm {
-      position: absolute;
-      top: 50%;
-      right: 150%;
-      transform: translateY(-50%);
-    }
-  }
-  
-  &__search-input {
-    font-size: calc(100vw * (20 / 1920));
-    color: $black;
-    background-color: $white;
-    width: calc(100vw * (330 / 1920));
-    height: calc(100vw * (40 / 1920));
-    padding-inline: calc(100vw * (7 / 1920));
+@include xl {
+	.header {
+		&__logo {
+			width: calc(100vw * (133 / $xl));
+			height: calc(100vw * (59 / $xl));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      width: calc(100vw * (271 / $xl));
-      height: calc(100vw * (40 / $xl));
-      padding-inline: calc(100vw * (7 / $xl));
-    }
+		&__top {
+			padding: calc(100vw * (10 / $xl)) calc(100vw * (20 / $xl));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-      width: calc(100vw * (250 / $lg));
-      height: calc(100vw * (30 / $lg));
-      padding-inline: calc(100vw * (7 / $lg));
-    }
+		&__bottom {
+			margin-top: calc(100vw * (10 / $xl));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (15 / $sm));
-      width: 0;
-      height: calc(100vw * (30 / $sm));
-      padding: 0;
-      transition: all 0.3s ease;
-    }
+		&__search {
+			margin-inline: calc(100vw * (22 / $xl));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (20 / $xs-base));
-      height: calc(100vw * (40 / $xs-base));
-    }
-  }
+		&__search-input {
+			font-size: calc(100vw * (15 / $xl));
+			width: calc(100vw * (166 / $xl));
+			height: calc(100vw * (22 / $xl));
+			padding-inline: calc(100vw * (7 / $xl));
+		}
 
-  &__search-submit {
-    width: calc(100vw * (30 / 1920));
-    aspect-ratio: 1 / 1;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: calc(100vw * (10 / 1920));
-    transform: translateY(-50%);
+		&__search-submit {
+			width: calc(100vw * (18 / $xl));
+		}
 
-    @include xl {
-      width: calc(100vw * (30 / $xl));
-      right: calc(100vw * (10 / $xl));
-    }
+		&__cart {
+			width: calc(100vw * (23 / $xl));
+		}
 
-    @include lg {
-      width: calc(100vw * (25 / $lg));
-      right: calc(100vw * (10 / $lg));
-    }
+		&__cart-count {
+			font-size: calc(100vw * (12 / $xl));
+		}
+	}
+}
 
-    @include sm {
-      width: calc(100vw * (25 / $sm));
-      right: calc(100vw * (10 / $sm));
-    }
+@include lg {
+	.header {
+		&__logo {
+			width: calc(100vw * (133 / $lg));
+			height: calc(100vw * (59 / $lg));
+		}
 
-    @include xs {
-      width: calc(100vw * (27 / $xs-base));
-      right: calc(100vw * (10 / $xs-base));
-    }
-  }
+		&__top {
+			padding: calc(100vw * (10 / $lg)) calc(100vw * (20 / $lg));
+		}
 
-  &__search-btn {
-    width: calc(100vw * (25 / $sm));
-    height: calc(100vw * (25 / $sm));
-    background: transparent url('../img/search_white.png') no-repeat center;
-    background-size: 100% auto;
+		&__bottom {
+			margin-top: calc(100vw * (10 / $lg));
+		}
 
-    @include xs {
-      width: calc(100vw * (25 / $xs-base));
-      height: calc(100vw * (25 / $xs-base));
-    }
-  }
+		&__search {
+			margin-inline: calc(100vw * (22 / $lg));
+		}
 
-  &__cart {
-    width: calc(100vw * (34 / 1920));
-    height: calc(100vw * (32 / 1920));
-    position: relative;
-    display: flex;
-    align-items: center;
+		&__search-input {
+			font-size: calc(100vw * (15 / $lg));
+			width: calc(100vw * (166 / $lg));
+			height: calc(100vw * (22 / $lg));
+			padding-inline: calc(100vw * (7 / $lg));
+		}
 
-    > img {
-      width: 100%;
-      height: 100%;
-    }
+		&__search-submit {
+			width: calc(100vw * (18 / $lg));
+		}
 
-    @include xl {
-      width: calc(100vw * (34 / $xl));
-      height: calc(100vw * (32 / $xl));
-    }
+		&__cart {
+			width: calc(100vw * (23 / $lg));
+		}
 
-    @include lg {
-      width: calc(100vw * (30 / $lg));
-      height: calc(100vw * (28 / $lg));
-    }
+		&__cart-count {
+			font-size: calc(100vw * (12 / $lg));
+		}
+	}
+}
 
-    @include sm {
-      width: calc(100vw * (25 / $sm));
-      height: calc(100vw * (23 / $sm));
-    }
+@include sm {
+	.header {
+		&__logo {
+			width: calc(100vw * (133 / $sm));
+			height: calc(100vw * (59 / $sm));
+		}
 
-    @include xs {
-      width: calc(100vw * (25 / $xs-base));
-      height: calc(100vw * (23 / $xs-base));
-    }
-  }
+		&__top {
+			padding: calc(100vw * (10 / $sm)) calc(100vw * (20 / $sm));
+		}
 
-  &__cart-count{
-    font-size: calc(100vw * (14 / $xl));
-    line-height: 1;
-    width: 1.2em;
-    aspect-ratio: 1 / 1;
-    color: $white;
-    background-color: $special;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    display: grid;
-    place-content: center;
+		&__bottom {
+			margin-top: calc(100vw * (10 / $sm));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (14 / $xl));
-    }
+		&__search {
+			margin-inline: calc(100vw * (22 / $sm));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (14 / $lg));
-    }
+		&__search-input {
+			font-size: calc(100vw * (15 / $sm));
+			width: calc(100vw * (166 / $sm));
+			height: calc(100vw * (22 / $sm));
+			padding-inline: calc(100vw * (7 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (10 / $sm));
-    }
+		&__search-submit {
+			width: calc(100vw * (18 / $sm));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (10 / $xs-base));
-    }
-  }
+		&__cart {
+			width: calc(100vw * (23 / $sm));
+		}
+
+		&__cart-count {
+			font-size: calc(100vw * (12 / $sm));
+		}
+	}
+}
+
+@include xs {
+	.header {
+		&__logo {
+			width: calc(100vw * (79 / $xs-base));
+			height: calc(100vw * (35 / $xs-base));
+		}
+
+		&__top {
+			padding: calc(100vw * (8 / $xs-base)) calc(100vw * (20 / $xs-base));
+		}
+
+		&__search {
+			margin-inline: calc(100vw * (10 / $xs-base));
+			border: none;
+			display: flex;
+
+			&.open {
+				.header__search-input {
+					width: calc(100vw * (140 / $xs-base));
+					padding-inline: calc(100vw * (7 / $xs-base));
+				}
+			}
+		}
+
+		&__search-input {
+			font-size: calc(100vw * (15 / $xs-base));
+			width: 0;
+			height: calc(100vw * (30 / $xs-base));
+			padding: 0;
+			transition: all 0.3s ease;
+			border-bottom: 1px solid $white;
+		}
+
+		&__search-btn {
+			width: calc(100vw * (18 / $xs-base));
+			aspect-ratio: 1 / 1;
+			background: transparent url('../img/search_white.png') no-repeat center;
+			background-size: 100% auto;
+		}
+
+		&__cart {
+			width: calc(100vw * (18 / $xs-base));
+		}
+
+		&__cart-count {
+			font-size: calc(100vw * (10 / $xs-base));
+		}
+	}
 }

@@ -1,48 +1,86 @@
 .breadcrumbs {
-  padding: calc(100vw * (26 / 1920)) calc(100vw * (100 / 1920)) 0;
-  gap: calc(100vw * (10 / 1920));
+	padding: calc(100vw * (20 / 1920)) calc(100vw * (100 / 1920));
 
-  @include xl {
-    padding: calc(100vw * (23 / $xl)) calc(100vw * (35 / $xl)) 0;
-    gap: calc(100vw * (10 / $xl));
-  }
+	&__list {
+		gap: calc(100vw * (10 / 1920));
+	}
 
-  @include lg {
-    padding: calc(100vw * (17 / $lg)) calc(100vw * (18 / $lg)) 0;
-    gap: calc(100vw * (6 / $lg));
-  }
+	&__item {
+		font-size: calc(100vw * (20 / 1920));
+		color: #494949;
+		gap: calc(100vw * (10 / 1920));
 
-  @include sm {
-    padding: calc(100vw * (10 / $sm)) calc(100vw * (15 / $sm)) 0;
-    gap: calc(100vw * (6 / $sm));
-  }
+		&::after {
+			content: '/';
+		}
 
-  &__item {
-    font-size: calc(100vw * (20 / 1920));
-    color: #494949;
-    gap: calc(100vw * (10 / 1920));
+		&:last-child::after {
+			content: none;
+		}
+	}
+}
 
-    &::after {
-      content: "/";
-    }
+@media (min-width: 1920px) {
+	.breadcrumbs {
+		padding: 20px 0;
+		display: grid;
+		grid-template-columns: 1fr [content-start] 1720px [content-end] 1fr;
+		> * {
+			grid-column: content;
+		}
 
-    &:last-child::after {
-      content: none;
-    }
+		&__list {
+			gap: 10px;
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      gap: calc(100vw * (10 / $xl));
-    }
+		&__item {
+			font-size: 20px;
+			gap: 10px;
+		}
+	}
+}
 
-    @include lg {
-      font-size: calc(100vw * (13 / $lg));
-      gap: calc(100vw * (6 / $lg));
-    }
+@include xl {
+	.breadcrumbs {
+		padding: calc(100vw * (23 / $xl)) calc(100vw * (35 / $xl)) 0;
 
-    @include sm {
-      font-size: calc(100vw * (13 / $sm));
-      gap: calc(100vw * (6 / $sm));
-    }
-  }
+		&__list {
+			gap: calc(100vw * (10 / $xl));
+		}
+
+		&__item {
+			font-size: calc(100vw * (20 / $xl));
+			gap: calc(100vw * (10 / $xl));
+		}
+	}
+}
+
+@include lg {
+	.breadcrumbs {
+		padding: calc(100vw * (17 / $lg)) calc(100vw * (18 / $lg)) 0;
+
+		&__list {
+			gap: calc(100vw * (6 / $lg));
+		}
+
+		&__item {
+			font-size: calc(100vw * (13 / $lg));
+			gap: calc(100vw * (6 / $lg));
+		}
+	}
+}
+
+@include sm {
+	.breadcrumbs {
+		padding: calc(100vw * (10 / $sm)) calc(100vw * (15 / $sm)) 0;
+
+		&__list {
+			gap: calc(100vw * (6 / $sm));
+		}
+
+		&__item {
+			font-size: calc(100vw * (13 / $sm));
+			gap: calc(100vw * (6 / $sm));
+		}
+	}
 }

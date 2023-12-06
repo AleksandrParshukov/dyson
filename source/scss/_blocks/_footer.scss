@@ -1,271 +1,328 @@
 .footer {
-  padding: calc(100vw * (90 / 1920)) calc(100vw * (95 / 1920)) calc(100vw * (40 / 1920));
-  color: $white;
-  background-color: $black;
+	padding: calc(100vw * (90 / 1920)) calc(100vw * (95 / 1920)) calc(100vw * (40 / 1920));
+	color: $white;
+	background-color: $black;
 
-  @include xl {
-    padding: calc(100vw * (90 / $xl)) calc(100vw * (25 / $xl)) calc(100vw * (40 / $xl));
-  }
+	&__logo {
+		width: calc(100vw * (159 / 1920));
+		height: calc(100vw * (87 / 1920));
+		display: block;
 
-  @include lg {
-    padding: calc(100vw * (60 / $lg)) calc(100vw * (27 / $lg)) calc(100vw * (15 / $lg));
-  }
+		> img {
+			width: 100%;
+			height: auto;
+		}
+	}
 
-  @include sm {
-    padding: calc(100vw * (20 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (25 / $sm));
-  }
+	&__wrapper {
+		margin: calc(100vw * (40 / 1920)) calc(100vw * (155 / 1920)) calc(100vw * (100 / 1920));
+		display: grid;
+		grid-template-columns: max-content;
+		grid-template-areas: 'buyers catalog company policy' 'buyers catalog social payment';
+		gap: calc(100vw * (60 / 1920)) calc(100vw * (120 / 1920));
+	}
 
-  @include xs {
-    padding: calc(100vw * (16 / $xs-base)) calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
-  }
+	&__menu {
+		margin-top: calc(100vw * (25 / 1920));
+		gap: calc(100vw * (18 / 1920));
+		display: flex;
+		flex-direction: column;
+	}
 
-  &__logo {
-    width: calc(100vw * (159 / 1920));
-    height: calc(100vw * (87 / 1920));
-    display: block;
+	&__caption {
+		font-size: calc(100vw * (22 / 1920));
+		line-height: 1.3;
+		font-weight: 500;
+	}
 
-    > img {
-      width: 100%;
-      height: auto;
-    }
+	&__link {
+		font-size: calc(100vw * (18 / 1920));
+		line-height: 1.2;
+	}
 
-    @include xl {
-      width: calc(100vw * (159 / $xl));
-      height: calc(100vw * (87 / $xl));
-    }
+	&__buyers {
+		grid-area: buyers;
+	}
 
-    @include lg {
-      width: calc(100vw * (130 / $lg));
-      height: calc(100vw * (73 / $lg));
-    }
+	&__catalog {
+		grid-area: catalog;
+		margin-inline: calc(100vw * (100 / 1920));
+	}
 
-    @include sm {
-      width: calc(100vw * (130 / $sm));
-      height: calc(100vw * (73 / $sm));
-    }
+	&__company {
+		grid-area: company;
+	}
 
-    @include xs {
-      width: calc(100vw * (100 / $xs-base));
-      height: calc(100vw * (48 / $xs-base));
-    }
-  }
+	&__policy {
+		grid-area: policy;
+	}
 
-  &__wrapper {
-    margin: calc(100vw * (40 / 1920)) calc(100vw * (155 / 1920)) calc(100vw * (100 / 1920));
-    display: grid;
-    grid-template-columns: max-content;
-    grid-template-areas: 'buyers catalog company policy' 'buyers catalog social payment';
-    gap: calc(100vw * (60 / 1920)) calc(100vw * (120 / 1920));
+	&__social {
+		grid-area: social;
+	}
 
-    @include xl {
-      margin: calc(100vw * (40 / $xl)) calc(100vw * (90 / $xl)) calc(100vw * (100 / $xl));
-      gap: calc(100vw * (100 / $xl));
-    }
+	&__payment {
+		grid-area: payment;
+	}
 
-    @include lg {
-      margin: calc(100vw * (27 / $lg)) calc(100vw * (60 / $lg)) calc(100vw * (40 / $lg));
-      gap: calc(100vw * (80 / $lg));
-    }
+	&__icon {
+		width: auto;
+		height: calc(100vw * (51 / 1920));
 
-    @include sm {
-      margin: calc(100vw * (15 / $sm)) calc(100vw * (55 / $sm)) calc(100vw * (45 / $sm));
-      grid-template-areas: 'buyers catalog company' 
-      'buyers catalog social' 
-      'buyers policy social' 
-      'payment policy social'
-      'payment policy social'
-      'payment policy social' ;
-      gap: calc(100vw * (30 / $sm));
-    }
+		> img {
+			width: auto;
+			height: 100%;
+		}
+	}
 
-    @include xs {
-      margin: calc(100vw * (40 / $xs-base)) calc(100vw * (20 / $xs-base)) calc(100vw * (50 / $xs-base));
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-  }
+	&__copyright {
+		font-size: calc(100vw * (20 / 1920));
+		line-height: 1.3;
+		text-align: center;
+	}
+}
 
-  &__menu {
-    margin-top: calc(100vw * (25 / 1920));
-    gap: calc(100vw * (18 / 1920));
-    display: flex;
-    flex-direction: column;
+@media (min-width: 1920px) {
+	.footer {
+		padding: 90px 95px 40px;
+		display: grid;
+		grid-template-columns: 1fr [content-start] 1920px [content-end] 1fr;
 
-    @include xl {
-      margin-top: calc(100vw * (25 / $xl));
-      gap: calc(100vw * (15 / $xl));
-    }
+		> * {
+			grid-column: content;
+		}
 
-    @include lg {
-      margin-top: calc(100vw * (20 / $lg));
-      gap: calc(100vw * (14 / $lg));
-    }
+		&__logo {
+			width: 159px;
+			height: 87px;
+		}
 
-    @include sm {
-      margin-top: calc(100vw * (18 / $sm));
-      gap: calc(100vw * (10 / $sm));
-    }
+		&__wrapper {
+			margin: 40px 155px 100px;
+			gap: 60px 120px;
+		}
 
-    @include xs {
-      margin-top: calc(100vw * (20 / $xs-base));
-      gap: calc(100vw * (14 / $xs-base));
-    }
-  }
+		&__menu {
+			margin-top: 25px;
+			gap: 18px;
+		}
 
-  &__caption {
-    font-size: calc(100vw * (22 / 1920));
-    line-height: 1.3;
-    font-weight: 500;
+		&__caption {
+			font-size: 22px;
+		}
 
-    @include xl {
-      font-size: calc(100vw * (22 / $xl));
-    }
+		&__link {
+			font-size: 18px;
+		}
 
-    @include lg {
-      font-size: calc(100vw * (18 / $lg));
-    }
+		&__catalog {
+			margin-inline: 100px;
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-    }
+		&__icon {
+			height: 51px;
+		}
 
-    @include xs {
-      font-size: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__copyright {
+			font-size: 20px;
+		}
+	}
+}
 
-  &__link {
-    font-size: calc(100vw * (18 / 1920));
-    line-height: 1.2;
+@include xl {
+	.footer {
+		padding: calc(100vw * (90 / $xl)) calc(100vw * (25 / $xl)) calc(100vw * (40 / $xl));
 
-    @include xl {
-      font-size: calc(100vw * (18 / $xl));
-    }
+		&__logo {
+			width: calc(100vw * (159 / $xl));
+			height: calc(100vw * (87 / $xl));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
+		&__wrapper {
+			margin: calc(100vw * (40 / $xl)) calc(100vw * (90 / $xl)) calc(100vw * (100 / $xl));
+			gap: calc(100vw * (100 / $xl));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (15 / $sm));
-    }
+		&__menu {
+			margin-top: calc(100vw * (25 / $xl));
+			gap: calc(100vw * (15 / $xl));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-    }
-  }
+		&__caption {
+			font-size: calc(100vw * (22 / $xl));
+		}
 
-  &__buyers {
-    grid-area: buyers;
-  }
+		&__link {
+			font-size: calc(100vw * (18 / $xl));
+		}
 
-  &__catalog {
-    grid-area: catalog;
-    margin-inline: calc(100vw * (100 / 1920));
+		&__catalog {
+			margin-inline: calc(100vw * (90 / $xl));
+		}
 
-    @include xl {
-      margin-inline: calc(100vw * (90 / $xl));
-    }
+		&__icon {
+			height: calc(100vw * (51 / $xl));
+		}
 
-    @include lg {
-      margin-inline: calc(100vw * (60 / $lg));
-    }
+		&__copyright {
+			font-size: calc(100vw * (20 / $xl));
+		}
+	}
+}
 
-    @include sm {
-      margin-inline: 0;
-    }
-  }
+@include lg {
+	.footer {
+		padding: calc(100vw * (60 / $lg)) calc(100vw * (27 / $lg)) calc(100vw * (15 / $lg));
 
-  &__company {
-    grid-area: company;
+		&__logo {
+			width: calc(100vw * (130 / $lg));
+			height: calc(100vw * (73 / $lg));
+		}
 
-    @include sm {
-      text-align: right;
-    }
-  }
+		&__wrapper {
+			margin: calc(100vw * (27 / $lg)) calc(100vw * (60 / $lg)) calc(100vw * (40 / $lg));
+			gap: calc(100vw * (80 / $lg));
+		}
 
-  &__policy {
-    grid-area: policy;
+		&__menu {
+			margin-top: calc(100vw * (20 / $lg));
+			gap: calc(100vw * (14 / $lg));
+		}
 
-    @include xs {
-      order: 1;
-    }
-  }
+		&__caption {
+			font-size: calc(100vw * (18 / $lg));
+		}
 
-  &__social {
-    grid-area: social;
+		&__link {
+			font-size: calc(100vw * (15 / $lg));
+		}
 
-    @include sm {
-      text-align: right;
-      .footer__menu-item {
-        justify-content: end;
-      }
-    }
+		&__catalog {
+			margin-inline: calc(100vw * (60 / $lg));
+		}
 
-    @include xs {
-      text-align: left;
-      margin-top: calc(100vw * (20 / $xs-base));
+		&__icon {
+			height: calc(100vw * (34 / $lg));
+		}
 
-      .footer__menu-item {
-        justify-content: start;
-      }
-    }
-  }
+		&__copyright {
+			font-size: calc(100vw * (12 / $lg));
+		}
+	}
+}
 
-  &__payment {
-    grid-area: payment;
+@include sm {
+	.footer {
+		padding: calc(100vw * (20 / $sm)) calc(100vw * (16 / $sm)) calc(100vw * (25 / $sm));
 
-    @include xs {
-      order: 2;
-    }
-  }
+		&__logo {
+			width: calc(100vw * (130 / $sm));
+			height: calc(100vw * (73 / $sm));
+		}
 
-  &__icon {
-    width: auto;
-    height: calc(100vw * (51 / 1920));
+		&__wrapper {
+			margin: calc(100vw * (15 / $sm)) calc(100vw * (55 / $sm)) calc(100vw * (45 / $sm));
+			grid-template-areas:
+				'buyers catalog company'
+				'buyers catalog social'
+				'buyers policy social'
+				'payment policy social'
+				'payment policy social'
+				'payment policy social';
+			gap: calc(100vw * (30 / $sm));
+		}
 
-    > img {
-      width: auto;
-      height: 100%;
-    }
+		&__menu {
+			margin-top: calc(100vw * (18 / $sm));
+			gap: calc(100vw * (10 / $sm));
+		}
 
-    @include xl {
-      height: calc(100vw * (51 / $xl));
-    }
+		&__caption {
+			font-size: calc(100vw * (18 / $sm));
+		}
 
-    @include lg {
-      height: calc(100vw * (34 / $lg));
-    }
+		&__link {
+			font-size: calc(100vw * (15 / $sm));
+		}
 
-    @include sm {
-      height: calc(100vw * (34 / $sm));
-    }
+		&__catalog {
+			margin-inline: 0;
+		}
 
-    @include xs {
-      height: calc(100vw * (30 / $xs-base));
-    }
-  }
+		&__company {
+			text-align: right;
+		}
 
-  &__copyright {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.3;
-    text-align: center;
+		&__social {
+			text-align: right;
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-    }
+			.footer__menu-item {
+				justify-content: end;
+			}
+		}
 
-    @include lg {
-      font-size: calc(100vw * (12 / $lg));
-    }
+		&__icon {
+			height: calc(100vw * (34 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (14 / $sm));
-    }
+		&__copyright {
+			font-size: calc(100vw * (14 / $sm));
+		}
+	}
+}
 
-    @include xs {
-      font-size: calc(100vw * (17 / $xs-base));
-    }
-  }
+@include xs {
+	.footer {
+		padding: calc(100vw * (16 / $xs-base)) calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
+
+		&__logo {
+			width: calc(100vw * (100 / $xs-base));
+			height: calc(100vw * (48 / $xs-base));
+		}
+
+		&__wrapper {
+			margin: calc(100vw * (40 / $xs-base)) calc(100vw * (20 / $xs-base)) calc(100vw * (50 / $xs-base));
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+
+		&__menu {
+			margin-top: calc(100vw * (20 / $xs-base));
+			gap: calc(100vw * (14 / $xs-base));
+		}
+
+		&__caption {
+			font-size: calc(100vw * (20 / $xs-base));
+		}
+
+		&__link {
+			font-size: calc(100vw * (18 / $xs-base));
+		}
+
+		&__policy {
+			order: 1;
+		}
+
+		&__social {
+			text-align: left;
+			margin-top: calc(100vw * (20 / $xs-base));
+
+			.footer__menu-item {
+				justify-content: start;
+			}
+		}
+
+		&__payment {
+			order: 2;
+		}
+
+		&__icon {
+			height: calc(100vw * (30 / $xs-base));
+		}
+
+		&__copyright {
+			font-size: calc(100vw * (17 / $xs-base));
+		}
+	}
 }

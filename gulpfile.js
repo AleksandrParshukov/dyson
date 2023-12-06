@@ -7,7 +7,8 @@ const gulp = require('gulp'),
 	sourcemap = require('gulp-sourcemaps'),
 	rename = require('gulp-rename'),
 	del = require('del'),
-	sync = require('browser-sync').create();
+	sync = require('browser-sync').create(),
+	fileinclude = require('gulp-file-include');
 
 // Styles
 
@@ -65,7 +66,17 @@ exports.js = js;
 // HTML
 
 const html = () => {
-	return gulp.src('source/*.html').pipe(gulp.dest('docs'));
+	// return gulp.src('source/*.html').pipe(gulp.dest('docs'));
+
+	return gulp
+		.src('source/[^_]*.html')
+		.pipe(
+			fileinclude({
+				prefix: '@@',
+				basepath: '@file',
+			})
+		)
+		.pipe(gulp.dest('docs'));
 };
 
 // Copy
