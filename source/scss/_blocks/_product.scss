@@ -1,3 +1,18 @@
 .product {
-  background-color: #f4f4f4;
+	background-color: #f4f4f4;
+
+	.products-sc {
+		background-color: #f4f4f4;
+	}
+}
+
+@include xl-up {
+	.product {
+		display: grid;
+		grid-template-columns: [full-width-start] 1fr [content-start] 1500px [content-end] 1fr [full-width-end];
+
+		> *:not(.full-width) {
+			grid-column: content;
+		}
+	}
 }

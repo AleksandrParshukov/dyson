@@ -1,6 +1,6 @@
 .callback {
 	color: $white;
-	padding: calc(100vw * (100 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
+	padding: 100px 100px 50px;
 	background: $black url('../img/callback_bg.webp') no-repeat bottom center;
 	background-size: auto 100%;
 	box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.25);
@@ -8,73 +8,40 @@
 
 	&__title {
 		color: inherit;
-		margin-bottom: calc(100vw * (20 / 1920));
+		margin-bottom: 25px;
 	}
 
 	&__form {
-		width: calc(100vw * (570 / 1920));
+		width: 570px;
 		margin-inline: auto;
-		gap: calc(100vw * (35 / 1920));
+		gap: 35px;
 	}
 
 	&__form-caption {
-		font-size: calc(100vw * (20 / 1920));
+		font-size: 20px;
 		line-height: 1.5;
 		text-align: center;
 	}
 
 	&__input {
-		font-size: calc(100vw * (20 / 1920));
+		font-size: 20px;
 		color: $black;
 		width: 100%;
-		height: calc(100vw * (50 / 1920));
-		padding-inline: calc(100vw * (26 / 1920));
-		border-radius: calc(100vw * (10 / 1920));
+		height: 50px;
+		padding-inline: 26px;
+		border-radius: 10px;
 		background-color: $white;
 
 		&--textarea {
-			height: calc(100vw * (200 / 1920));
-			padding-top: calc(100vw * (15 / 1920));
+			height: 200px;
+			padding-top: 15px;
 			border: none;
-			border-radius: calc(100vw * (20 / 1920));
+			border-radius: 10px;
 		}
 	}
 
 	&__submit {
 		margin-inline: auto;
-	}
-}
-
-@media (min-width: 1920px) {
-	.callback {
-		padding: 100px 245px 50px;
-		background-position: center;
-
-		&__title {
-			margin-bottom: 20px;
-		}
-
-		&__form {
-			width: 570px;
-			gap: 35px;
-		}
-
-		&__form-caption {
-			font-size: 20px;
-		}
-
-		&__input {
-			font-size: 20px;
-			height: 50px;
-			padding-inline: 26px;
-			border-radius: 10px;
-
-			&--textarea {
-				height: 200px;
-				padding-top: 15px;
-				border-radius: 20px;
-			}
-		}
 	}
 }
 

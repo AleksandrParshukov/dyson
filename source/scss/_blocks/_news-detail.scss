@@ -1,179 +1,307 @@
 .news-detail {
-  padding: calc(100vw * (100 / 1920)) calc(100vw * (165 / 1920)) calc(100vw * (50 / 1920));
-  background-color: #ffffff;
-  box-shadow: 0 0px 10px 2px rgba(0,0,0,.1);
-  z-index: 1;
+	width: 100%;
+	padding: 0 0 75px;
+	background-color: $white;
+	display: grid;
+	grid-template-columns:
+		[full-width-start]
+		85px
+		[content-start] 1fr [content-end]
+		85px
+		[full-width-end];
+	z-index: 1;
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
-  }
+	> * {
+		grid-column: content;
+	}
 
-  @include lg {
-    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
-  }
+	> .news__list {
+		grid-column: full-width;
+		margin-block: 0;
+	}
 
-  @include sm {
-    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
-  }
+	&__top-img {
+		margin-bottom: 75px;
+		grid-column: full-width;
+		position: relative;
 
-  @include xs {
-    padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base));
-  }
+		> img {
+			width: 100%;
+			height: auto;
+		}
+	}
 
-  &__top-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: calc(100vw * (75 / 1920));
+	&__title {
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1;
+		color: $special;
+		margin-bottom: 45px;
+	}
 
-    @include xl {
-      margin-bottom: calc(100vw * (70 / $xl));
-    }
+	&__content {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%;
+	}
 
-    @include lg {
-      margin-bottom: calc(100vw * (50 / $lg));
-    }
+	&__date {
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%;
+		color: #979797;
+		margin-top: 20px;
+	}
 
-    @include sm {
-      margin-bottom: calc(100vw * (45 / $sm));
-    }
+	&__controls {
+		margin-block: 90px 70px;
+		margin-inline: auto;
+		display: flex;
+		gap: 20px;
+	}
 
-    @include xs {
-      margin-bottom: calc(100vw * (25 / $xs-base));
-    }
-  }
+	&__link {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1;
+		color: $special;
+		width: 260px;
+		height: 50px;
+		background: $white;
+		border: 1px solid currentColor;
+		border-radius: 25px;
+		display: grid;
+		place-content: center;
+		transition: color 0.3s ease;
 
-  &__caption {
-    font-size: calc(100vw * (36 / 1920));
-    line-height: calc(100vw * (48 / 1920));
-    text-align: center;
-    text-transform: uppercase;
-    margin-block: calc(100vw * (100 / 1920)) calc(100vw * (70 / 1920));
+		&:hover {
+			color: $special-dark;
+		}
+	}
+}
 
-    @include xl {
-      font-size: calc(100vw * (36 / $xl));
-      line-height: calc(100vw * (48 / $xl));
-      margin-block: calc(100vw * (80 / $xl)) calc(100vw * (60 / $xl));
-    }
+@include xl-up {
+	.news-detail {
+		grid-template-columns:
+			1fr
+			[full-width-start]
+			85px
+			[content-start] 1372px [content-end]
+			85px
+			[full-width-end]
+			1fr;
 
-    @include lg {
-      font-size: calc(100vw * (30 / $lg));
-      line-height: calc(100vw * (40 / $lg));
-      margin-block: calc(100vw * (65 / $lg)) calc(100vw * (50 / $lg));
-    }
+		&__top-img {
+			&::before,
+			&::after {
+				content: '';
+				height: 100%;
+				width: 5%;
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
 
-    @include sm {
-      font-size: calc(100vw * (26 / $sm));
-      line-height: calc(100vw * (32 / $sm));
-      margin-block: calc(100vw * (40 / $sm)) calc(100vw * (25 / $sm));
-    }
+			&::before {
+				background-image: linear-gradient(to right, $white, transparent);
+				left: 0;
+			}
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-      line-height: calc(100vw * (24 / $xs-base));
-      margin-block: calc(100vw * (30 / $xs-base));
-    }
-  }
+			&::after {
+				background-image: linear-gradient(to left, $white, transparent);
+				right: 0;
+			}
+		}
+	}
+}
 
-  &__content {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: calc(100vw * (26 / 1920));
-    text-align: center;
+@include xl {
+	.news-detail {
+		padding: 0 0 calc(100vw * (75 / $xl));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (85 / $xl))
+			[content-start] 1fr [content-end]
+			calc(100vw * (85 / $xl))
+			[full-width-end];
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-    }
+		&__top-img {
+			margin-bottom: calc(100vw * (75 / $xl));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-    }
+		&__title {
+			font-size: calc(100vw * (40 / $xl));
+			margin-bottom: calc(100vw * (45 / $xl));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (24 / $sm));
-    }
+		&__content {
+			font-size: calc(100vw * (18 / $xl));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (14 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-    }
+		&__date {
+			font-size: calc(100vw * (15 / $xl));
+			margin-top: calc(100vw * (20 / $xl));
+		}
 
+		&__controls {
+			margin-block: calc(100vw * (90 / $xl)) calc(100vw * (70 / $xl));
+			gap: calc(100vw * (20 / $xl));
+		}
 
-    li {
-      display: flex;
-      gap: 10px;
-      &::before {
-        content: "";
-        width: 13px;
-        height: 4px;
-        margin-top: 0.55em;
-        background-color: $special;
-        display: block;
-      }
-    }
+		&__link {
+			font-size: calc(100vw * (18 / $xl));
+			width: calc(100vw * (260 / $xl));
+			height: calc(100vw * (50 / $xl));
+			border-radius: calc(100vw * (25 / $xl));
+		}
+	}
+}
 
-    > *:not(img) {
-      text-align: left;
-    }
+@include lg {
+	.news-detail {
+		padding: 0 0 calc(100vw * (55 / $lg));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (55 / $lg))
+			[content-start] 1fr [content-end]
+			calc(100vw * (55 / $lg))
+			[full-width-end];
 
-    > img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
+		&__top-img {
+			margin-bottom: calc(100vw * (60 / $lg));
+		}
 
-  &__date {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: calc(100vw * (26 / 1920));
-    margin-top: calc(100vw * (20 / 1920));
-    margin-inline: auto;
-    
+		&__title {
+			font-size: calc(100vw * (35 / $lg));
+			margin-bottom: calc(100vw * (35 / $lg));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-      margin-top: calc(100vw * (20 / $xl));
-    }
+		&__content {
+			font-size: calc(100vw * (15 / $lg));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-      margin-top: calc(100vw * (20 / $lg));
-    }
+		&__date {
+			font-size: calc(100vw * (13 / $lg));
+			margin-top: calc(100vw * (10 / $lg));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (22 / $sm));
-      margin-top: calc(100vw * (15 / $sm));
-    }
+		&__controls {
+			margin-block: calc(100vw * (40 / $lg)) calc(100vw * (65 / $lg));
+			gap: calc(100vw * (20 / $lg));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (16 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-      margin-top: calc(100vw * (15 / $xs-base));
-    }
-  }
+		&__link {
+			font-size: calc(100vw * (18 / $lg));
+			width: calc(100vw * (260 / $lg));
+			height: calc(100vw * (50 / $lg));
+			border-radius: calc(100vw * (25 / $lg));
+		}
+	}
+}
 
-  &__link {
-    margin-top: calc(100vw * (100 / 1920));
-    margin-inline: auto;
-    
+@include sm {
+	.news-detail {
+		padding: 0 0 calc(100vw * (55 / $sm));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (70 / $sm))
+			[content-start] 1fr [content-end]
+			calc(100vw * (70 / $sm))
+			[full-width-end];
 
-    @include xl {
-      margin-top: calc(100vw * (100 / $xl));
-    }
+		&__top-img {
+			margin-bottom: calc(100vw * (40 / $sm));
+		}
 
-    @include lg {
-      margin-top: calc(100vw * (70 / $lg));
-    }
+		&__title {
+			font-size: calc(100vw * (30 / $sm));
+			margin-bottom: calc(100vw * (32 / $sm));
+		}
 
-    @include sm {
-      margin-top: calc(100vw * (50 / $sm));
-    }
+		&__content {
+			font-size: calc(100vw * (15 / $sm));
 
-    @include xs {
-      margin-top: calc(100vw * (30 / $xs-base));
-    }
-  }
+			> img {
+				max-width: 100%;
+				height: auto;
+				float: none !important;
+				margin: 1em auto !important;
+			}
+		}
+
+		&__date {
+			font-size: calc(100vw * (13 / $sm));
+			margin-top: calc(100vw * (10 / $sm));
+		}
+
+		&__controls {
+			width: 100%;
+			margin-block: calc(100vw * (40 / $sm)) calc(100vw * (55 / $sm));
+			justify-content: space-between;
+			gap: 0;
+		}
+
+		&__link {
+			font-size: calc(100vw * (15 / $sm));
+			width: calc(100vw * (172 / $sm));
+			height: calc(100vw * (40 / $sm));
+			border-radius: calc(100vw * (25 / $sm));
+		}
+	}
+}
+
+@include xs {
+	.news-detail {
+		padding: 0 0 calc(100vw * (40 / $xs-base));
+		grid-template-columns:
+			[full-width-start]
+			calc(100vw * (20 / $xs-base))
+			[content-start] 1fr [content-end]
+			calc(100vw * (20 / $xs-base))
+			[full-width-end];
+
+		> .news__list {
+			grid-column: content;
+		}
+
+		> .news__title {
+			margin-top: calc(100vw * (25 / $xs-base));
+		}
+
+		&__top-img {
+			margin-bottom: calc(100vw * (35 / $xs-base));
+		}
+
+		&__title {
+			font-size: calc(100vw * (23 / $xs-base));
+			margin-bottom: calc(100vw * (30 / $xs-base));
+		}
+
+		&__content {
+			font-size: calc(100vw * (15 / $xs-base));
+		}
+
+		&__date {
+			display: none;
+		}
+
+		&__controls {
+			margin-block: calc(100vw * (35 / $xs-base)) 0;
+			flex-direction: column;
+			order: 5;
+			gap: calc(100vw * (15 / $xs-base));
+		}
+
+		&__link {
+			font-size: calc(100vw * (15 / $xs-base));
+			width: 100%;
+			height: calc(100vw * (50 / $xs-base));
+			border-radius: calc(100vw * (25 / $xs-base));
+		}
+	}
 }

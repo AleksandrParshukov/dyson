@@ -16,6 +16,12 @@
 	}
 }
 
+@mixin llg {
+	@media (max-width: #{$llg}px) {
+		@content;
+	}
+}
+
 @mixin lg {
 	@media (max-width: #{$lg}px) {
 		@content;
@@ -39,7 +45,6 @@
 		@content;
 	}
 }
-
 
 @mixin xl-up {
 	@media (min-width: #{$xl}px) {
@@ -70,7 +75,6 @@
 		@content;
 	}
 }
-
 
 @mixin mob {
 	@media (max-width: #{$md}) {

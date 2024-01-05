@@ -6,28 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.cdnfonts.com/css/dyson-modern" rel="stylesheet">
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/owl.carousel.min.css" rel="stylesheet">
   <link href="./css/owl.theme.default.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Dyson</title>
 </head>
 
 <body>
-  <header class="header d-flex flex-column">
+  <header class="header">
     <div class="header__top">
       <a class="header__logo" href="/">
         <img src="./img/logo_white.png" width="159" height="89" alt="">
       </a>
       <div class="header__controls d-flex align-items-center">
         <div class="header__catalog catalog-select">
-          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn collapsed" data-bs-toggle="collapse"
+          <p class="catalog-select__caption from-xs js_top_menu_btn collapsed" data-bs-toggle="collapse"
             data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"
-            role="button">Каталог</p>
-          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button"
-            data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false"
-            aria-controls="top_collapsing_menu"></button>
+            role="button">
+            Каталог
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 9 6" fill="none">
+              <path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </p>
+          <button class="catalog-select__btn js_top_menu_btn to-xs collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"></button>
           <div class="catalog-select__list-wrapper collapse" id="top_collapsing_menu">
             <ul class="catalog-select__list">
               <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
@@ -42,10 +49,10 @@
         <form class="header__search">
           <div class="header__search-wrapper">
             <input class="header__search-input" type="text">
-            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25"
-                alt=""></button>
+            <button class="header__search-submit from-xs" type="submit"><img src="./img/search_white.png" width="25"
+                height="25" alt=""></button>
           </div>
-          <button class="header__search-btn js_search_btn to-sm" type="button"></button>
+          <button class="header__search-btn js_search_btn to-xs" type="button"></button>
         </form>
 
         <a href="./cart.html" class="header__cart">
@@ -54,240 +61,279 @@
         </a>
       </div>
     </div>
+
+    <div class="header__bottom from-xs">
+      <nav class="main-nav d-flex">
+        <a class="main-nav__link" href="#">Фены <span>Dyson Supersonic</span></a>
+        <a class="main-nav__link active" href="#">Стайлеры <span>Dyson Airwrap</span></a>
+        <a class="main-nav__link" href="#">Выпрямители <span>Dyson Corrale</span></a>
+      </nav>
+    </div>
   </header>
 
-  <main class="main product">
-    <div class="breadcrumbs">
-      <ul class="breadcrumbs__list d-flex flex-wrap align-items-center from-xs">
-        <li class="breadcrumbs__item d-flex">
-          <a href="/">Главная</a>
-        </li>
-        <li class="breadcrumbs__item d-flex">
-          <a href="./category.html">Фены Dyson Supersonic</a>
-        </li>
-        <li class="breadcrumbs__item d-flex">
-          <p>Фен Dyson Supersonic HD07 (красный) с 5 насадками и боксом красного оттенка</p>
-        </li>
-      </ul>
+<main class="main product">
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs__list d-flex flex-wrap align-items-center from-xs">
+      <li class="breadcrumbs__item d-flex">
+        <a href="/">Главная</a>
+      </li>
+      <li class="breadcrumbs__item d-flex">
+        <a href="./category.html">Фены Dyson Supersonic</a>
+      </li>
+      <li class="breadcrumbs__item d-flex">
+        <p>Фен Dyson Supersonic HD07 (красный) с 5 насадками и боксом красного оттенка</p>
+      </li>
+    </ul>
+  </div>
+
+  <section class="product-top d-flex flex-wrap justify-content-between">
+    <div class="product-top__img-wrapper d-flex flex-wrap">
+      <div class="product-top__main-img">
+        <img src="./img/product.webp" width="550" height="550" alt="">
+      </div>
+      <div class="product-top__images js_product_preview_slider d-flex">
+        <div class="product-top__img"><img src="./img/product.webp" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/prod1.png" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/prod2.png" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/prod3.png" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/product.webp" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/prod3.png" width="105" height="105" alt=""></div>
+        <div class="product-top__img"><img src="./img/prod1.png" width="105" height="105" alt=""></div>
+      </div>
     </div>
 
-    <section class="product-top d-flex flex-wrap justify-content-between">
-      <div class="product-top__img-wrapper d-flex flex-wrap">
-        <div class="product-top__main-img">
-          <img src="./img/product.webp" width="550" height="550" alt="">
-        </div>
-        <div class="product-top__images js_product_preview_slider d-flex">
-          <div class="product-top__img"><img src="./img/product.webp" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/prod1.png" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/prod2.png" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/prod3.png" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/product.webp" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/prod3.png" width="105" height="105" alt=""></div>
-          <div class="product-top__img"><img src="./img/prod1.png" width="105" height="105" alt=""></div>
-        </div>
+    <div class="product-top__desc-wrapper d-flex flex-column">
+      <h1 class="product-top__title h1">
+        Фен Dyson Supersonic HD03 + 4 насадки + чехол (фуксия)
+      </h1>
+
+      <div class="product-top__prices prices">
+        <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+        <p class="prices__old-price"><span>70900</span>&#8381;</p>
+        <div class="product-top__sale sale">-3%</div>
       </div>
 
-      <div class="product-top__desc-wrapper d-flex flex-column">
-        <h1 class="product-top__title h1">Фен Dyson Supersonic HD07</h1>
-        <p class="product-top__short-desc">
-          с 5 насадками, дорожным чехлом и подставка
-          (фуксия/яркий никель)
-        </p>
-        <div class="product-top__prices prices">
-          <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-          <p class="prices__old-price"><span>70900</span>&#8381;</p>
-          <div class="product-top__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-        </div>
-
-        <div class="product-top__long-desc">
-          <p>
-            Фен Dyson V9 с интеллектуальным мотором не только обеспечивает бережное сушение волос, но и дарит им
-            отличный результат укладки.
-            Стильный дизайн фена сочетает в себе яркий никель и жизнерадостный цвет фуксии. Комплект включает в себя
-            пять специальных насадок,
-            в том числе новую для укладки непослушных волос. Для удобства хранения и перевозки к нему предоставляется
-            подставка и прочный чехол.
-          </p><br>
-          <p>Dyson Supersonic укомплектовывается тремя насадками, а также ковриком и удобным крючком.</p>
-        </div>
-
-        <a href="/catalog.html" class="product-top__buy btn js_buy_btn">в корзину</a>
+      <div class="product-top__long-desc">
+        <p>
+          Фен Dyson V9 с интеллектуальным мотором не только обеспечивает бережное сушение волос, но и дарит им
+          отличный результат укладки.
+          Стильный дизайн фена сочетает в себе яркий никель и жизнерадостный цвет фуксии. Комплект включает в себя
+          пять специальных насадок,
+          в том числе новую для укладки непослушных волос. Для удобства хранения и перевозки к нему предоставляется
+          подставка и прочный чехол.
+        </p><br>
+        <p>Dyson Supersonic укомплектовывается тремя насадками, а также ковриком и удобным крючком.</p>
       </div>
-    </section>
 
-    <section class="product-info">
-      <div class="product-info__tabs">
-        <ul class="product-info__menu d-flex justify-content-between">
-          <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
-              href="#equipment-tab">Комплектация</a></li>
-          <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
-              href="#description-tab">Описание</a></li>
-          <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
-              href="#characteristics-tab">Характеристики</a></li>
-        </ul>
-        <div id="equipment-tab" class="product-info__tab">
-          <ul class="equipment d-flex flex-wrap">
-            <li class="equipment__item d-flex flex-column align-items-center">
-              <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
-              <p class="equipment__name">Фен Dyson Supersonic</p>
-              <p class="equipment__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
-                id ad reiciendis aliquid,
-                nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
-              </p>
-            </li>
-            <li class="equipment__item d-flex flex-column align-items-center">
-              <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
-              <p class="equipment__name">Фен Dyson Supersonic</p>
-              <p class="equipment__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
-                id ad reiciendis aliquid,
-                nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
-              </p>
-            </li>
-            <li class="equipment__item d-flex flex-column align-items-center">
-              <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
-              <p class="equipment__name">Фен Dyson Supersonic</p>
-              <p class="equipment__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
-                id ad reiciendis aliquid,
-                nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
-              </p>
-            </li>
-            <li class="equipment__item d-flex flex-column align-items-center">
-              <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
-              <p class="equipment__name">Фен Dyson Supersonic</p>
-              <p class="equipment__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
-                id ad reiciendis aliquid,
-                nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
-              </p>
-            </li>
-            <li class="equipment__item d-flex flex-column align-items-center">
-              <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
-              <p class="equipment__name">Фен Dyson Supersonic</p>
-              <p class="equipment__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
-                id ad reiciendis aliquid,
-                nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div id="description-tab" class="product-info__tab">
-          <p>
-            Фен Dyson V9 с интеллектуальным мотором не только обеспечивает бережное сушение волос, но и дарит им
-            отличный результат укладки.
-            Стильный дизайн фена сочетает в себе яркий никель и жизнерадостный цвет фуксии. Комплект включает в себя
-            пять специальных насадок,
-            в том числе новую для укладки непослушных волос. Для удобства хранения и перевозки к нему предоставляется
-            подставка и прочный чехол.
-          </p><br>
-          <p>Dyson Supersonic укомплектовывается тремя насадками, а также ковриком и удобным крючком.</p>
-        </div>
-        <div id="characteristics-tab" class="product-info__tab">
-          <ul class="characteristics d-flex flex-wrap justify-content-center">
-            <li class="characteristics__item">
-              <p class="characteristics__title">УМЕНЬШЕНИЕ СТАТИКИ</p>
-              <p>Отрицательные ионы</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">СКОРОСТЬ ВОЗДУШНОГО ПОТОКА</p>
-              <p>41 л/с V9</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">МОЩНОСТЬ</p>
-              <p>1600 Вт</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">ЦИФРОВАЯ ТЕХНОЛОГИЯ ДВИГАТЕЛЯ</p>
-              <p>Dyson Цифровой двигатель V9</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">ЦИФРОВАЯ ТЕХНОЛОГИЯ ДВИГАТЕЛЯ</p>
-              <p>Dyson Цифровой двигатель V9</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">ВЕС</p>
-              <p>0.659 кг</p>
-            </li>
-            <li class="characteristics__item">
-              <p class="characteristics__title">ДЛИНА ШНУРА</p>
-              <p>2,8 м V9</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <p class="product-top__availability">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
+          <rect x="0.898438" y="3.96289" width="13" height="13" fill="white" stroke="#C4C4C4" stroke-linecap="round"
+            stroke-linejoin="round" stroke-dasharray="1 2" />
+          <path d="M8.94805 14.6985L2.50232 6.89936L8.94805 10.0028L20.3042 0.913401L8.94805 14.6985Z" fill="#4FAD50" />
+        </svg>
 
-    <section class="products-sc">
-      <h2 class="products-sc__title h2">Похожие товары</h2>
+        Есть в наличии
+      </p>
 
-      <ul class="products-sc__list d-flex">
-        <li class="products-sc__item card">
-          <div class="card__content">
-            <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
-            <p class="card__category">Dyson Supersonic</p>
-            <a href="./product.html" class="card__name">
-              Фен Dyson Supersonic HD07
-              с подставкой и косметичкой
-              (фуксия/яркий никель)
-            </a>
-            <div class="card__prices prices d-flex">
-              <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-              <p class="prices__old-price"><span>70900</span>&#8381;</p>
-            </div>
-          </div>
-          <div class="card__buy-btn">
-            <button class="btn">в корзину</button>
-          </div>
-        </li>
-        <li class="products-sc__item card">
-          <div class="card__content">
-            <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
-            <p class="card__category">Dyson Supersonic</p>
-            <a href="./product.html" class="card__name">
-              Фен Dyson Supersonic HD07
-              с подставкой и косметичкой
-              (фуксия/яркий никель)
-            </a>
-            <div class="card__prices prices d-flex">
-              <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-              <p class="prices__old-price"><span>70900</span>&#8381;</p>
-            </div>
-          </div>
-          <div class="card__buy-btn">
-            <button class="btn">в корзину</button>
-          </div>
-        </li>
-        <li class="products-sc__item card">
-          <div class="card__content">
-            <div class="card__sale sale"><span class="from-lg">Sale </span><span class="to-lg">-</span>3%</div>
-            <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
-            <p class="card__category">Dyson Supersonic</p>
-            <a href="./product.html" class="card__name">
-              Фен Dyson Supersonic HD07
-              с подставкой и косметичкой
-              (фуксия/яркий никель)
-            </a>
-            <div class="card__prices prices d-flex">
-              <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
-              <p class="prices__old-price"><span>70900</span>&#8381;</p>
-            </div>
-          </div>
-          <div class="card__buy-btn">
-            <button class="btn">в корзину</button>
-          </div>
-        </li>
+      <a href="/catalog.html" class="product-top__buy btn js_buy_btn">в корзину</a>
+    </div>
+  </section>
+
+  <section class="product-info full-width">
+    <div class="product-info__tabs">
+      <ul class="product-info__menu d-flex">
+        <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
+            href="#equipment-tab">Комплектация</a></li>
+        <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
+            href="#description-tab">Описание</a></li>
+        <li class="product-info__menu-item"><a class="d-flex align-items-center justify-content-center"
+            href="#characteristics-tab">Характеристики</a></li>
       </ul>
+      <div id="equipment-tab" class="product-info__tab">
+        <ul class="equipment">
+          <li class="equipment__item d-flex flex-column align-items-center">
+            <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
+            <p class="equipment__name">Фен Dyson Supersonic HD07 фуксия/яркий никель</p>
+            <p class="equipment__desc">
+              Фен идеально подходит для ежедневного использования, благодаря своей бережной процедуре сушки волос за
+              короткое временя.
+              Фен имеют оттенок фуксии, а некоторые его детали - яркий никелевый цвет.
+            </p>
+          </li>
+          <li class="equipment__item d-flex flex-column align-items-center">
+            <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
+            <p class="equipment__name">Фен Dyson Supersonic</p>
+            <p class="equipment__desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
+              id ad reiciendis aliquid,
+              nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
+            </p>
+          </li>
+          <li class="equipment__item d-flex flex-column align-items-center">
+            <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
+            <p class="equipment__name">Фен Dyson Supersonic</p>
+            <p class="equipment__desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
+              id ad reiciendis aliquid,
+              nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
+            </p>
+          </li>
+          <li class="equipment__item d-flex flex-column align-items-center">
+            <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
+            <p class="equipment__name">Фен Dyson Supersonic</p>
+            <p class="equipment__desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
+              id ad reiciendis aliquid,
+              nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
+            </p>
+          </li>
+          <li class="equipment__item d-flex flex-column align-items-center">
+            <img class="equipment__img" src="./img/product_equipment.png" width="280" height="197" alt="">
+            <p class="equipment__name">Фен Dyson Supersonic</p>
+            <p class="equipment__desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni architecto velit numquam ducimus eveniet
+              id ad reiciendis aliquid,
+              nemo inventore nesciunt atque, dicta commodi dolores rerum repellendus, tempora consequatur eligendi.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div id="description-tab" class="product-info__tab">
+        <p>
+          Фен Dyson V9 с интеллектуальным мотором не только обеспечивает бережное сушение волос, но и дарит им
+          отличный результат укладки.
+          Стильный дизайн фена сочетает в себе яркий никель и жизнерадостный цвет фуксии. Комплект включает в себя
+          пять специальных насадок,
+          в том числе новую для укладки непослушных волос. Для удобства хранения и перевозки к нему предоставляется
+          подставка и прочный чехол.
+        </p><br>
+        <p>Dyson Supersonic укомплектовывается тремя насадками, а также ковриком и удобным крючком.</p>
+      </div>
+      <div id="characteristics-tab" class="product-info__tab">
+        <ul class="characteristics">
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_1.png" alt="">
+            <p class="characteristics__title">Уменьшение статики</p>
+            <p>Отрицательные ионы</p>
+          </li>
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_2.png" alt="">
+            <p class="characteristics__title">Скорость воздушного потока</p>
+            <p>41 л/с V9</p>
+          </li>
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_3.png" alt="">
+            <p class="characteristics__title">Мощность</p>
+            <p>1600 Вт</p>
+          </li>
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_4.png" alt="">
+            <p class="characteristics__title">Длина шнура</p>
+            <p>2,8 м V9</p>
+          </li>
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_5.png" alt="">
+            <p class="characteristics__title">Вес</p>
+            <p>0.659 кг</p>
+          </li>
+          <li class="characteristics__item">
+            <img class="characteristics__icon" src="./img/characteristics_6.png" alt="">
+            <p class="characteristics__title">Габариты (ШхВхД)</p>
+            <p>272 х 41 х 48 мм</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-      <a class="products-sc__link btn from-sm" href="/catalog.html">Перейти в каталог Dyson</a>
-    </section>
+  <section class="products-sc full-width">
+  <h2 class="products-sc__title h2">Новые поступления</h2>
 
-    <section class="delivery-sc ">
-  <h2 class="delivery-sc__title h2">Закажите <br class="to-xs"><span>флагман Dyson прямо сейчас!</span></h2>
+  <ul class="products-sc__list product-list">
+    <li class="products-sc__item card">
+      <div class="card__content">
+        <div class="card__sale sale">-3%</div>
+        <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
+        <a href="./product.html" class="card__name">
+          Фен Dyson Supersonic HD07
+          с подставкой и косметичкой
+          (фуксия/яркий никель)
+        </a>
+        <div class="card__prices prices d-flex">
+          <p class="prices__old-price"><span>70900</span>&#8381;</p>
+          <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+        </div>
+      </div>
+      <div class="card__buy-btn">
+        <button class="btn">в корзину</button>
+        <a class="btn card__buy-link" href="/product.html">подробнее</a>
+      </div>
+    </li>
+    <li class="products-sc__item card">
+      <div class="card__content">
+        <div class="card__sale sale">-3%</div>
+        <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
+        <a href="./product.html" class="card__name">
+          Фен Dyson Supersonic HD07
+          с подставкой и косметичкой
+          (фуксия/яркий никель)
+        </a>
+        <div class="card__prices prices d-flex">
+          <p class="prices__old-price"><span>70900</span>&#8381;</p>
+          <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+        </div>
+      </div>
+      <div class="card__buy-btn">
+        <button class="btn">в корзину</button>
+        <a class="btn card__buy-link" href="/product.html">подробнее</a>
+      </div>
+    </li>
+    <li class="products-sc__item card">
+      <div class="card__content">
+        <div class="card__sale sale">-3%</div>
+        <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
+        <a href="./product.html" class="card__name">
+          Фен Dyson Supersonic HD07
+          с подставкой и косметичкой
+          (фуксия/яркий никель)
+        </a>
+        <div class="card__prices prices d-flex">
+          <p class="prices__old-price"><span>70900</span>&#8381;</p>
+          <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+        </div>
+      </div>
+      <div class="card__buy-btn">
+        <button class="btn">в корзину</button>
+        <a class="btn card__buy-link" href="/product.html">подробнее</a>
+      </div>
+    </li>
+    <li class="products-sc__item card">
+      <div class="card__content">
+        <div class="card__sale sale">-3%</div>
+        <a class="card__img" href="./product.html"><img src="./img/card1.webp" alt=""></a>
+        <a href="./product.html" class="card__name">
+          Фен Dyson Supersonic HD07
+          с подставкой и косметичкой
+          (фуксия/яркий никель)
+        </a>
+        <div class="card__prices prices d-flex">
+          <p class="prices__old-price"><span>70900</span>&#8381;</p>
+          <p class="prices__cur-price"><span>44900</span>&nbsp;&#8381;</p>
+        </div>
+      </div>
+      <div class="card__buy-btn">
+        <button class="btn">в корзину</button>
+        <a class="btn card__buy-link" href="/product.html">подробнее</a>
+      </div>
+    </li>
+  </ul>
+
+  <a class="products-sc__link btn from-xs" href="/catalog.html">Перейти в каталог Dyson</a>
+</section>
+
+  <section class="delivery-sc full-width ">
+  <h2 class="delivery-sc__title h2">Закажите <br class="to-xs"><span>флагман <span class="text-logo">dyson</span> прямо
+      сейчас!</span></h2>
 
   <ul class="delivery-sc__list d-flex flex-wrap">
     <li class="delivery-sc__item d-flex flex-column align-items-center">
@@ -329,7 +375,7 @@
   </ul>
 </section>
 
-    <section class="callback ">
+  <section class="callback full-width ">
   <h2 class="callback__title h2">Связаться с нами</h2>
 
   <form class="callback__form d-flex flex-column">
@@ -352,144 +398,148 @@
   </form>
 </section>
 
-    <section class="quote">
-      <div class="quote__wrapper">
-        <img class="quote__img" src="./img/quote_img.png" width="580" height="327" alt="">
-        <p class="quote__text d-flex align-items-center">
-          <span class="quote__logo"><img src="./img/logo_violet.png" width="153" height="58" alt=""></span>
-          <span>- созданы</span>,<br class="to-xs"> <span>чтобы служить долго!</span>
-        </p>
-        <img class="quote__quotes from-xs" src="./img/quotes.png" width="158" height="130" alt="">
-      </div>
-    </section>
+  <section class="quote full-width ">
+  <div class="quote__wrapper">
+    <img class="quote__img" src="./img/quote_img.png" width="580" height="327" alt="">
+    <p class="quote__text d-flex align-items-center">
+      <span class="quote__logo"><img src="./img/logo_violet.png" width="153" height="58" alt=""></span>
+      <span>- созданы</span>,<br class="to-xs"> <span>чтобы служить долго!</span>
+    </p>
+    <img class="quote__quotes from-xs" src="./img/quotes.png" width="158" height="130" alt="">
+  </div>
+</section>
 
-    <footer class="footer">
-      <a href="/" class="footer__logo">
-        <img src="./img/logo_white.png" width="159" height="89" alt="">
-      </a>
+  <a class="callback-btn">
+  <img src="./img/callback.svg" width="80" height="80" alt="">
+</a>
+</main>
 
-      <div class="footer__wrapper">
-        <div class="d-flex flex-column footer__buyers">
-          <p class="footer__caption">Покупателям</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Вопрос-ответ</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Доставка</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Самовывоз</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Оплата</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Возврат и обмен</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Акции</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Новости</a>
-            </li>
-          </ul>
-        </div>
+<footer class="footer ">
+  <a href="/" class="footer__logo">
+    <img src="./img/logo_white.png" width="159" height="89" alt="">
+  </a>
 
-        <div class="d-flex flex-column footer__catalog from-xs">
-          <p class="footer__caption">Каталог</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Фены Dyson Supersonic</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Подарочная коллекция</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Специальное предложение</a>
-            </li>
-          </ul>
-        </div>
+  <div class="footer__wrapper">
+    <div class="d-flex flex-column footer__buyers from-xs">
+      <p class="footer__caption">Покупателям</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Вопрос-ответ</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Доставка</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Самовывоз</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Оплата</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Возврат и обмен</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Акции</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Новости</a>
+        </li>
+      </ul>
+    </div>
 
-        <div class="d-flex flex-column footer__company from-xs">
-          <p class="footer__caption">Компания</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">О нас</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Контакты</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Сотрудничество</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Карта сайта</a>
-            </li>
-          </ul>
+    <div class="d-flex flex-column footer__catalog">
+      <p class="footer__caption">Каталог</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Фены Dyson Supersonic</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Подарочная коллекция</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Специальное предложение</a>
+        </li>
+      </ul>
+    </div>
 
-        </div>
-        <div class="d-flex flex-column footer__policy">
-          <p class="footer__caption from-xs">Правовая информация</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Регистрация устройства</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Условия и положения</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Политика конфиденциальности</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link from-xs">Оферта</a>
-            </li>
-          </ul>
-        </div>
+    <div class="d-flex flex-column footer__company from-xs">
+      <p class="footer__caption">Компания</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">О нас</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Контакты</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Сотрудничество</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Карта сайта</a>
+        </li>
+      </ul>
 
-        <div class="d-flex flex-column footer__social">
-          <p class="footer__caption">Связаться с нами</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="tel:+74951065769" class="footer__link">+74951065769</a>
-            </li>
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
+    </div>
+    <div class="d-flex flex-column footer__policy from-xs">
+      <p class="footer__caption">Правовая информация</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Регистрация устройства</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Условия и положения</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Оферта</a>
+        </li>
+      </ul>
+    </div>
 
-        <div class="d-flex flex-column footer__payment">
-          <p class="footer__caption from-xs">Принимаем к оплате</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="67" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="80" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="170" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="d-flex flex-column footer__social">
+      <p class="footer__caption">Связаться с нами</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="tel:+74951065769" class="footer__link">+74951065769</a>
+        </li>
+        <li class="footer__menu-item d-flex">
+          <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
+        </li>
+      </ul>
+    </div>
 
-      <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
-    </footer>
-  </main>
+    <div class="d-flex flex-column footer__payment">
+      <p class="footer__caption">Принимаем к оплате</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item d-flex">
+          <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="68" height="40" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="65" height="40" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="53" height="40" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/slick.js"></script>
-  <script src="js/script.min.js"></script>
+  <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/OwlCarousel/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 
 </html>

@@ -42,9 +42,6 @@
 	}
 
 	&__item {
-		font-size: calc(100vw * (20 / 1920));
-		line-height: 2.5;
-		text-align: center;
 		min-width: max-content;
 		width: 100%;
 		border-bottom: 1px solid #e3e3e3;
@@ -52,6 +49,12 @@
 
 		&:last-child {
 			border: none;
+		}
+
+		a {
+			font-size: calc(100vw * (20 / 1920));
+			line-height: 2.5;
+			text-align: left;
 		}
 
 		&::after {
@@ -86,7 +89,9 @@
 		}
 
 		&__item {
-			font-size: calc(100vw * (20 / $xl));
+			a {
+				font-size: calc(100vw * (20 / $xl));
+			}
 
 			&::after {
 				height: calc(100vw * (3 / $xl));
@@ -102,7 +107,9 @@
 		}
 
 		&__item {
-			font-size: calc(100vw * (18 / $lg));
+			a {
+				font-size: calc(100vw * (18 / $lg));
+			}
 
 			&::after {
 				height: calc(100vw * (3 / $lg));
@@ -126,13 +133,16 @@
 		}
 
 		&__item {
-			font-size: calc(100vw * (18 / $sm));
-			line-height: 1.2;
 			width: 100%;
 			padding-block: calc(100vw * (20 / $sm));
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			a {
+				font-size: calc(100vw * (18 / $sm));
+				line-height: 1.2;
+			}
 
 			&::after {
 				content: none;
@@ -172,8 +182,11 @@
 		}
 
 		&__item {
-			font-size: calc(100vw * (18 / $xs-base));
 			padding-block: calc(100vw * (20 / $xs-base));
+
+			a {
+				font-size: calc(100vw * (18 / $xs-base));
+			}
 		}
 	}
 }

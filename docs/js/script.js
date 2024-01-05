@@ -27,6 +27,14 @@ function init_carousel() {
 		},
 	});
 
+	$('.js_banner_carousel').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		autoHeight: false,
+		items: 1,
+	});
+
 	/* $('.js_product_preview_slider').owlCarousel({
 		loop: true,
 		nav: true,
@@ -194,5 +202,5 @@ $('document').ready(function () {
 	init_tabs();
 	init_qty();
 	init_forms();
-	init_sync_sliders();
+	//init_sync_sliders();
 });

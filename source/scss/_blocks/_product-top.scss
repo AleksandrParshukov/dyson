@@ -1,304 +1,344 @@
 .product-top {
-  padding: calc(100vw * (112 / 1920)) calc(100vw * (248 / 1920)) calc(100vw * (40 / 1920));
+	padding: 80px 130px 35px;
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (130 / $xl)) calc(100vw * (35 / $xl));
-  }
+	&__img-wrapper {
+		gap: 17px;
+	}
 
-  @include lg {
-    padding: calc(100vw * (70 / $lg)) calc(100vw * (50 / $lg)) calc(100vw * (30 / $lg));
-  }
+	&__main-img {
+		width: 482px;
+		aspect-ratio: 1 / 1;
+		margin-top: 1.5em;
+		margin-bottom: auto;
+		box-shadow: -2px 4px 4px 0px rgba(51, 98, 171, 0.08);
 
-  @include sm {
-    padding: calc(100vw * (40 / $sm)) calc(100vw * (35 / $sm)) calc(100vw * (25 / $sm));
-  }
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 
-  @include xs {
-    padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base)) calc(100vw * (20 / $xs-base));
-  }
+	&__images {
+		width: 87px;
+		flex-direction: column;
+		gap: 8px;
+	}
 
-  &__img-wrapper {
-    gap: calc(100vw * (22 / 1920));
+	.slick-prev,
+	.slick-next {
+		width: 29px;
+		height: 14px;
+		margin-inline: auto;
 
-    @include xl {
-      gap: calc(100vw * (17 / $xl));
-    }
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: transparent url('../img/faq_chevron.png') no-repeat center;
+			background-size: contain;
+			display: block;
+		}
+	}
 
-    @include lg {
-      gap: calc(100vw * (15 / $lg));
-    }
+	.slick-next {
+		transform: rotate(180deg);
+	}
 
-    @include sm {
-      gap: calc(100vw * (15 / $sm));
-    }
+	&__img {
+		width: 87px;
+		aspect-ratio: 1 / 1;
+		box-shadow: -2px 4px 4px 0px rgba(51, 98, 171, 0.08);
+		cursor: pointer;
 
-    @include xs {
-      width: 100%;
-      margin-bottom: calc(100vw * (18 / $xs-base));
-      gap: calc(100vw * (18 / $xs-base));
-    }
-  }
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-  &__main-img {
-    width: calc(100vw * (550 / 1920));
-    aspect-ratio: 1 / 1;
-    margin-top: 1.5em;
-    margin-bottom: auto;
+	&__desc-wrapper {
+		width: 610px;
+	}
 
-    > img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    } 
+	&__prices {
+		align-items: end;
+		font-size: 40px;
+		margin-top: 25px;
 
-    @include xl {
-      width: calc(100vw * (482 / $xl));
-    }
+		.prices__old-price {
+			font-size: 28px;
+			margin-inline: 8px 12px;
+		}
+	}
 
-    @include lg {
-      width: calc(100vw * (373 / $lg));
-      margin-top: 1em;
-    }
+	&__long-desc {
+		font-size: 18px;
+		line-height: 1.25;
+		margin-block: 30px 15px;
+	}
 
-    @include sm {
-      width: calc(100vw * (278 / $sm));
-    }
+	&__availability {
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 1.4;
+		color: #4fad50;
+		display: flex;
+		align-items: center;
 
-    @include xs {
-      width: calc(100vw * (265 / $xs-base));
-      margin-top: 0;
-      margin-inline: auto;
-    }
-  }
+		> svg {
+			margin-bottom: 1px;
+		}
+	}
 
-  &__images {
-    width: calc(100vw * (105 / 1920));
-    flex-direction: column;
-    gap: calc(100vw * (8 / 1920));
+	&__buy {
+		margin-top: 40px;
+		margin-inline: auto;
+	}
+}
 
-    @include xl {
-      width: calc(100vw * (87 / $xl));
-      gap: calc(100vw * (12 / $xl));
-    }
+@include xl {
+	.product-top {
+		padding: calc(100vw * (80 / $xl)) calc(100vw * (130 / $xl)) calc(100vw * (35 / $xl));
 
-    @include lg {
-      width: calc(100vw * (70 / $lg));
-      gap: calc(100vw * (7 / $lg));
-    }
+		&__img-wrapper {
+			gap: calc(100vw * (17 / $xl));
+		}
 
-    @include sm {
-      width: calc(100vw * (48 / $sm));
-      gap: calc(100vw * (11 / $sm));
-    }
+		&__main-img {
+			width: calc(100vw * (482 / $xl));
+		}
 
-    @include xs {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 0;
-    }
-  }
+		&__images {
+			width: calc(100vw * (87 / $xl));
+			gap: calc(100vw * (12 / $xl));
+		}
 
-  .slick-slide > div {
-    @include xs {
-      display: flex;
-    }
-  }
+		.slick-prev,
+		.slick-next {
+			width: calc(100vw * (29 / $xl));
+			height: calc(100vw * (14 / $xl));
+		}
 
-  .slick-prev, .slick-next {
-    width: calc(100vw * (29 / 1920));
-    height: calc(100vw * (14 / 1920));
-    margin-inline: auto;
+		&__img {
+			width: calc(100vw * (87 / $xl));
+		}
 
-    &::after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: transparent url('../img/faq_chevron.png') no-repeat center;
-      background-size: contain;
-      display: block;
-    }
+		&__desc-wrapper {
+			width: calc(100vw * (610 / $xl));
+		}
 
-    @include xl {
-      width: calc(100vw * (29 / $xl));
-      height: calc(100vw * (14 / $xl));
-    }
+		&__short-desc {
+			font-size: calc(100vw * (24 / $xl));
+			margin-block: calc(100vw * (30 / $xl)) calc(100vw * (35 / $xl));
+		}
 
-    @include lg {
-      width: calc(100vw * (17 / $lg));
-      height: calc(100vw * (8 / $lg));
-    }
+		&__prices {
+			font-size: calc(100vw * (30 / $xl));
+			margin-top: calc(100vw * (25 / $xl));
 
-    @include sm {
-      width: calc(100vw * (17 / $sm));
-      height: calc(100vw * (8 / $sm));
-    }
+			.prices__old-price {
+				font-size: calc(100vw * (24 / $xl));
+				margin-right: calc(100vw * (8 / $xl));
+			}
+		}
 
-    @include xs {
-      width: calc(100vw * (70 / $xs-base));
-      height: 100%;
-      transform: rotate(-90deg);
-    }
-  }
+		&__long-desc {
+			font-size: calc(100vw * (18 / $xl));
+			margin-block: calc(100vw * (30 / $xl)) calc(100vw * (15 / $xl));
+		}
 
-  .slick-next {
-    transform: rotate(180deg);
+		&__availability {
+			font-size: calc(100vw * (15 / $xl));
+		}
+	}
+}
 
-    @include xs {
-      transform: rotate(90deg);
-    }
-  }
+@include lg {
+	.product-top {
+		padding: calc(100vw * (55 / $lg)) calc(100vw * (50 / $lg)) calc(100vw * (30 / $lg));
 
-  &__img {
-    width: calc(100vw * (105 / 1920));
-    aspect-ratio: 1 / 1;
-    border: 1px solid #b9b9b9;
-    cursor: pointer;
+		&__img-wrapper {
+			gap: calc(100vw * (15 / $lg));
+		}
 
-    > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } 
+		&__main-img {
+			width: calc(100vw * (373 / $lg));
+			margin-top: 1em;
+		}
 
-    @include xl {
-      width: calc(100vw * (87 / $xl));
-    }
+		&__images {
+			width: calc(100vw * (70 / $lg));
+			gap: calc(100vw * (7 / $lg));
+		}
 
-    @include lg {
-      width: calc(100vw * (70 / $lg));
-    }
+		.slick-prev,
+		.slick-next {
+			width: calc(100vw * (17 / $lg));
+			height: calc(100vw * (8 / $lg));
+		}
 
-    @include sm {
-      width: calc(100vw * (48 / $sm));
-    }
+		&__img {
+			width: calc(100vw * (70 / $lg));
+		}
 
-    @include xs {
-      width: calc(100vw * (73 / $xs-base)) !important;
-      margin-inline: auto;
-    }
-  }
+		&__desc-wrapper {
+			width: calc(100vw * (425 / $lg));
+		}
 
-  &__desc-wrapper {
-    width: calc(100vw * (680 / 1920));
+		&__short-desc {
+			font-size: calc(100vw * (18 / $lg));
+			margin-block: calc(100vw * (15 / $lg)) calc(100vw * (35 / $lg));
+		}
 
-    @include xl {
-      width: calc(100vw * (610 / $xl));
-    }
+		&__prices {
+			font-size: calc(100vw * (25 / $lg));
+			margin-top: calc(100vw * (20 / $lg));
 
-    @include lg {
-      width: calc(100vw * (425 / $lg));
-    }
+			.prices__old-price {
+				font-size: calc(100vw * (15 / $lg));
+				margin-right: calc(100vw * (5 / $lg));
+			}
+		}
 
-    @include sm {
-      width: calc(100vw * (325 / $sm));
-    }
+		&__long-desc {
+			font-size: calc(100vw * (15 / $lg));
+			margin-block: calc(100vw * (30 / $lg)) calc(100vw * (15 / $lg));
+		}
 
-    @include xs {
-      width: 100%;
-    }
-  }
+		&__availability {
+			font-size: calc(100vw * (15 / $lg));
+		}
+	}
+}
 
-  &__short-desc {
-    font-size: calc(100vw * (30 / 1920));
-    line-height: 1;
-    margin-block: calc(100vw * (25 / 1920)) calc(100vw * (30 / 1920));
+@include sm {
+	.product-top {
+		padding: calc(100vw * (40 / $sm)) calc(100vw * (35 / $sm)) calc(100vw * (25 / $sm));
 
-    @include xl {
-      font-size: calc(100vw * (24 / $xl));
-      margin-block: calc(100vw * (30 / $xl)) calc(100vw * (35 / $xl));
-    }
+		&__img-wrapper {
+			gap: calc(100vw * (15 / $sm));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (18 / $lg));
-      margin-block: calc(100vw * (15 / $lg)) calc(100vw * (35 / $lg));
-    }
+		&__main-img {
+			width: calc(100vw * (278 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      margin-block: calc(100vw * (15 / $sm)) calc(100vw * (20 / $sm));
-    }
+		&__images {
+			width: calc(100vw * (48 / $sm));
+			gap: calc(100vw * (11 / $sm));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (17 / $xs-base));
-      margin-block: calc(100vw * (30 / $xs-base));
-    }
-  }
+		.slick-prev,
+		.slick-next {
+			width: calc(100vw * (17 / $sm));
+			height: calc(100vw * (8 / $sm));
+		}
 
-  &__prices {
-    align-items: end;
-    font-size: calc(100vw * (40 / 1920));
+		&__img {
+			width: calc(100vw * (48 / $sm));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (30 / $xl));
-    }
+		&__desc-wrapper {
+			width: calc(100vw * (325 / $sm));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (25 / $lg));
-    }
+		&__short-desc {
+			font-size: calc(100vw * (18 / $sm));
+			margin-block: calc(100vw * (15 / $sm)) calc(100vw * (20 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (25 / $sm));
-    }
+		&__prices {
+			font-size: calc(100vw * (28 / $sm));
+			margin-top: calc(100vw * (15 / $sm));
 
-    @include xs {
-      font-size: calc(100vw * (28 / $xs-base));
-      margin-left: auto;
-    }
+			.prices__old-price {
+				font-size: calc(100vw * (15 / $sm));
+				margin-right: calc(100vw * (5 / $sm));
+			}
+		}
 
-    .prices__old-price {
-      font-size: calc(100vw * (27 / 1920));
-      margin-right: calc(100vw * (10 / 1920));
+		&__long-desc {
+			font-size: calc(100vw * (13 / $sm));
+			margin-block: calc(100vw * (25 / $sm)) calc(100vw * (10 / $sm));
+		}
 
-      @include xl {
-        font-size: calc(100vw * (24 / $xl));
-        margin-right: calc(100vw * (8 / $xl));
-      }
+		&__availability {
+			font-size: calc(100vw * (13 / $sm));
+		}
+	}
+}
 
-      @include lg {
-        font-size: calc(100vw * (15 / $lg));
-        margin-right: calc(100vw * (5 / $lg));
-      }
+@include xs {
+	.product-top {
+		padding: calc(100vw * (35 / $xs-base)) calc(100vw * (15 / $xs-base)) calc(100vw * (20 / $xs-base));
 
-      @include sm {
-        font-size: calc(100vw * (18 / $sm));
-        margin-right: calc(100vw * (5 / $sm));
-      }
+		&__img-wrapper {
+			width: 100%;
+			margin-bottom: calc(100vw * (18 / $xs-base));
+			gap: calc(100vw * (18 / $xs-base));
+		}
 
-      @include xs {
-        font-size: calc(100vw * (17 / $xs-base));
-        margin-right: calc(100vw * (7 / $xs-base));
-      }
-    }
-  }
+		&__main-img {
+			width: calc(100vw * (265 / $xs-base));
+			margin-top: 0;
+			margin-inline: auto;
+		}
 
-  &__long-desc {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.25;
-    margin-block: calc(100vw * (45 / 1920)) calc(100vw * (50 / 1920));
+		&__images {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 0;
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      margin-block: calc(100vw * (30 / $xl)) calc(100vw * (40 / $xl));
-    }
+		.slick-slide > div {
+			display: flex;
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-      margin-block: calc(100vw * (30 / $lg)) calc(100vw * (35 / $lg));
-    }
+		.slick-prev,
+		.slick-next {
+			width: calc(100vw * (70 / $xs-base));
+			height: 100%;
+			transform: rotate(-90deg);
+		}
 
-    @include sm {
-      font-size: calc(100vw * (15 / $sm));
-      margin-block: calc(100vw * (25 / $sm)) calc(100vw * (35 / $sm));
-    }
+		.slick-next {
+			transform: rotate(90deg);
+		}
 
-    @include xs {
-      font-size: calc(100vw * (15 / $xs-base));
-      margin-block: calc(100vw * (25 / $xs-base)) calc(100vw * (30 / $xs-base));
-    }
-  }
+		&__img {
+			width: calc(100vw * (73 / $xs-base)) !important;
+			margin-inline: auto;
+		}
 
-  &__buy {
-    margin-inline: auto;
-  }
+		&__desc-wrapper {
+			width: 100%;
+		}
+
+		&__short-desc {
+			font-size: calc(100vw * (17 / $xs-base));
+			margin-block: calc(100vw * (30 / $xs-base));
+		}
+
+		&__prices {
+			font-size: calc(100vw * (28 / $xs-base));
+			margin-top: calc(100vw * (15 / $xs-base));
+
+			.prices__old-price {
+				font-size: calc(100vw * (17 / $xs-base));
+				margin-right: calc(100vw * (7 / $xs-base));
+			}
+		}
+
+		&__long-desc {
+			font-size: calc(100vw * (13 / $xs-base));
+			margin-block: calc(100vw * (15 / $xs-base)) calc(100vw * (15 / $xs-base));
+		}
+
+		&__availability {
+			font-size: calc(100vw * (13 / $xs-base));
+		}
+	}
 }

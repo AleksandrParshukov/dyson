@@ -1,45 +1,25 @@
 .contacts {
-	padding-block: calc(100vw * (20 / 1920)) calc(100vw * (40 / 1920));
+	padding-block: 20px 40px;
 	background-color: $black;
 
 	&__list {
 		display: flex;
-		gap: calc(100vw * (60 / 1920));
+		gap: 40px;
 		justify-content: center;
 	}
 
 	&__link {
-		font-size: calc(100vw * (30 / 1920));
-		line-height: calc(100vw * (32 / 1920));
+		font-size: 24px;
+		line-height: 26px;
 		color: $white;
 		display: flex;
-		gap: calc(100vw * (10 / 1920));
+		gap: 10px;
 		align-items: center;
 
 		> img {
-			width: calc(100vw * (60 / 1920));
+			width: 50px;
 			aspect-ratio: 1 / 1;
 			flex-shrink: 0;
-		}
-	}
-}
-
-@media (min-width: 1920px) {
-	.contacts {
-		padding-block: 20px 40px;
-
-		&__list {
-			gap: 60px;
-		}
-
-		&__link {
-			font-size: 30px;
-			line-height: 32px;
-			gap: 10px;
-
-			> img {
-				width: 60px;
-			}
 		}
 	}
 }
@@ -112,10 +92,11 @@
 		background-color: $black;
 
 		&__list {
+			width: max-content;
+			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
 			gap: calc(100vw * (20 / $xs-base));
-			align-items: center;
 
 			> li {
 				width: max-content;

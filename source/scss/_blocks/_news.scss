@@ -1,220 +1,186 @@
 .news {
-  &__item {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    
-    @include xs {
-      grid-template-columns: 100%;
-    }
+	padding-block: 75px;
+	background-color: $white;
 
-    &--black {
-      .news { 
-        &__content {
-          color: $white;
-        }
-        
-        &__img {
-          @include xs {
-            grid-row: 3 / 4;
-          }
-        }
-      }
-    }
+	&__title {
+		margin-bottom: 45px;
+	}
 
-    &--reverse {
-      .news {
-        &__img {
-          margin-top: auto;
-          margin-left: auto;
-          margin-right: 0;
-          grid-column: 2 / 3;
+	&__list {
+		width: max-content;
+		margin-bottom: 75px;
+		margin-inline: auto;
+		display: grid;
+		grid-template-columns: repeat(3, 425px);
+		gap: 50px 45px;
+	}
 
-          @include xs {
-            grid-column: 1 / 2;
-          }
-        }
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
 
-        &__content {
-          grid-column: 1 / 2;
-          grid-row: 1 / 2;
-        }
+	&__img {
+		width: 100%;
+		height: 283px;
+		display: block;
 
-        &__date {
-          text-align: left;
-        }
-      }
-    }
-  }
-  
-  &__title {
-    color: $white;
-    grid-column: 1 / -1;
-  }
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-  &__img {
-    width: 100%;
-    height: auto;
-    margin-top: auto;
-    margin-right: auto;
+	&__name {
+		font-size: 25px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.164;
+		color: $special;
+		transition: color 0.3s ease;
 
-    @include xs {
-      grid-row: 2 / 3;
-    }
-  }
+		&:hover {
+			color: $special-dark;
+		}
+	}
 
-  &__content {
-    text-align: center;
-    width: calc(100vw * (500 / 1920));
-    height: min-content;
-    padding-block: calc(100vw * (177 / 1920)) calc(100vw * (110 / 1920));
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+	&__date {
+		color: #bebebe;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.164;
+		font-size: 15px;
+	}
+}
 
-    @include xl {
-      width: calc(100vw * (500 / $xl));
-      padding-block: calc(100vw * (140 / $xl)) calc(100vw * (100 / $xl));
-    }
+@include xl {
+	.news {
+		padding-block: calc(100vw * (75 / $xl));
 
-    @include lg {
-      width: calc(100vw * (450 / $lg));
-      padding-block: calc(100vw * (100 / $lg)) calc(100vw * (60 / $lg));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (45 / $xl));
+		}
 
-    @include sm {
-      width: calc(100vw * (350 / $sm));
-      padding-block: calc(100vw * (50 / $sm)) calc(100vw * (30 / $sm));
-    }
+		&__list {
+			margin-bottom: calc(100vw * (75 / $xl));
+			grid-template-columns: repeat(3, calc(100vw * (425 / $xl)));
+			gap: calc(100vw * (50 / $xl)) calc(100vw * (45 / $xl));
+		}
 
-    @include xs {
-      width: 100%;
-      padding-block: calc(100vw * (50 / $xs-base)) calc(100vw * (30 / $xs-base));
-      padding-inline: calc(100vw * (15 / $xs-base));
-    }
-  }
+		&__item {
+			gap: calc(100vw * (16 / $xl));
+		}
 
-  &__date {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: calc(100vw * (26 / 1920));
-    text-align: right;
-    margin-bottom: calc(100vw * (80 / 1920));
+		&__img {
+			height: calc(100vw * (283 / $xl));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-      margin-bottom: calc(100vw * (70 / $xl));
-    }
+		&__name {
+			font-size: calc(100vw * (25 / $xl));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-      margin-bottom: calc(100vw * (55 / $lg));
-    }
+		&__date {
+			font-size: calc(100vw * (15 / $xl));
+		}
+	}
+}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (24 / $sm));
-      margin-bottom: calc(100vw * (50 / $sm));
-    }
+@include lg {
+	.news {
+		padding-block: calc(100vw * (60 / $lg)) calc(100vw * (70 / $lg));
 
-    @include xs {
-      font-size: calc(100vw * (14 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-      margin-bottom: calc(100vw * (25 / $xs-base));
-    }
-  }
+		&__title {
+			margin-bottom: calc(100vw * (35 / $lg));
+		}
 
-  &__caption {
-    font-size: calc(100vw * (36 / 1920));
-    line-height: calc(100vw * (40 / 1920));
-    color: $special;
-    text-transform: uppercase;
-    margin-bottom: calc(100vw * (25 / 1920));
+		&__list {
+			margin-bottom: calc(100vw * (50 / $lg));
+			grid-template-columns: repeat(3, calc(100vw * (318 / $lg)));
+			gap: calc(100vw * (25 / $lg)) calc(100vw * (16 / $lg));
+		}
 
-    @include xl {
-      font-size: calc(100vw * (36 / $xl));
-      line-height: calc(100vw * (40 / $xl));
-      margin-bottom: calc(100vw * (25 / $xl));
-    }
+		&__item {
+			gap: calc(100vw * (16 / $lg));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (30 / $lg));
-      line-height: calc(100vw * (32 / $lg));
-      margin-bottom: calc(100vw * (20 / $lg));
-    }
+		&__img {
+			height: calc(100vw * (210 / $lg));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (26 / $sm));
-      line-height: calc(100vw * (28 / $sm));
-      margin-bottom: calc(100vw * (20 / $sm));
-    }
+		&__name {
+			font-size: calc(100vw * (18 / $lg));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (22 / $xs-base));
-      line-height: calc(100vw * (24 / $xs-base));
-      margin-bottom: calc(100vw * (15 / $xs-base));
-    }
-  }
+		&__date {
+			font-size: calc(100vw * (13 / $lg));
+		}
+	}
+}
 
-  &__desc {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: calc(100vw * (26 / 1920));
-    margin-bottom: calc(100vw * (40 / 1920));
+@include sm {
+	.news {
+		padding-block: calc(100vw * (45 / $sm)) calc(100vw * (70 / $sm));
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-      line-height: calc(100vw * (26 / $xl));
-      margin-bottom: calc(100vw * (40 / $xl));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (35 / $sm));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (20 / $lg));
-      line-height: calc(100vw * (26 / $lg));
-      margin-bottom: calc(100vw * (30 / $lg));
-    }
+		&__list {
+			margin-bottom: calc(100vw * (30 / $sm));
+			grid-template-columns: repeat(3, calc(100vw * (232 / $sm)));
+			gap: calc(100vw * (25 / $sm)) calc(100vw * (15 / $sm));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (18 / $sm));
-      line-height: calc(100vw * (24 / $sm));
-      margin-bottom: calc(100vw * (25 / $sm));
-    }
+		&__item {
+			gap: calc(100vw * (10 / $sm));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (14 / $xs-base));
-      line-height: calc(100vw * (18 / $xs-base));
-      margin-bottom: calc(100vw * (20 / $xs-base));
-    }
-  }
+		&__img {
+			height: calc(100vw * (153 / $sm));
+		}
 
-  &__link {
-    color: #717171;
-    width: calc(100vw * (256 / 1920));
-    height: calc(100vw * (49 / 1920));
-    margin-top: auto;
-    margin-inline: auto;
-    border: 1px solid currentColor;
-    border-radius: 30px;
-    display: grid;
-    place-content: center;
+		&__name {
+			font-size: calc(100vw * (17 / $sm));
+		}
 
-    @include xl {
-      width: calc(100vw * (256 / $xl));
-      height: calc(100vw * (49 / $xl));
-    }
+		&__date {
+			font-size: calc(100vw * (12 / $sm));
+		}
+	}
+}
 
-    @include lg {
-      width: calc(100vw * (256 / $lg));
-      height: calc(100vw * (49 / $lg));
-    }
+@include xs {
+	.news {
+		padding-block: calc(100vw * (35 / $xs-base));
+		padding-inline: calc(100vw * (20 / $xs-base));
 
-    @include sm {
-      width: calc(100vw * (256 / $sm));
-      height: calc(100vw * (49 / $sm));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (40 / $xs-base));
+		}
 
-    @include xs {
-      width: calc(100vw * (256 / $xs-base));
-      height: calc(100vw * (49 / $xs-base));
-    }
-  }
+		&__list {
+			width: 100%;
+			margin-bottom: calc(100vw * (60 / $xs-base));
+			grid-template-columns: 100%;
+			gap: calc(100vw * (35 / $xs-base));
+		}
+
+		&__item {
+			gap: calc(100vw * (16 / $xs-base));
+		}
+
+		&__img {
+			height: calc(100vw * (210 / $xs-base));
+		}
+
+		&__name {
+			font-size: calc(100vw * (20 / $xs-base));
+		}
+
+		&__date {
+			font-size: calc(100vw * (13 / $xs-base));
+		}
+	}
 }

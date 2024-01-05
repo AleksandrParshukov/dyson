@@ -3,7 +3,7 @@
 }
 
 .h1 {
-	font-size: calc(100vw * (40 / 1920));
+	font-size: 36px;
 	line-height: 1;
 	font-weight: 400;
 	color: $black;
@@ -11,7 +11,7 @@
 }
 
 .h2 {
-	font-size: calc(100vw * (36 / 1920));
+	font-size: 40px;
 	line-height: 1;
 	font-weight: 400;
 	color: $black;
@@ -20,7 +20,7 @@
 }
 
 .h3 {
-	font-size: calc(100vw * (30 / 1920));
+	font-size: 30px;
 	line-height: 1;
 	font-weight: 400;
 	color: $black;
@@ -29,14 +29,14 @@
 }
 
 .btn {
-	font-size: calc(100vw * (18 / 1920));
-	line-height: calc(100vw * (20 / 1920));
+	font-size: 18px;
+	line-height: 20px;
 	color: $white;
 	width: max-content;
-	padding: calc(100vw * (14 / 1920)) calc(100vw * (36 / 1920)) calc(100vw * (16 / 1920));
+	padding: 15px 36px;
 	background-color: $special;
 	border: none;
-	border-radius: calc(100vw * (50 / 1920));
+	border-radius: 50px;
 	display: block;
 	position: relative;
 	z-index: 1;
@@ -75,27 +75,27 @@
 
 .prices {
 	font-family: sans-serif;
-	font-size: calc(100vw * (36 / 1920));
+	font-size: 40px;
 	line-height: 1;
 	color: $special;
-	gap: calc(100vw * (7 / 1920));
+	gap: 7px;
 	display: flex;
 	align-items: baseline;
 
 	&__old-price {
-		font-size: calc(100vw * (24 / 1920));
+		font-size: 28px;
 		text-decoration: line-through;
 		color: $light;
 	}
 }
 
 .sale {
-	font-size: calc(100vw * (20 / 1920));
+	font-size: 15px;
 	line-height: 1;
 	color: $white;
-	padding: calc(100vw * (12 / 1920)) calc(100vw * (7 / 1920));
+	padding: 7px 14px;
 	background-color: $special-light;
-	border-radius: calc(100vw * (14 / 1920));
+	border-radius: 10px;
 }
 
 .form-group {
@@ -116,43 +116,100 @@
 	transform: translateX(-50%);
 }
 
-@media (min-width: 1920px) {
-	.h1 {
-		font-size: 40px;
+.product-list {
+	width: max-content;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 240px);
+	gap: 40px;
+}
+
+.full-width {
+	grid-column: full-width;
+}
+
+.text-logo {
+	font-family: 'Vacuum', sans-serif;
+}
+
+.callback-btn {
+	width: 60px;
+	aspect-ratio: 1 / 1;
+	position: fixed;
+	bottom: 100px;
+	right: 50px;
+	z-index: 25;
+	cursor: pointer;
+
+	> img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
 	}
 
-	.h2 {
-		font-size: 36px;
-	}
-
-	.h3 {
-		font-size: 30px;
-	}
-
-	.btn {
-		font-size: 18px;
-		line-height: 20px;
-		padding: 14px 36px 16px;
-		border-radius: 50px;
-	}
-
-	.prices {
-		font-size: 36px;
-		gap: 8px;
-
-		&__old-price {
-			font-size: 24px;
+	&:hover {
+		&::before {
+			animation: callback-btn-b 0.75s;
+		}
+		&::after {
+			animation: callback-btn-a 0.75s;
 		}
 	}
 
-	.sale {
-		font-size: 20px;
-		padding: 12px 7px;
-		border-radius: 14px;
+	&::before,
+	&::after {
+		content: '';
+		aspect-ratio: 1 / 1;
+		display: block;
+		border-radius: 50%;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: center;
 	}
 
-	.form-group label.error {
-		font-size: 15px;
+	&::before {
+		width: 150%;
+		border: 5px solid $special;
+	}
+
+	&::after {
+		width: 100%;
+		border: 3px solid $special;
+	}
+}
+
+@keyframes callback-btn-a {
+	0% {
+		width: 100%;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		width: 150%;
+		opacity: 0;
+	}
+}
+
+@keyframes callback-btn-b {
+	0% {
+		width: 150%;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		width: 225%;
+		opacity: 0;
 	}
 }
 
@@ -162,7 +219,7 @@
 	}
 
 	.h2 {
-		font-size: calc(100vw * (36 / $xl));
+		font-size: calc(100vw * (40 / $xl));
 	}
 
 	.h3 {
@@ -177,22 +234,34 @@
 	}
 
 	.prices {
-		font-size: calc(100vw * (30 / $xl));
-		gap: calc(100vw * (6 / $xl));
+		font-size: calc(100vw * (40 / $xl));
+		gap: calc(100vw * (7 / $xl));
 
 		&__old-price {
-			font-size: calc(100vw * (20 / $xl));
+			font-size: calc(100vw * (28 / $xl));
 		}
 	}
 
 	.sale {
-		font-size: calc(100vw * (17 / $xl));
-		padding: calc(100vw * (10 / $xl)) calc(100vw * (6 / $xl));
-		border-radius: calc(100vw * (14 / $xl));
+		font-size: calc(100vw * (15 / $xl));
+		padding: calc(100vw * (7 / $xl)) calc(100vw * (14 / $xl));
+		border-radius: calc(100vw * (10 / $xl));
 	}
 
 	.form-group label.error {
 		font-size: calc(100vw * (15 / $xl));
+	}
+
+	.product-list {
+		grid-template-columns: repeat(4, calc(100vw * (240 / $xl)));
+		gap: calc(100vw * (40 / $xl));
+	}
+}
+
+@include llg {
+	.product-list {
+		grid-template-columns: repeat(4, calc(100vw * (240 / $llg)));
+		gap: calc(100vw * (40 / $llg));
 	}
 }
 
@@ -227,12 +296,17 @@
 
 	.sale {
 		font-size: calc(100vw * (12 / $lg));
-		padding: calc(100vw * (9 / $lg)) calc(100vw * (7 / $lg));
+		padding: calc(100vw * (7 / $lg)) calc(100vw * (14 / $lg));
 		border-radius: calc(100vw * (14 / $lg));
 	}
 
 	.form-group label.error {
 		font-size: calc(100vw * (13 / $lg));
+	}
+
+	.product-list {
+		grid-template-columns: repeat(3, calc(100vw * (240 / $lg)));
+		gap: calc(100vw * (55 / $lg));
 	}
 }
 
@@ -266,13 +340,18 @@
 	}
 
 	.sale {
-		font-size: calc(100vw * (18 / $sm));
-		padding: calc(100vw * (6 / $sm)) calc(100vw * (10 / $sm));
+		font-size: calc(100vw * (13 / $sm));
+		padding: calc(100vw * (6 / $sm)) calc(100vw * (11 / $sm));
 		border-radius: calc(100vw * (14 / $sm));
 	}
 
 	.form-group label.error {
 		font-size: calc(100vw * (13 / $sm));
+	}
+
+	.product-list {
+		grid-template-columns: repeat(3, calc(100vw * (180 / $sm)));
+		gap: calc(100vw * (25 / $sm));
 	}
 }
 
@@ -306,12 +385,17 @@
 	}
 
 	.sale {
-		font-size: calc(100vw * (17 / $xs-base));
-		padding: calc(100vw * (8 / $xs-base)) calc(100vw * (13 / $xs-base));
+		font-size: calc(100vw * (13 / $xs-base));
+		padding: calc(100vw * (6 / $xs-base)) calc(100vw * (11 / $xs-base));
 		border-radius: calc(100vw * (14 / $xs-base));
 	}
 
 	.form-group label.error {
 		font-size: calc(100vw * (13 / $xs-base));
+	}
+
+	.product-list {
+		grid-template-columns: repeat(2, calc(100vw * (156 / $xs-base)));
+		gap: calc(100vw * (10 / $xs-base));
 	}
 }

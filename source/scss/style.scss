@@ -1,9 +1,17 @@
 @font-face {
-    font-family: 'futura';
-    src: url('../fonts/futura-bt-for-dyson-w05-medium.woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'futura';
+	src: url('../fonts/futura-bt-for-dyson-w05-medium.woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vacuum';
+	src: url('../fonts/Vacuum.otf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @import '_defs/vars';
@@ -11,7 +19,6 @@
 @import '_mixins/breakpoints';
 @import '_defs/resp_helpers';
 @import '_defs/util';
-
 
 @import '_blocks/header';
 @import '_blocks/breadcrumbs';
@@ -46,3 +53,4 @@
 @import '_blocks/news-detail';
 @import '_blocks/delivery';
 @import '_blocks/news';
+@import '_blocks/registration';

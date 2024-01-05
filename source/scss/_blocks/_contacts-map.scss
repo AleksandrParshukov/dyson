@@ -1,9 +1,9 @@
 .contacts-map {
-	padding: calc(100vw * (100 / 1920)) calc(100vw * (145 / 1920));
+	padding: 100px 0;
 	background-color: #ffffff;
 
 	&__text {
-		font-size: calc(100vw * (20 / 1920));
+		font-size: 20px;
 		text-align: center;
 		margin-block: 1em;
 	}
@@ -14,18 +14,13 @@
 	}
 }
 
-@media (min-width: 1920px) {
+@include xl-up {
 	.contacts-map {
-		padding: 100px 0;
 		display: grid;
-		grid-template-columns: 1fr [content-start] 1630px [content-end] 1fr;
+		grid-template-columns: 1fr [content-start] 1478px [content-end] 1fr;
 
 		> * {
 			grid-column: content;
-		}
-
-		&__text {
-			font-size: 20px;
 		}
 	}
 }

@@ -1,19 +1,15 @@
 .products-sc {
-	padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
+	padding: 100px 100px 50px;
 	background-color: #fafafa;
+	display: flex;
+	flex-direction: column;
 
 	&__title {
-		margin-bottom: calc(100vw * (55 / 1920));
-	}
-
-	&__list {
-		width: max-content;
-		margin-inline: auto;
-		gap: calc(100vw * (90 / 1920));
+		margin-bottom: 55px;
 	}
 
 	&__link {
-		margin: calc(100vw * (55 / 1920)) auto 0;
+		margin: 55px auto 0;
 	}
 }
 
@@ -23,10 +19,6 @@
 
 		&__title {
 			margin-bottom: calc(100vw * (55 / $xl));
-		}
-
-		&__list {
-			gap: calc(100vw * (70 / $xl));
 		}
 
 		&__link {
@@ -44,7 +36,9 @@
 		}
 
 		&__list {
-			gap: calc(100vw * (50 / $lg));
+			.card:nth-child(3) ~ .card {
+				display: none;
+			}
 		}
 
 		&__link {
@@ -61,10 +55,6 @@
 			margin-bottom: calc(100vw * (40 / $sm));
 		}
 
-		&__list {
-			gap: calc(100vw * (25 / $sm));
-		}
-
 		&__link {
 			margin-top: calc(100vw * (25 / $sm));
 		}
@@ -73,7 +63,7 @@
 
 @include xs {
 	.products-sc {
-		padding: calc(100vw * (42 / $xs-base)) calc(100vw * (36 / $xs-base)) calc(100vw * (30 / $xs-base));
+		padding: calc(100vw * (42 / $xs-base)) calc(100vw * (20 / $xs-base)) calc(100vw * (30 / $xs-base));
 		background-color: #f0f0f0;
 
 		&__title {
@@ -81,8 +71,9 @@
 		}
 
 		&__list {
-			gap: calc(100vw * (20 / $xs-base));
-			flex-direction: column;
+			.card:nth-child(3) ~ .card {
+				display: flex;
+			}
 		}
 
 		&__link {

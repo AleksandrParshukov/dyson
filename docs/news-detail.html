@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.cdnfonts.com/css/dyson-modern" rel="stylesheet">
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/owl.carousel.min.css" rel="stylesheet">
   <link href="./css/owl.theme.default.min.css" rel="stylesheet">
@@ -14,19 +15,24 @@
 </head>
 
 <body>
-  <header class="header d-flex flex-column">
+  <header class="header">
     <div class="header__top">
       <a class="header__logo" href="/">
         <img src="./img/logo_white.png" width="159" height="89" alt="">
       </a>
       <div class="header__controls d-flex align-items-center">
         <div class="header__catalog catalog-select">
-          <p class="catalog-select__caption d-none d-md-flex js_top_menu_btn collapsed" data-bs-toggle="collapse"
+          <p class="catalog-select__caption from-xs js_top_menu_btn collapsed" data-bs-toggle="collapse"
             data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"
-            role="button">Каталог</p>
-          <button class="catalog-select__btn js_top_menu_btn d-md-none collapsed" type="button"
-            data-bs-toggle="collapse" data-bs-target="#top_collapsing_menu" aria-expanded="false"
-            aria-controls="top_collapsing_menu"></button>
+            role="button">
+            Каталог
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 9 6" fill="none">
+              <path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </p>
+          <button class="catalog-select__btn js_top_menu_btn to-xs collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#top_collapsing_menu" aria-expanded="false" aria-controls="top_collapsing_menu"></button>
           <div class="catalog-select__list-wrapper collapse" id="top_collapsing_menu">
             <ul class="catalog-select__list">
               <li class="catalog-select__item"><a href="#">Фены Dyson</a></li>
@@ -41,10 +47,10 @@
         <form class="header__search">
           <div class="header__search-wrapper">
             <input class="header__search-input" type="text">
-            <button class="header__search-submit" type="submit"><img src="./img/search.png" width="25" height="25"
-                alt=""></button>
+            <button class="header__search-submit from-xs" type="submit"><img src="./img/search_white.png" width="25"
+                height="25" alt=""></button>
           </div>
-          <button class="header__search-btn js_search_btn to-sm" type="button"></button>
+          <button class="header__search-btn js_search_btn to-xs" type="button"></button>
         </form>
 
         <a href="./cart.html" class="header__cart">
@@ -55,72 +61,110 @@
     </div>
   </header>
 
-  <main class="main d-flex flex-column">
-    <section class="news-detail">
-      <img class="news-detail__top-img" src="./img/news-detail_top.webp" alt="">
+<main class="main d-flex flex-column">
+  <div class="breadcrumbs breadcrumbs--white">
+    <ul class="breadcrumbs__list d-flex flex-wrap align-items-center">
+      <li class="breadcrumbs__item d-flex">
+        <a href="/">Главная</a>
+      </li>
+      <li class="breadcrumbs__item d-flex">
+        <a href="./category.html">Регистрация устройства</a>
+      </li>
+    </ul>
+  </div>
 
-      <h2 class="news-detail__title h2">Новости</h2>
+  <section class="news-detail">
+    <div class="news-detail__top-img">
+      <img src="./img/news-detail_top.webp" alt="">
+    </div>
 
-      <p class="news-detail__caption" style="color: #ba7600">
-        Новая насадка фена Дайсон<br>
-        для борьбы с пушащимися волосами
+    <h1 class="news-detail__title h2">
+      Новая насадка фена Дайсон для борьбы<br>
+      с пушащимися волосами.
+    </h1>
+
+    <div class="news-detail__content">
+      <p>
+        Эффект Коанда - это термин, который используют в своей работе стилисты. Этого эффекта можно достичь с
+        использованием
+        стайлера и фена Dyson. Он основан на технологии создания причесок без использования дополнительных
+        аксессуаров, зажимов
+        и заколок. Уложить волосы можно благодаря мощному потоку воздуха.
       </p>
+      <br>
 
+      <img src="./img/news-detail.webp" style="float: left; margin-right: 30px;" alt="">
+      <p>
+        Ранее эффект Коанда был задействован только в цилиндрических насадках стайлера. Сейчас же есть насадка с
+        режимом Коанда
+        для фена. В 2022 году производитель выпустил новую модель стайлера, где все насадки работают по технологии
+        Коанда. Это
+        существенно экономит время на укладкуРанее эффект Коанда был задействован только в цилиндрических насадках
+        стайлера.
+        Сейчас же есть насадка с режимом Коанда для фена. В 2022 году производитель выпустил новую модель стайлера,
+        где все
+        насадки работают по технологии Коанда. Это существенно экономит время на укладку
+      </p>
+      <br>
+      <p>
+        Подобного эффекта можно достичь только при использовании техники Дайсон, другие бренды не смогли ее внедрить в
+        свои
+        устройства по уходу за волосами. Этого удалось достичь за счет того, что инженеры компании посвятили несколько
+        лет
+        разработке продукта. Все гаджеты для ухода за волосами от Dyson отличаются высокой технологичностью, а поэтому
+        ими
+        комфортно пользоваться и управлять.
+      </p>
+      <br>
+      <p>
+        Волоски примагничиваются к девайсу без участия человека. Стайлер имеет 6 потоков воздуха, за счет чего волосы
+        притягиваются и удается достичь максимального объема. В результате удается быстро создать аккуратную прическу,
+        откуда не
+        будут торчать волоски. В 2022 году бренд Dyson выпустил насадку для фена с эффектом Коанда, которая
+        справляется со всеми
+        торчащими волосками. Сушить волосы стало еще проще и быстрее
 
-      <div class="news-detail__content">
-        <p>
-          Брашинг - это круглая расческа со щетинками, которую девушки и мужчины используют для укладки и придания
-          объема
-          волосам.
-          Она может использоваться как расческа или насадка на стайлер. Щетка может иметь разный диаметр, который нужно
-          подбирать
-          отталкиваясь от длины волос, чем они длиннее, тем больше объем щетки должен быть. Оптимальные размеры щетки
-          брашинга:
-          20-90 мм.
-        </p>
-        <br>
-        <p>
-          Но для того чтобы укладка брашингом получилась красивой, необходимо использовать щетку только на чистых,
-          слегка
-          подсушенных волосах. Важно удерживать щетку и фен в одном направлении, сама щетка должна плотно прилегать к
-          голове.
-          Работать нужно с отдельными прядями, каждая прядь должны быть 3-5 сантиметров.
-        </p>
-        <br>
-        <p>
-          Фен или стайлер с насадкой брашинг гораздо удобнее для домашнего использования. Если использовать отдельно
-          расческу
-          брашинг и фен, то с первого раза укладка может не получиться.
-        </p>
-        <br>
-        <p>
-          Но такая термическая укладка может оказаться опасной для волос. Чтобы этого избежать, прислушивайтесь таких
-          рекомендаций:
-        </p>
-        <br>
-        <p>
-          используйте брашинг только на подсушенные волосы, на мокрых волосах не получится укладки;
-          наносите на волосы средства для укладки, чтобы эффект держался дольше времени;
-        </p>
-        <br>
-        <img src="./img/news-detail.webp" width="296" height="214" alt="">
-        <br>
-        <p>
-          Для ее создания инженеры Дайсон выполнили в лабораториях разные исследования.жно и с помощью
-          насадки-концентратора, но
-          для этого нужен опыт и сноровка. А с новой насадкой получится уложить даже самые непослушные волос. Для ее
-          создания
-          инженеры Дайсон выполнили в лабораториях разные исследования.жно и с помощью насадки-концентратора.
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <p class="news-detail__date">27.09.2023</p>
+    <p class="news-detail__date">27.09.2023</p>
 
-      <a href="/" class="news-detail__link btn">Перейти на главную Dyson</a>
-    </section>
+    <div class="news-detail__controls">
+      <a href="/news.html" class="news-detail__link">Все новости</a>
+      <a href="/news-detail.html" class="news-detail__link">Следующая новость</a>
+      <a href="/catalog.html" class="news-detail__link">Каталог Dyson</a>
+    </div>
 
-    <section class="delivery-sc delivery-sc--light">
-  <h2 class="delivery-sc__title h2">Закажите <br class="to-xs"><span>флагман Dyson прямо сейчас!</span></h2>
+    <h2 class="news__title h2">Статьи по теме</h2>
+
+    <ul class="news__list">
+      <li class="news__item">
+
+        <a href="/news-detail.html" class="news__img"><img src="./img/news_1.webp" alt=""></a>
+
+        <a class="news__name" href="/news-detail.html">Отличия фенов модели HD07 от HD03?</a>
+        <p class="news__date">18/06/2023</p>
+      </li>
+      <li class="news__item">
+
+        <a href="/news-detail.html" class="news__img"><img src="./img/news_2.webp" alt=""></a>
+
+        <a class="news__name" href="/news-detail.html">Уход за волосами в холодное время года</a>
+        <p class="news__date">18/06/2023</p>
+      </li>
+      <li class="news__item">
+
+        <a href="/news-detail.html" class="news__img"><img src="./img/news_3.webp" alt=""></a>
+
+        <a class="news__name" href="/news-detail.html">Как работает выпрямитель Dyson</a>
+        <p class="news__date">18/06/2023</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="delivery-sc full-width ">
+  <h2 class="delivery-sc__title h2">Закажите <br class="to-xs"><span>флагман <span class="text-logo">dyson</span> прямо
+      сейчас!</span></h2>
 
   <ul class="delivery-sc__list d-flex flex-wrap">
     <li class="delivery-sc__item d-flex flex-column align-items-center">
@@ -161,132 +205,170 @@
     </li>
   </ul>
 </section>
+  <section class="callback full-width ">
+  <h2 class="callback__title h2">Связаться с нами</h2>
 
-    <footer class="footer order-2">
-      <a href="/" class="footer__logo">
-        <img src="./img/logo_white.png" width="159" height="89" alt="">
-      </a>
+  <form class="callback__form d-flex flex-column">
+    <p class="callback__form-caption">Есть вопросы? Оставьте свою заявку, и мы вам ответим.</p>
 
-      <div class="footer__wrapper">
-        <div class="d-flex flex-column footer__buyers">
-          <p class="footer__caption">Покупателям</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Вопрос-ответ</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Доставка</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Самовывоз</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Оплата</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Возврат и обмен</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Акции</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Новости</a>
-            </li>
-          </ul>
-        </div>
+    <div class="form-group">
+      <input type="text" name="name" class="callback__input" placeholder="Имя">
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" class="callback__input" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="text" name="phone" class="callback__input" placeholder="Телефон">
+    </div>
+    <div class="form-group">
+      <textarea name="message" class="callback__input callback__input--textarea" rows="10"
+        placeholder="Сообщение"></textarea>
+    </div>
+    <button type="submit" class="callback__submit btn">Отправить</button>
+  </form>
+</section>
+  <section class="quote full-width ">
+  <div class="quote__wrapper">
+    <img class="quote__img" src="./img/quote_img.png" width="580" height="327" alt="">
+    <p class="quote__text d-flex align-items-center">
+      <span class="quote__logo"><img src="./img/logo_violet.png" width="153" height="58" alt=""></span>
+      <span>- созданы</span>,<br class="to-xs"> <span>чтобы служить долго!</span>
+    </p>
+    <img class="quote__quotes from-xs" src="./img/quotes.png" width="158" height="130" alt="">
+  </div>
+</section>
 
-        <div class="d-flex flex-column footer__catalog from-xs">
-          <p class="footer__caption">Каталог</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Фены Dyson Supersonic</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Подарочная коллекция</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Специальное предложение</a>
-            </li>
-          </ul>
-        </div>
+  <a class="callback-btn">
+  <img src="./img/callback.svg" width="80" height="80" alt="">
+</a>
+</main>
 
-        <div class="d-flex flex-column footer__company from-xs">
-          <p class="footer__caption">Компания</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">О нас</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Контакты</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Сотрудничество</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Карта сайта</a>
-            </li>
-          </ul>
+<footer class="footer ">
+  <a href="/" class="footer__logo">
+    <img src="./img/logo_white.png" width="159" height="89" alt="">
+  </a>
 
-        </div>
-        <div class="d-flex flex-column footer__policy">
-          <p class="footer__caption from-xs">Правовая информация</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Регистрация устройства</a>
-            </li>
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Условия и положения</a>
-            </li>
-            <li class="footer__menu-item">
-              <a href="#" class="footer__link">Политика конфиденциальности</a>
-            </li>
-            <li class="footer__menu-item from-xs">
-              <a href="#" class="footer__link">Оферта</a>
-            </li>
-          </ul>
-        </div>
+  <div class="footer__wrapper">
+    <div class="d-flex flex-column footer__buyers from-xs">
+      <p class="footer__caption">Покупателям</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Вопрос-ответ</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Доставка</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Самовывоз</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Оплата</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Возврат и обмен</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Акции</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Новости</a>
+        </li>
+      </ul>
+    </div>
 
-        <div class="d-flex flex-column footer__social">
-          <p class="footer__caption">Связаться с нами</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item">
-              <a href="tel:+74951065769" class="footer__link">+74951065769</a>
-            </li>
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
+    <div class="d-flex flex-column footer__catalog">
+      <p class="footer__caption">Каталог</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Фены Dyson Supersonic</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Подарочная коллекция</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Специальное предложение</a>
+        </li>
+      </ul>
+    </div>
 
-        <div class="d-flex flex-column footer__payment">
-          <p class="footer__caption from-xs">Принимаем к оплате</p>
-          <ul class="footer__menu">
-            <li class="footer__menu-item d-flex">
-              <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="67" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="80" height="51" alt=""></a>
-              <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="170" height="51" alt=""></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="d-flex flex-column footer__company from-xs">
+      <p class="footer__caption">Компания</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">О нас</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Контакты</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Сотрудничество</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Карта сайта</a>
+        </li>
+      </ul>
 
-      <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
-    </footer>
-  </main>
+    </div>
+    <div class="d-flex flex-column footer__policy from-xs">
+      <p class="footer__caption">Правовая информация</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Регистрация устройства</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Условия и положения</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__menu-item">
+          <a href="#" class="footer__link">Оферта</a>
+        </li>
+      </ul>
+    </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/script.min.js"></script>
+    <div class="d-flex flex-column footer__social">
+      <p class="footer__caption">Связаться с нами</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="tel:+74951065769" class="footer__link">+74951065769</a>
+        </li>
+        <li class="footer__menu-item d-flex">
+          <a href="#" class="footer__icon"><img src="./img/icons8-telegram.svg" width="51" height="51" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/icons8-whatsapp.svg" width="51" height="51" alt=""></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex flex-column footer__payment">
+      <p class="footer__caption">Принимаем к оплате</p>
+      <ul class="footer__menu">
+        <li class="footer__menu-item d-flex">
+          <a href="#" class="footer__icon"><img src="./img/Old_Visa_Logo.svg" width="68" height="40" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/mastercard-logo.svg" width="65" height="40" alt=""></a>
+          <a href="#" class="footer__icon"><img src="./img/mir-logo.svg" width="53" height="40" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer__copyright">COPYRIGHT © 2023 Yourdyson.ru Все права зищищены.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/OwlCarousel/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 
 </html>

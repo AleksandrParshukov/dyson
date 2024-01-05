@@ -1,10 +1,11 @@
 .card {
 	position: relative;
+	border: none;
+	border-radius: 0;
 
 	&__content {
-		width: 416px;
 		height: 100%;
-		padding: 20px 40px;
+		padding: 40px 20px 20px;
 		background-color: $white;
 		display: flex;
 		flex-direction: column;
@@ -14,15 +15,14 @@
 
 	&__sale {
 		position: absolute;
-		top: 17px;
-		right: -17px;
+		top: 14px;
+		right: -12px;
 	}
 
 	&__img {
 		width: 100%;
 		aspect-ratio: 1 / 1;
 		object-fit: contain;
-		margin-bottom: 10px;
 
 		> img {
 			width: 100%;
@@ -31,17 +31,11 @@
 		}
 	}
 
-	&__category {
-		font-size: 30px;
-		line-height: 1;
-		color: $gray;
-	}
-
 	&__name {
-		font-size: 24px;
+		font-size: 15px;
 		line-height: 1.125;
 		text-align: left;
-		margin-block: 15px 25px;
+		margin-block: 15px;
 
 		&:hover {
 			color: inherit;
@@ -49,6 +43,7 @@
 	}
 
 	&__prices {
+		font-size: 28px;
 		margin-top: auto;
 		margin-inline: auto 0;
 		position: relative;
@@ -57,6 +52,10 @@
 		justify-content: end;
 		align-items: baseline;
 		gap: 8px;
+
+		.prices__old-price {
+			font-size: 13px;
+		}
 	}
 
 	&__buy-btn {
@@ -72,7 +71,18 @@
 		gap: 15px;
 
 		> .btn {
+			font-size: 15px;
+			line-height: 18px;
+			padding: 10px 25px;
 			width: 200px;
+		}
+	}
+
+	&__buy-link {
+		background-color: #1a1b47;
+
+		&::before {
+			background-color: $special-dark;
 		}
 	}
 }
@@ -95,30 +105,77 @@
 @include xl {
 	.card {
 		&__content {
-			width: calc(100vw * (358 / $xl));
-			padding: calc(100vw * (20 / $xl)) calc(100vw * (30 / $xl));
+			padding: calc(100vw * (40 / $xl)) calc(100vw * (20 / $xl)) calc(100vw * (20 / $xl));
 		}
 
 		&__sale {
-			top: calc(100vw * (15 / $xl));
-			right: calc(100vw * (-15 / $xl));
-		}
-
-		&__img {
-			margin-bottom: calc(100vw * (10 / $xl));
-		}
-
-		&__category {
-			font-size: calc(100vw * (25 / $xl));
+			position: absolute;
+			top: calc(100vw * (14 / $xl));
+			right: calc(100vw * (-12 / $xl));
 		}
 
 		&__name {
-			font-size: calc(100vw * (22 / $xl));
-			margin-block: calc(100vw * (17 / $xl)) calc(100vw * (20 / $xl));
+			font-size: calc(100vw * (15 / $xl));
+			margin-block: calc(100vw * (15 / $xl));
 		}
 
 		&__prices {
+			font-size: calc(100vw * (28 / $xl));
 			gap: calc(100vw * (8 / $xl));
+
+			.prices__old-price {
+				font-size: calc(100vw * (13 / $xl));
+			}
+		}
+
+		&__buy-btn {
+			gap: calc(100vw * (15 / $xl));
+
+			> .btn {
+				font-size: calc(100vw * (15 / $xl));
+				line-height: calc(100vw * (18 / $xl));
+				padding: calc(100vw * (9 / $xl)) calc(100vw * (25 / $xl)) calc(100vw * (11 / $xl));
+				width: calc(100vw * (200 / $xl));
+			}
+		}
+	}
+}
+
+@include llg {
+	.card {
+		&__content {
+			padding: calc(100vw * (40 / $llg)) calc(100vw * (20 / $llg)) calc(100vw * (20 / $llg));
+		}
+
+		&__sale {
+			position: absolute;
+			top: calc(100vw * (14 / $llg));
+			right: calc(100vw * (-12 / $llg));
+		}
+
+		&__name {
+			font-size: calc(100vw * (15 / $llg));
+			margin-block: calc(100vw * (15 / $llg));
+		}
+
+		&__prices {
+			font-size: calc(100vw * (28 / $llg));
+			gap: calc(100vw * (8 / $llg));
+
+			.prices__old-price {
+				font-size: calc(100vw * (13 / $llg));
+			}
+		}
+
+		&__buy-btn {
+			gap: calc(100vw * (15 / $llg));
+
+			> .btn {
+				font-size: calc(100vw * (15 / $llg));
+				line-height: calc(100vw * (18 / $llg));
+				padding: calc(100vw * (9 / $llg)) calc(100vw * (25 / $llg)) calc(100vw * (11 / $llg));
+				width: calc(100vw * (200 / $llg));
+			}
 		}
 	}
 }
@@ -126,61 +183,66 @@
 @include lg {
 	.card {
 		&__content {
-			width: calc(100vw * (250 / $lg));
-			padding: calc(100vw * (20 / $lg)) calc(100vw * (25 / $lg));
+			padding: calc(100vw * (30 / $lg)) calc(100vw * (20 / $lg)) calc(100vw * (20 / $lg));
 		}
 
 		&__sale {
-			top: calc(100vw * (10 / $lg));
-			right: calc(100vw * (-10 / $lg));
-		}
-
-		&__img {
-			margin-bottom: calc(100vw * (10 / $lg));
-		}
-
-		&__category {
-			font-size: calc(100vw * (20 / $lg));
+			top: calc(100vw * (14 / $lg));
+			right: calc(100vw * (-12 / $lg));
 		}
 
 		&__name {
 			font-size: calc(100vw * (15 / $lg));
-			margin-block: calc(100vw * (11 / $lg)) calc(100vw * (15 / $lg));
+			margin-block: calc(100vw * (15 / $lg));
 		}
 
 		&__prices {
+			font-size: calc(100vw * (28 / $lg));
 			gap: calc(100vw * (8 / $lg));
+
+			.prices__old-price {
+				font-size: calc(100vw * (13 / $lg));
+			}
+		}
+
+		&__buy-btn {
+			gap: calc(100vw * (15 / $lg));
+
+			> .btn {
+				font-size: calc(100vw * (15 / $lg));
+				line-height: calc(100vw * (18 / $lg));
+				padding: calc(100vw * (10 / $lg)) calc(100vw * (25 / $lg));
+				width: calc(100vw * (200 / $lg));
+			}
 		}
 	}
 }
 
 @include sm {
 	.card {
+		position: relative;
+
 		&__content {
-			width: calc(100vw * (225 / $sm));
-			padding: calc(100vw * (18 / $sm)) calc(100vw * (20 / $sm));
+			padding: calc(100vw * (16 / $sm)) calc(100vw * (12 / $sm)) calc(100vw * (6 / $sm));
 		}
 
 		&__sale {
-			top: calc(100vw * (10 / $sm));
-			right: calc(100vw * (-10 / $sm));
-		}
-
-		&__img {
-			margin-bottom: calc(100vw * (8 / $sm));
-		}
-
-		&__category {
-			font-size: calc(100vw * (20 / $sm));
+			top: calc(100vw * (8 / $sm));
+			right: calc(100vw * (-8 / $sm));
 		}
 
 		&__name {
-			font-size: calc(100vw * (15 / $sm));
-			margin-block: calc(100vw * (12 / $sm)) calc(100vw * (15 / $sm));
+			font-size: calc(100vw * (12 / $sm));
+			margin-block: calc(100vw * (15 / $sm)) calc(100vw * (5 / $sm));
 		}
 
 		&__prices {
-			gap: calc(100vw * (8 / $sm));
+			font-size: calc(100vw * (18 / $sm));
+			gap: calc(100vw * (5 / $sm));
+
+			.prices__old-price {
+				font-size: calc(100vw * (12 / $sm));
+			}
 		}
 	}
 }
@@ -188,32 +250,27 @@
 @include xs {
 	.card {
 		&__content {
-			width: calc(100vw * (287 / $xs-base));
-			padding: calc(100vw * (25 / $xs-base)) calc(100vw * (25 / $xs-base));
-			margin-inline: auto;
+			padding: calc(100vw * (12 / $xs-base));
 		}
 
 		&__sale {
-			top: calc(100vw * (20 / $xs-base));
-			right: calc(100vw * (-18 / $xs-base));
-		}
-
-		&__img {
-			margin-bottom: calc(100vw * (10 / $xs-base));
-		}
-
-		&__category {
-			font-size: calc(100vw * (25 / $xs-base));
+			position: absolute;
+			top: calc(100vw * (8 / $xs-base));
+			right: calc(100vw * (-8 / $xs-base));
 		}
 
 		&__name {
-			font-size: calc(100vw * (15 / $xs-base));
-			text-align: center;
-			margin-block: calc(100vw * (16 / $xs-base)) calc(100vw * (20 / $xs-base));
+			font-size: calc(100vw * (12 / $xs-base));
+			margin-block: calc(100vw * (16 / $xs-base)) calc(100vw * (6 / $xs-base));
 		}
 
 		&__prices {
-			gap: calc(100vw * (8 / $xs-base));
+			font-size: calc(100vw * (18 / $xs-base));
+			gap: calc(100vw * (5 / $xs-base));
+
+			.prices__old-price {
+				font-size: calc(100vw * (12 / $xs-base));
+			}
 		}
 	}
 }

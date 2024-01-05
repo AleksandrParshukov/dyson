@@ -1,19 +1,19 @@
 .uniqueness {
 	color: $white;
-	height: calc(100vw * (670 / 1920));
-	padding: calc(100vw * (220 / 1920)) calc(100vw * (245 / 1920)) 0;
+	height: 670px;
+	padding: 220px 155px 0;
 	background: $black url('../img/uniqueness.webp') no-repeat top left;
 	background-size: 100% 100%;
 
 	&__wrapper {
-		width: calc(100vw * (570 / 1920));
+		width: 520px;
 		margin-left: auto;
 	}
 
 	&__title {
 		color: inherit;
 		text-transform: uppercase;
-		margin-bottom: calc(100vw * (30 / 1920));
+		margin-bottom: 35px;
 	}
 
 	&__logo {
@@ -21,35 +21,22 @@
 	}
 
 	&__text {
-		font-size: calc(100vw * (20 / 1920));
-		line-height: 1.3;
+		font-size: 20px;
 		text-align: justify;
 	}
 }
 
-@media (min-width: 1920px) {
+@include xl-up {
 	.uniqueness {
-		color: $white;
-		height: 670px;
 		padding: 220px 0 0;
 		background: $black url('../img/uniqueness.webp') no-repeat center;
 		background-size: auto 100%;
 		display: grid;
 		// 1920 - 245*2 (padding-inline: 245px)
-		grid-template-columns: 1fr [content-start] 1430px [content-end] 1fr;
+		grid-template-columns: 1fr [content-start] 1226px [content-end] 1fr;
 
-		&__wrapper {
-			width: 570px;
-			margin-left: auto;
+		> * {
 			grid-column: content;
-		}
-
-		&__title {
-			margin-bottom: 30px;
-		}
-
-		&__text {
-			font-size: 20px;
 		}
 	}
 }

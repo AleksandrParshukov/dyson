@@ -8,8 +8,8 @@
 	z-index: 1000;
 
 	&__logo {
-		width: calc(100vw * (133 / 1920));
-		height: calc(100vw * (59 / 1920));
+		width: 133px;
+		height: 59px;
 
 		> img {
 			width: 100%;
@@ -19,18 +19,18 @@
 	}
 
 	&__top {
-		padding: calc(100vw * (10 / 1920)) calc(100vw * (35 / 1920));
+		padding: 10px 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
 	&__bottom {
-		margin-top: calc(100vw * (10 / 1920));
+		margin-top: 10px;
 	}
 
 	&__search {
-		margin-inline: calc(100vw * (22 / 1920));
+		margin-inline: 22px;
 		position: relative;
 		border-bottom: 1px solid $white;
 
@@ -49,16 +49,16 @@
 	}
 
 	&__search-input {
-		font-size: calc(100vw * (18 / 1920));
+		font-size: 15px;
 		color: $white;
 		background-color: transparent;
-		width: calc(100vw * (166 / 1920));
-		height: calc(100vw * (22 / 1920));
-		padding-inline: calc(100vw * (7 / 1920));
+		width: 166px;
+		height: 22px;
+		padding-inline: 7px;
 	}
 
 	&__search-submit {
-		width: calc(100vw * (18 / 1920));
+		width: 18px;
 		aspect-ratio: 1 / 1;
 		display: flex;
 
@@ -70,7 +70,7 @@
 	}
 
 	&__cart {
-		width: calc(100vw * (23 / 1920));
+		width: 23px;
 		aspect-ratio: 1 / 1;
 		position: relative;
 		display: flex;
@@ -83,7 +83,7 @@
 	}
 
 	&__cart-count {
-		font-size: calc(100vw * (12 / 1920));
+		font-size: 12px;
 		line-height: 1;
 		width: 1.2em;
 		aspect-ratio: 1 / 1;
@@ -99,49 +99,13 @@
 	}
 }
 
-@media (min-width: 1920px) {
+@include xl-up {
 	.header {
 		display: grid;
-		grid-template-columns: 1fr [content-start] 1920px [content-end] 1fr;
+		grid-template-columns: 1fr [content-start] 1500px [content-end] 1fr;
 
 		> * {
 			grid-column: content;
-		}
-
-		&__logo {
-			width: 133px;
-			height: 59px;
-		}
-
-		&__top {
-			padding: 10px 35px;
-		}
-
-		&__bottom {
-			margin-top: 10px;
-		}
-
-		&__search {
-			margin-inline: 22px;
-		}
-
-		&__search-input {
-			font-size: 18px;
-			width: 166px;
-			height: 22px;
-			padding-inline: 7px;
-		}
-
-		&__search-submit {
-			width: 18px;
-		}
-
-		&__cart {
-			width: 23px;
-		}
-
-		&__cart-count {
-			font-size: 12px;
 		}
 	}
 }

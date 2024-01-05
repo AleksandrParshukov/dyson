@@ -1,115 +1,183 @@
 .about-sc {
-  color: $primary;
-  padding: calc(100vw * (90 / 1920)) calc(100vw * (245 / 1920)) calc(100vw * (50 / 1920));
-  background: $black url('../img/about-sc.webp') no-repeat top left;
-  background-size: 100% auto;
+	color: $primary;
+	background-color: $black;
+	position: relative;
+	overflow: hidden;
 
-  @include xl {
-    padding: calc(100vw * (100 / $xl)) calc(100vw * (155 / $xl)) calc(100vw * (50 / $xl));
-    background-image: url('../img/about-sc_xl.webp');
-  }
+	&::after {
+		content: '';
+		width: 1788px;
+		height: 71px;
+		background: transparent url('../img/about-sc_mask.svg') no-repeat center;
+		background-size: contain;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-  @include lg {
-    padding: calc(100vw * (70 / $lg)) calc(100vw * (60 / $lg)) calc(100vw * (35 / $lg));
-    background-image: url('../img/about-sc_lg.webp');
-  }
+	&__wrapper {
+		margin-left: auto;
+		background-color: #1b1b1b;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		position: relative;
+	}
 
-  @include sm {
-    padding: calc(100vw * (50 / $sm)) calc(100vw * (64 / $sm)) calc(100vw * (35 / $sm));
-    background-image: url('../img/about-sc_sm.webp');
-    background-position: bottom right;
-    background-size: 100% auto;
-  }
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 
-  @include xs {
-    padding: calc(100vw * (280 / $xs-base)) calc(100vw * (24 / $xs-base)) calc(100vw * (5 / $xs-base));
-    background-image: url('../img/about-sc_xs.webp');
-    background-position: top center;
-  }
+	&__content {
+		padding: 100px 150px 50px;
+		display: flex;
+		flex-direction: column;
+	}
 
-  &__wrapper {
-    width: calc(100vw * (570 / 1920));
-    margin-left: auto;
+	&__title {
+		color: inherit;
+		margin-bottom: 33px;
+	}
 
-    @include xl {
-      width: calc(100vw * (485 / $xl));
-    }
+	&__text {
+		font-size: 18px;
+		line-height: 1.3;
+		text-align: justify;
+		margin-bottom: 1.3em;
+	}
+}
 
-    @include lg {
-      width: calc(100vw * (400 / $lg));
-    }
+@include xl-up {
+	.about-sc {
+		display: grid;
+		grid-template-columns: 1fr [content-start] 1500px [content-end] 1fr;
 
-    @include sm {
-      width: calc(100vw * (265 / $sm));
-    }
+		> * {
+			grid-column: content;
+		}
 
-    @include xs {
-      width: 100%;
-    }
-  }
+		&__wrapper {
+			&::before,
+			&::after {
+				content: '';
+				height: 100%;
+				width: 5%;
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
 
-  &__title {
-    color: inherit;
-    margin-bottom: calc(100vw * (90 / 1920));
+			&::before {
+				background-image: linear-gradient(to right, $black, transparent);
+				left: 0;
+			}
 
-    @include xl {
-      margin-bottom: calc(100vw * (62 / $xl));
-    }
+			&::after {
+				background-image: linear-gradient(to left, $black, transparent);
+				right: 0;
+			}
+		}
+	}
+}
 
-    @include lg {
-      margin-bottom: calc(100vw * (42 / $lg));
-    }
+@include xl {
+	.about-sc {
+		&::after {
+			content: '';
+			width: calc(100vw * (1788 / $xl));
+			height: calc(100vw * (71 / $xl));
+		}
 
-    @include sm {
-      margin-bottom: calc(100vw * (45 / $sm));
-    }
+		&__content {
+			padding: calc(100vw * (100 / $xl)) calc(100vw * (150 / $xl)) calc(100vw * (50 / $xl));
+		}
 
-    @include xs {
-      margin-bottom: calc(100vw * (35 / $xs-base));
-    }
-  }
+		&__title {
+			margin-bottom: calc(100vw * (33 / $xl));
+		}
 
-  &__text {
-    font-size: calc(100vw * (20 / 1920));
-    line-height: 1.3;
-    text-align: justify;
-    margin-bottom: 1.3em;
+		&__text {
+			font-size: calc(100vw * (18 / $xl));
+		}
+	}
+}
 
-    @include xl {
-      font-size: calc(100vw * (20 / $xl));
-    }
+@include lg {
+	.about-sc {
+		&::after {
+			content: '';
+			width: calc(100vw * (1788 / $lg));
+			height: calc(100vw * (71 / $lg));
+		}
 
-    @include lg {
-      font-size: calc(100vw * (15 / $lg));
-    }
+		&__content {
+			padding: calc(100vw * (88 / $lg)) calc(100vw * (50 / $lg)) calc(100vw * (75 / $lg));
+		}
 
-    @include sm {
-      font-size: calc(100vw * (15 / $sm));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (32 / $lg));
+		}
 
-    @include xs {
-      font-size: calc(100vw * (18 / $xs-base));
-    }
-  }
+		&__text {
+			font-size: calc(100vw * (15 / $lg));
+		}
+	}
+}
 
-  &__link {
-    margin-top: calc(100vw * (50 / 1920));
-    margin-inline: auto;
+@include sm {
+	.about-sc {
+		&::after {
+			content: '';
+			width: calc(100vw * (1788 / $sm));
+			height: calc(100vw * (71 / $sm));
+		}
 
-    @include xl {
-      margin-top: calc(100vw * (90 / $xl));
-    }
+		&__wrapper {
+			grid-template-columns: calc(100vw * (252 / $sm)) 1fr;
+		}
 
-    @include lg {
-      margin-top: calc(100vw * (35 / $lg));
-    }
+		&__content {
+			padding: calc(100vw * (88 / $sm)) calc(100vw * (70 / $sm)) calc(100vw * (75 / $sm));
+		}
 
-    @include sm {
-      margin-top: calc(100vw * (45 / $sm));
-    }
+		&__title {
+			margin-bottom: calc(100vw * (32 / $sm));
+		}
 
-    @include xs {
-      margin-top: calc(100vw * (28 / $xs-base));
-    }
-  }
+		&__text {
+			font-size: calc(100vw * (15 / $sm));
+		}
+	}
+}
+
+@include xs {
+	.about-sc {
+		&::after {
+			content: '';
+			width: calc(100vw * (1386 / $xs-base));
+			height: calc(100vw * (55 / $xs-base));
+			transform: translateX(-40%);
+		}
+
+		&__wrapper {
+			grid-template-columns: 100%;
+			grid-template-rows: calc(100vw * (427 / $xs-base)) max-content;
+		}
+
+		&__content {
+			padding: calc(100vw * (28 / $xs-base)) calc(100vw * (22 / $xs-base)) calc(100vw * (45 / $xs-base));
+		}
+
+		&__title {
+			margin-bottom: calc(100vw * (20 / $xs-base));
+		}
+
+		&__text {
+			font-size: calc(100vw * (15 / $xs-base));
+		}
+	}
 }

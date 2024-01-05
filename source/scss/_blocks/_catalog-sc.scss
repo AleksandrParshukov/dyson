@@ -1,18 +1,18 @@
 .catalog-sc {
 	color: $primary;
-	padding: calc(100vw * (100 / 1920)) calc(100vw * (100 / 1920)) calc(100vw * (50 / 1920));
+	padding: 100px 100px 50px;
 	background: $black url('../img/catalog-sc_bg.webp') no-repeat bottom center;
-	background-size: 100% auto;
+	background-size: auto 100%;
 
 	&__title {
 		color: inherit;
-		margin-bottom: calc(100vw * (70 / 1920));
+		margin-bottom: 60px;
 	}
 
 	&__list {
 		width: max-content;
 		margin-inline: auto;
-		gap: calc(100vw * (200 / 1920));
+		gap: 200px;
 	}
 
 	&__item {
@@ -23,48 +23,20 @@
 
 	&__img {
 		width: auto;
-		height: calc(100vw * (457 / 1920));
+		height: 400px;
 	}
 
 	&__category {
-		font-size: calc(100vw * (30 / 1920));
+		font-size: 20px;
 		line-height: 1;
-		margin-top: calc(100vw * (16 / 1920));
+		margin-top: 16px;
 	}
 
 	&__name {
-		font-size: calc(100vw * (30 / 1920));
+		font-size: 20px;
 		line-height: 1;
 		color: #8c8c8c;
-		margin-bottom: calc(100vw * (32 / 1920));
-	}
-}
-
-@media (min-width: 1920px) {
-	.catalog-sc {
-		padding: 100px 100px 50px;
-
-		&__title {
-			margin-bottom: 70px;
-		}
-
-		&__list {
-			gap: 200px;
-		}
-
-		&__img {
-			height: 457px;
-		}
-
-		&__category {
-			font-size: 30px;
-			margin-top: 16px;
-		}
-
-		&__name {
-			font-size: 30px;
-			margin-bottom: 32px;
-		}
+		margin-bottom: 32px;
 	}
 }
 
@@ -84,17 +56,45 @@
 		}
 
 		&__category {
-			font-size: calc(100vw * (30 / $xl));
+			font-size: calc(100vw * (20 / $xl));
 			margin-top: calc(100vw * (16 / $xl));
 		}
 
 		&__name {
-			font-size: calc(100vw * (30 / $xl));
+			font-size: calc(100vw * (20 / $xl));
 			margin-bottom: calc(100vw * (32 / $xl));
 		}
 	}
 }
 
+/* @include llg {
+	.catalog-sc {
+		padding: calc(100vw * (76 / $llg)) calc(100vw * (100 / $llg)) calc(100vw * (35 / $llg));
+
+		&__title {
+			margin-bottom: calc(100vw * (30 / $llg));
+		}
+
+		&__list {
+			gap: calc(100vw * (140 / $llg));
+		}
+
+		&__img {
+			height: calc(100vw * (341 / $llg));
+		}
+
+		&__category {
+			font-size: calc(100vw * (20 / $llg));
+			margin-top: calc(100vw * (13 / $llg));
+		}
+
+		&__name {
+			font-size: calc(100vw * (20 / $llg));
+			margin-bottom: calc(100vw * (26 / $llg));
+		}
+	}
+}
+ */
 @include lg {
 	.catalog-sc {
 		padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
