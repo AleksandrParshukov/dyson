@@ -1,5 +1,6 @@
 .header {
 	color: $white;
+	height: 75px;
 	background-color: $black;
 	box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.25);
 	display: flex;
@@ -10,6 +11,7 @@
 	&__logo {
 		width: 133px;
 		height: 59px;
+		margin-block: auto;
 
 		> img {
 			width: 100%;
@@ -19,7 +21,8 @@
 	}
 
 	&__top {
-		padding: 10px 20px;
+		height: 100%;
+		padding: 0 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -30,6 +33,7 @@
 	}
 
 	&__search {
+		margin-block: auto;
 		margin-inline: 22px;
 		position: relative;
 		border-bottom: 1px solid $white;
@@ -112,13 +116,15 @@
 
 @include xl {
 	.header {
+		height: calc(100vw * (75 / $xl));
+
 		&__logo {
 			width: calc(100vw * (133 / $xl));
 			height: calc(100vw * (59 / $xl));
 		}
 
 		&__top {
-			padding: calc(100vw * (10 / $xl)) calc(100vw * (20 / $xl));
+			padding: 0 calc(100vw * (20 / $xl));
 		}
 
 		&__bottom {
@@ -127,13 +133,31 @@
 
 		&__search {
 			margin-inline: calc(100vw * (22 / $xl));
+			border: none;
+			display: flex;
+
+			&.open {
+				.header__search-input {
+					width: calc(100vw * (166 / $xl));
+					padding-inline: calc(100vw * (7 / $xl));
+				}
+			}
 		}
 
 		&__search-input {
 			font-size: calc(100vw * (15 / $xl));
-			width: calc(100vw * (166 / $xl));
+			width: 0;
 			height: calc(100vw * (22 / $xl));
-			padding-inline: calc(100vw * (7 / $xl));
+			padding: 0;
+			transition: all 0.3s ease;
+			border-bottom: 1px solid $white;
+		}
+
+		&__search-btn {
+			width: calc(100vw * (18 / $xl));
+			aspect-ratio: 1 / 1;
+			background: transparent url('../img/search_white.png') no-repeat center;
+			background-size: 100% auto;
 		}
 
 		&__search-submit {
@@ -152,13 +176,15 @@
 
 @include lg {
 	.header {
+		height: calc(100vw * (75 / $lg));
+
 		&__logo {
 			width: calc(100vw * (133 / $lg));
 			height: calc(100vw * (59 / $lg));
 		}
 
 		&__top {
-			padding: calc(100vw * (10 / $lg)) calc(100vw * (20 / $lg));
+			padding: 0 calc(100vw * (20 / $lg));
 		}
 
 		&__bottom {
@@ -167,13 +193,23 @@
 
 		&__search {
 			margin-inline: calc(100vw * (22 / $lg));
+
+			&.open {
+				.header__search-input {
+					width: calc(100vw * (166 / $lg));
+					padding-inline: calc(100vw * (7 / $lg));
+				}
+			}
 		}
 
 		&__search-input {
 			font-size: calc(100vw * (15 / $lg));
-			width: calc(100vw * (166 / $lg));
+			width: 0;
 			height: calc(100vw * (22 / $lg));
-			padding-inline: calc(100vw * (7 / $lg));
+		}
+
+		&__search-btn {
+			width: calc(100vw * (18 / $lg));
 		}
 
 		&__search-submit {
@@ -192,13 +228,15 @@
 
 @include sm {
 	.header {
+		height: calc(100vw * (70 / $sm));
+
 		&__logo {
 			width: calc(100vw * (133 / $sm));
 			height: calc(100vw * (59 / $sm));
 		}
 
 		&__top {
-			padding: calc(100vw * (10 / $sm)) calc(100vw * (20 / $sm));
+			padding: 0 calc(100vw * (20 / $sm));
 		}
 
 		&__bottom {
@@ -207,13 +245,23 @@
 
 		&__search {
 			margin-inline: calc(100vw * (22 / $sm));
+
+			&.open {
+				.header__search-input {
+					width: calc(100vw * (166 / $sm));
+					padding-inline: calc(100vw * (7 / $sm));
+				}
+			}
 		}
 
 		&__search-input {
 			font-size: calc(100vw * (15 / $sm));
-			width: calc(100vw * (166 / $sm));
+			width: 0;
 			height: calc(100vw * (22 / $sm));
-			padding-inline: calc(100vw * (7 / $sm));
+		}
+
+		&__search-btn {
+			width: calc(100vw * (18 / $sm));
 		}
 
 		&__search-submit {
@@ -232,19 +280,19 @@
 
 @include xs {
 	.header {
+		height: calc(100vw * (50 / $xs-base));
+
 		&__logo {
 			width: calc(100vw * (79 / $xs-base));
 			height: calc(100vw * (35 / $xs-base));
 		}
 
 		&__top {
-			padding: calc(100vw * (8 / $xs-base)) calc(100vw * (20 / $xs-base));
+			padding: 0 calc(100vw * (20 / $xs-base));
 		}
 
 		&__search {
 			margin-inline: calc(100vw * (10 / $xs-base));
-			border: none;
-			display: flex;
 
 			&.open {
 				.header__search-input {
@@ -258,16 +306,11 @@
 			font-size: calc(100vw * (15 / $xs-base));
 			width: 0;
 			height: calc(100vw * (30 / $xs-base));
-			padding: 0;
 			transition: all 0.3s ease;
-			border-bottom: 1px solid $white;
 		}
 
 		&__search-btn {
 			width: calc(100vw * (18 / $xs-base));
-			aspect-ratio: 1 / 1;
-			background: transparent url('../img/search_white.png') no-repeat center;
-			background-size: 100% auto;
 		}
 
 		&__cart {

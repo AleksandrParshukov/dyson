@@ -55,6 +55,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 100px;
+		overflow: hidden;
 	}
 
 	&__certificate {
@@ -77,15 +78,25 @@
 @include xl-up {
 	.guarantee {
 		grid-template-columns:
-			1fr
 			[full-width-start]
+			1fr
 			150px
 			[content-start] 1240px [content-end]
 			150px
-			[full-width-end]
-			1fr;
+			1fr
+			[full-width-end];
 
+		&__top-img-wrap {
+			margin-bottom: 70px;
+			background-color: #e8e8e8;
+			display: grid;
+			grid-template-columns: subgrid;
+			grid-area: full-width;
+		}
 		&__top-img {
+			margin-bottom: 0;
+			grid-area: content;
+
 			&::before,
 			&::after {
 				content: '';
@@ -98,12 +109,12 @@
 			}
 
 			&::before {
-				background-image: linear-gradient(to right, $white, transparent);
+				background-image: linear-gradient(to right, #e8e8e8, transparent);
 				left: 0;
 			}
 
 			&::after {
-				background-image: linear-gradient(to left, $white, transparent);
+				background-image: linear-gradient(to left, #e8e8e8, transparent);
 				right: 0;
 			}
 		}
@@ -259,11 +270,43 @@
 		}
 
 		&__certificate {
-			height: calc(100vw * (130 / $xs-base));
+			height: calc(100vw * (186 / $xs-base));
+
+			> img {
+				width: auto !important;
+				height: 100%;
+				margin-inline: auto;
+			}
 		}
 
 		&__link {
 			margin-top: calc(100vw * (40 / $xs-base));
+		}
+
+		.owl-dots {
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.owl-carousel button.owl-dot {
+			flex-basis: 60px;
+			flex-shrink: 1;
+			max-width: 60px;
+			height: 5px;
+			background-color: #d9d9d9;
+			border-radius: 100vw;
+			display: block;
+		}
+
+		.owl-carousel button.owl-dot.active {
+			background-color: #32367d;
+		}
+
+		.owl-carousel button.owl-dot span {
+			width: 100%;
+			height: 100%;
 		}
 	}
 }

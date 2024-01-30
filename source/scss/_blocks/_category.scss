@@ -52,6 +52,24 @@
 	}
 }
 
+@include xl-up {
+	.category {
+		display: grid;
+		grid-template-columns:
+			[full-width-start]
+			1fr
+			150px
+			[content-start] 1240px [content-end]
+			150px
+			1fr
+			[full-width-end];
+
+		> * {
+			grid-column: content;
+		}
+	}
+}
+
 @include xl {
 	.category {
 		padding: calc(100vw * (70 / $xl)) calc(100vw * (120 / $xl)) calc(100vw * (60 / $xl));

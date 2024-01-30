@@ -1,7 +1,9 @@
 .main-nav {
 	width: min-content;
 	margin-inline: auto;
-	gap: 170px;
+	display: flex;
+	gap: 85px;
+	align-self: end;
 
 	&__link {
 		font-size: 18px;
@@ -15,14 +17,15 @@
 
 		&::after {
 			content: '';
+			width: 0;
 			height: 5px;
 			background-color: $special;
 			position: absolute;
 			bottom: 0;
-			left: 0;
 			right: 0;
-			opacity: 0;
-			transition: opacity 0.25s ease;
+			left: auto;
+			transition: width 0.25s ease;
+			transform-origin: right;
 		}
 
 		&:hover,
@@ -32,14 +35,17 @@
 
 		&:hover::after,
 		&.active::after {
-			opacity: 1;
+			width: 100%;
+			transform-origin: left;
+			right: auto;
+			left: 0;
 		}
 	}
 }
 
 @include xl {
 	.main-nav {
-		gap: calc(100vw * (170 / $xl));
+		gap: calc(100vw * (85 / $xl));
 
 		&__link {
 			font-size: calc(100vw * (18 / $xl));
@@ -58,9 +64,10 @@
 		gap: calc(100vw * (70 / $lg));
 
 		&__link {
-			font-size: calc(100vw * (20 / $lg));
-			padding-bottom: calc(100vw * (23 / $lg));
-			padding-inline: calc(100vw * (13 / $lg));
+			font-size: calc(100vw * (18 / $lg));
+			width: min-content;
+			padding-bottom: calc(100vw * (14 / $lg));
+			padding-inline: calc(100vw * (7 / $lg));
 
 			&::after {
 				height: calc(100vw * (5 / $lg));
@@ -71,19 +78,30 @@
 
 @include sm {
 	.main-nav {
-		gap: calc(100vw * (100 / $sm));
+		gap: calc(100vw * (45 / $sm));
 
 		&__link {
 			width: max-content;
-			font-size: calc(100vw * (18 / $sm));
-			padding-bottom: calc(100vw * (15 / $sm));
-			padding-inline: calc(100vw * (5 / $sm));
+			font-size: calc(100vw * (15 / $sm));
+			padding-bottom: calc(100vw * (10 / $sm));
+			padding-inline: 0;
 			display: flex;
 			flex-direction: column;
 
 			&::after {
-				height: calc(100vw * (3 / $sm));
+				content: none;
+			}
+
+			&:hover,
+			&.active {
+				color: $special;
 			}
 		}
+	}
+}
+
+@include xs {
+	.main-nav {
+		display: none;
 	}
 }

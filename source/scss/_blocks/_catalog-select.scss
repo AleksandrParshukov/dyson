@@ -59,13 +59,15 @@
 
 		&::after {
 			content: '';
-			width: 105%;
+			width: 0;
 			height: calc(100vw * (3 / 1920));
 			background-color: $special;
 			position: absolute;
 			top: 100%;
-			left: 0;
-			opacity: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: width 0.25s ease;
+			transform-origin: center;
 		}
 
 		&:hover a,
@@ -76,14 +78,33 @@
 
 		&:hover::after,
 		&.active::after {
-			opacity: 1;
-			transition: opacity 0.25s ease;
+			width: 105%;
+			transition: width 0.25s ease;
 		}
 	}
 }
 
 @include xl {
 	.catalog-select {
+		&__btn {
+			width: calc(100vw * (18 / $xl));
+			aspect-ratio: 1 / 1;
+			background: transparent url('../img/cross.png') no-repeat center;
+			background-size: 100% auto;
+			display: flex;
+			align-items: center;
+
+			&.collapsed {
+				background-image: url('../img/burger.png');
+			}
+		}
+
+		&__list-wrapper {
+			margin-top: 10px;
+			left: auto;
+			right: 0;
+		}
+
 		&__caption {
 			font-size: calc(100vw * (15 / $xl));
 		}
@@ -102,6 +123,10 @@
 
 @include lg {
 	.catalog-select {
+		&__btn {
+			width: calc(100vw * (18 / $lg));
+		}
+
 		&__caption {
 			font-size: calc(100vw * (15 / $lg));
 		}
@@ -120,6 +145,10 @@
 
 @include sm {
 	.catalog-select {
+		&__btn {
+			width: calc(100vw * (18 / $sm));
+		}
+
 		&__list-wrapper {
 			top: 0;
 			left: auto;
@@ -157,21 +186,10 @@
 
 		&__btn {
 			width: calc(100vw * (18 / $xs-base));
-			aspect-ratio: 1 / 1;
-			background: transparent url('../img/cross.png') no-repeat center;
-			background-size: 100% auto;
-			display: flex;
-			align-items: center;
-
-			&.collapsed {
-				background-image: url('../img/burger.png');
-			}
 		}
 
 		&__list-wrapper {
 			top: calc(100vw * (47 / $xs-base));
-			left: 0;
-			right: 0;
 			transition: all 0.3s ease;
 		}
 

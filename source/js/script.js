@@ -59,7 +59,7 @@ function init_carousel() {
 		arrows: true,
 		prevArrow: '<button type="button" class="slick-prev"></button>',
 		nextArrow: '<button type="button" class="slick-next"></button>',
-		infinite: false,
+		infinite: true,
 		responsive: [
 			{
 				breakpoint: 420,
@@ -78,6 +78,19 @@ function init_carousel() {
 
 		$('.product-top__main-img img').attr('src', img);
 	});
+
+	if ($(window).width() <= 420) {
+		$('.guarantee__certificates').owlCarousel({
+			loop: false,
+			nav: false,
+			dots: true,
+			autoHeight: false,
+			items: 1,
+			margin: 30,
+			autoWidth: true,
+			center: true,
+		});
+	}
 }
 
 function init_tabs() {

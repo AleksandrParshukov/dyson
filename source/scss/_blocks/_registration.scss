@@ -114,16 +114,26 @@
 @include xl-up {
 	.registration {
 		grid-template-columns:
-			1fr
 			[full-width-start]
+			1fr
 			150px
 			[content-start] 1240px [content-end]
 			150px
-			[full-width-end]
-			1fr;
+			1fr
+			[full-width-end];
+
+		&__top-img-wrap {
+			margin-bottom: 70px;
+			background-color: $black;
+			display: grid;
+			grid-template-columns: subgrid;
+			grid-area: full-width;
+		}
 
 		&__top-img {
+			margin-bottom: 0;
 			position: relative;
+			grid-area: content;
 
 			&::before,
 			&::after {

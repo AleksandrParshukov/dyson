@@ -47,31 +47,31 @@
 }
 
 @mixin xl-up {
-	@media (min-width: #{$xl}px) {
+	@media (min-width: #{$xl+0.5}px) {
 		@content;
 	}
 }
 
 @mixin lg-up {
-	@media (min-width: #{$lg}px) {
+	@media (min-width: #{$lg+0.5}px) {
 		@content;
 	}
 }
 
 @mixin md-up {
-	@media (min-width: #{$md}px) {
+	@media (min-width: #{$md+0.5}px) {
 		@content;
 	}
 }
 
 @mixin sm-up {
-	@media (min-width: #{$sm}px) {
+	@media (min-width: #{$sm+0.5}px) {
 		@content;
 	}
 }
 
 @mixin xs-up {
-	@media (min-width: #{$xs}px) {
+	@media (min-width: #{$xs+0.5}px) {
 		@content;
 	}
 }
