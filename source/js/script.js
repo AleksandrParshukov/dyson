@@ -208,6 +208,27 @@ function init_forms() {
 	});
 }
 
+function init_video() {
+	const video = $('.js_video').get(0),
+		$js_video_control = $('.js_video_control'),
+		$js_play_icon_btn = $js_video_control.find('.js_play_icon_btn'),
+		$js_pause_icon_btn = $js_video_control.find('.js_pause_icon_btn');
+
+	$js_play_icon_btn.on('click', function (evt) {
+		evt.preventDefault();
+
+		video.play();
+		$js_video_control.removeClass('paused');
+	});
+
+	$js_pause_icon_btn.on('click', function (evt) {
+		evt.preventDefault();
+
+		video.pause();
+		$js_video_control.addClass('paused');
+	});
+}
+
 $('document').ready(function () {
 	init_search();
 	// init_faq();
@@ -215,5 +236,6 @@ $('document').ready(function () {
 	init_tabs();
 	init_qty();
 	init_forms();
+	init_video();
 	//init_sync_sliders();
 });

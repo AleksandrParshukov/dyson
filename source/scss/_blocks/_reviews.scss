@@ -1,336 +1,337 @@
 .reviews {
-	padding: 100px 100px 50px;
-	background-color: #fafafa;
+  padding: 100px 100px 50px;
+  background-color: #fafafa;
 
-	.owl-carousel .owl-stage {
-		display: flex;
-	}
+  .owl-carousel .owl-stage {
+    display: flex;
+  }
 
-	.owl-carousel.owl-drag .owl-item {
-		display: flex;
-		justify-content: center;
-	}
+  .owl-carousel.owl-drag .owl-item {
+    display: flex;
+    justify-content: center;
+  }
 
-	.owl-theme .owl-dots {
-		margin-top: 33px;
-	}
+  .owl-theme .owl-dots {
+    margin-top: 33px;
+  }
 
-	.owl-theme .owl-dots .owl-dot span {
-		width: 30px;
-		height: auto;
-		aspect-ratio: 1 / 1;
-		margin-block: 0;
-		border-radius: 50%;
-		background-color: #e8e8e8;
-		border: 2px solid #e8e8e8;
-	}
+  .owl-theme .owl-dots .owl-dot span {
+    width: 30px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-block: 0;
+    border-radius: 50%;
+    background-color: #e8e8e8;
+    border: 2px solid #e8e8e8;
+  }
 
-	.owl-theme .owl-dots .owl-dot.active span {
-		background-color: $white;
-	}
+  .owl-theme .owl-dots .owl-dot.active span {
+    background-color: $white;
+  }
 
-	&__title {
-		margin-bottom: 50px;
-	}
+  &__title {
+    margin-bottom: 50px;
+  }
 
-	.owl-prev,
-	.owl-next {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-100%);
-	}
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+  }
 
-	.owl-prev {
-		right: 100%;
-	}
+  .owl-prev {
+    right: 100%;
+  }
 
-	.owl-next {
-		left: 100%;
-	}
+  .owl-next {
+    left: 100%;
+  }
 
-	&__nav {
-		width: 44px;
-		height: auto;
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		display: block;
-		background: $special url('../img/reviews_chevron.png') no-repeat center;
-		background-size: auto 80%;
+  &__nav {
+    width: 44px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: block;
+    background: $special url("../img/reviews_chevron.svg") no-repeat;
+    background-position: center left 12px;
+    background-size: auto 60%;
 
-		&--next {
-			transform: rotate(180deg);
-		}
+    &--next {
+      transform: rotate(180deg);
+    }
 
-		&:hover {
-			background-color: #730243;
-		}
-	}
+    &:hover {
+      background-color: #730243;
+    }
+  }
 
-	&__wrapper {
-		width: max-content;
-		margin-inline: auto;
-		position: relative;
-	}
+  &__wrapper {
+    width: max-content;
+    margin-inline: auto;
+    position: relative;
+  }
 
-	&__list {
-		width: 1330px;
-	}
+  &__list {
+    width: 1330px;
+  }
 
-	&__item {
-		width: 610px;
-		height: 100%;
-		padding: 40px 48px 30px;
-		margin-inline: 13px;
-		background-color: $white;
-		display: flex;
-		flex-direction: column;
-	}
+  &__item {
+    width: 610px;
+    height: 100%;
+    padding: 40px 48px 30px;
+    margin-inline: 13px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+  }
 
-	&__text {
-		font-size: 18px;
-		line-height: 1.3;
-		margin-bottom: auto;
-	}
+  &__text {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: auto;
+  }
 
-	&__author {
-		font-size: 20px;
-		line-height: 1.3;
-		margin-block: 20px 15px;
-	}
+  &__author {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-block: 20px 15px;
+  }
 
-	&__rating {
-		font-size: 26px;
-		line-height: 1.125;
-		color: #ffa300;
-	}
+  &__rating {
+    font-size: 26px;
+    line-height: 1.125;
+    color: #ffa300;
+  }
 
-	&__grade {
-		margin-right: 16px;
-	}
+  &__grade {
+    margin-right: 16px;
+  }
 
-	&__star {
-		width: 29px;
-		aspect-ratio: 1 / 1;
-		background: transparent url('../img/star_filled.svg') center no-repeat;
-		background-size: contain;
-	}
+  &__star {
+    width: 29px;
+    aspect-ratio: 1 / 1;
+    background: transparent url("../img/star_filled.svg") center no-repeat;
+    background-size: contain;
+  }
 }
 
 @include xl {
-	.reviews {
-		padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
+  .reviews {
+    padding: calc(100vw * (100 / $xl)) calc(100vw * (100 / $xl)) calc(100vw * (50 / $xl));
 
-		.owl-theme .owl-dots {
-			margin-top: calc(100vw * (33 / $xl));
-		}
+    .owl-theme .owl-dots {
+      margin-top: calc(100vw * (33 / $xl));
+    }
 
-		.owl-theme .owl-dots .owl-dot span {
-			width: calc(100vw * (30 / $xl));
-		}
+    .owl-theme .owl-dots .owl-dot span {
+      width: calc(100vw * (30 / $xl));
+    }
 
-		.owl-theme .owl-dots .owl-dot.active span {
-			background-color: $white;
-		}
+    .owl-theme .owl-dots .owl-dot.active span {
+      background-color: $white;
+    }
 
-		&__title {
-			margin-bottom: calc(100vw * (50 / $xl));
-		}
+    &__title {
+      margin-bottom: calc(100vw * (50 / $xl));
+    }
 
-		&__nav {
-			width: calc(100vw * (44 / $xl));
-		}
+    &__nav {
+      width: calc(100vw * (44 / $xl));
+    }
 
-		&__list {
-			width: calc(100vw * (1330 / $xl));
-		}
+    &__list {
+      width: calc(100vw * (1330 / $xl));
+    }
 
-		&__item {
-			width: calc(100vw * (610 / $xl));
-			padding: calc(100vw * (40 / $xl)) calc(100vw * (48 / $xl)) calc(100vw * (30 / $xl));
-		}
+    &__item {
+      width: calc(100vw * (610 / $xl));
+      padding: calc(100vw * (40 / $xl)) calc(100vw * (48 / $xl)) calc(100vw * (30 / $xl));
+    }
 
-		&__text {
-			font-size: calc(100vw * (18 / $xl));
-		}
+    &__text {
+      font-size: calc(100vw * (18 / $xl));
+    }
 
-		&__author {
-			font-size: calc(100vw * (20 / $xl));
-			margin-block: calc(100vw * (20 / $xl)) calc(100vw * (15 / $xl));
-		}
+    &__author {
+      font-size: calc(100vw * (20 / $xl));
+      margin-block: calc(100vw * (20 / $xl)) calc(100vw * (15 / $xl));
+    }
 
-		&__rating {
-			font-size: calc(100vw * (26 / $xl));
-		}
+    &__rating {
+      font-size: calc(100vw * (26 / $xl));
+    }
 
-		&__grade {
-			margin-right: calc(100vw * (16 / $xl));
-		}
+    &__grade {
+      margin-right: calc(100vw * (16 / $xl));
+    }
 
-		&__star {
-			width: calc(100vw * (29 / $xl));
-		}
-	}
+    &__star {
+      width: calc(100vw * (29 / $xl));
+    }
+  }
 }
 
 @include lg {
-	.reviews {
-		padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
+  .reviews {
+    padding: calc(100vw * (76 / $lg)) calc(100vw * (100 / $lg)) calc(100vw * (35 / $lg));
 
-		.owl-theme .owl-dots {
-			margin-top: calc(100vw * (24 / $lg));
-		}
+    .owl-theme .owl-dots {
+      margin-top: calc(100vw * (24 / $lg));
+    }
 
-		.owl-theme .owl-dots .owl-dot span {
-			width: calc(100vw * (27 / $lg));
-		}
+    .owl-theme .owl-dots .owl-dot span {
+      width: calc(100vw * (27 / $lg));
+    }
 
-		&__title {
-			margin-bottom: calc(100vw * (28 / $lg));
-		}
+    &__title {
+      margin-bottom: calc(100vw * (28 / $lg));
+    }
 
-		&__nav {
-			width: calc(100vw * (32 / $lg));
-		}
+    &__nav {
+      width: calc(100vw * (32 / $lg));
+    }
 
-		&__wrapper {
-			width: max-content;
-			margin-inline: auto;
-			position: relative;
-		}
+    &__wrapper {
+      width: max-content;
+      margin-inline: auto;
+      position: relative;
+    }
 
-		&__list {
-			width: calc(100vw * (850 / $lg));
-		}
+    &__list {
+      width: calc(100vw * (850 / $lg));
+    }
 
-		&__item {
-			width: calc(100vw * (410 / $lg));
-			padding: calc(100vw * (30 / $lg)) calc(100vw * (32 / $lg)) calc(100vw * (25 / $lg));
-		}
+    &__item {
+      width: calc(100vw * (410 / $lg));
+      padding: calc(100vw * (30 / $lg)) calc(100vw * (32 / $lg)) calc(100vw * (25 / $lg));
+    }
 
-		&__text {
-			font-size: calc(100vw * (15 / $lg));
-		}
+    &__text {
+      font-size: calc(100vw * (15 / $lg));
+    }
 
-		&__author {
-			font-size: calc(100vw * (15 / $lg));
-			margin-block: calc(100vw * (20 / $lg));
-		}
+    &__author {
+      font-size: calc(100vw * (15 / $lg));
+      margin-block: calc(100vw * (20 / $lg));
+    }
 
-		&__rating {
-			font-size: calc(100vw * (20 / $lg));
-		}
+    &__rating {
+      font-size: calc(100vw * (20 / $lg));
+    }
 
-		&__grade {
-			margin-right: calc(100vw * (12 / $lg));
-		}
+    &__grade {
+      margin-right: calc(100vw * (12 / $lg));
+    }
 
-		&__star {
-			width: calc(100vw * (21 / $lg));
-		}
-	}
+    &__star {
+      width: calc(100vw * (21 / $lg));
+    }
+  }
 }
 
 @include sm {
-	.reviews {
-		padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
+  .reviews {
+    padding: calc(100vw * (64 / $sm)) calc(100vw * (25 / $sm)) calc(100vw * (37 / $sm));
 
-		.owl-theme .owl-dots {
-			margin-top: calc(100vw * (24 / $sm));
-		}
+    .owl-theme .owl-dots {
+      margin-top: calc(100vw * (24 / $sm));
+    }
 
-		.owl-theme .owl-dots .owl-dot span {
-			width: calc(100vw * (27 / $sm));
-		}
+    .owl-theme .owl-dots .owl-dot span {
+      width: calc(100vw * (27 / $sm));
+    }
 
-		&__title {
-			margin-bottom: calc(100vw * (24 / $sm));
-		}
+    &__title {
+      margin-bottom: calc(100vw * (24 / $sm));
+    }
 
-		&__nav {
-			width: calc(100vw * (32 / $sm));
-		}
+    &__nav {
+      width: calc(100vw * (32 / $sm));
+    }
 
-		&__wrapper {
-			width: max-content;
-			margin-inline: auto;
-			position: relative;
-		}
+    &__wrapper {
+      width: max-content;
+      margin-inline: auto;
+      position: relative;
+    }
 
-		&__list {
-			width: calc(100vw * (650 / $sm));
-		}
+    &__list {
+      width: calc(100vw * (650 / $sm));
+    }
 
-		&__item {
-			width: calc(100vw * (314 / $sm));
-			padding: calc(100vw * (30 / $sm)) calc(100vw * (22 / $sm)) calc(100vw * (25 / $sm));
-		}
+    &__item {
+      width: calc(100vw * (314 / $sm));
+      padding: calc(100vw * (30 / $sm)) calc(100vw * (22 / $sm)) calc(100vw * (25 / $sm));
+    }
 
-		&__text {
-			font-size: calc(100vw * (15 / $sm));
-		}
+    &__text {
+      font-size: calc(100vw * (15 / $sm));
+    }
 
-		&__author {
-			font-size: calc(100vw * (18 / $sm));
-			margin-block: calc(100vw * (20 / $sm)) calc(100vw * (12 / $sm));
-		}
+    &__author {
+      font-size: calc(100vw * (18 / $sm));
+      margin-block: calc(100vw * (20 / $sm)) calc(100vw * (12 / $sm));
+    }
 
-		&__rating {
-			font-size: calc(100vw * (20 / $sm));
-		}
+    &__rating {
+      font-size: calc(100vw * (20 / $sm));
+    }
 
-		&__grade {
-			margin-right: calc(100vw * (12 / $sm));
-		}
+    &__grade {
+      margin-right: calc(100vw * (12 / $sm));
+    }
 
-		&__star {
-			width: calc(100vw * (21 / $sm));
-		}
-	}
+    &__star {
+      width: calc(100vw * (21 / $sm));
+    }
+  }
 }
 
 @include xs {
-	.reviews {
-		padding: calc(100vw * (35 / $xs-base)) 0;
+  .reviews {
+    padding: calc(100vw * (35 / $xs-base)) 0;
 
-		&__title {
-			width: calc(100vw * (260 / $xs-base));
-			margin-bottom: calc(100vw * (26 / $xs-base));
-			margin-inline: auto;
-		}
+    &__title {
+      width: calc(100vw * (260 / $xs-base));
+      margin-bottom: calc(100vw * (26 / $xs-base));
+      margin-inline: auto;
+    }
 
-		&__nav {
-			width: calc(100vw * (30 / $xs-base));
-		}
+    &__nav {
+      width: calc(100vw * (30 / $xs-base));
+    }
 
-		&__list {
-			width: calc(100vw * (260 / $xs-base));
-		}
+    &__list {
+      width: calc(100vw * (260 / $xs-base));
+    }
 
-		&__item {
-			width: calc(100vw * (260 / $xs-base));
-			padding: 0;
-			background-color: transparent;
-		}
+    &__item {
+      width: calc(100vw * (260 / $xs-base));
+      padding: 0;
+      background-color: transparent;
+    }
 
-		&__text {
-			font-size: calc(100vw * (18 / $xs-base));
-		}
+    &__text {
+      font-size: calc(100vw * (18 / $xs-base));
+    }
 
-		&__author {
-			font-size: calc(100vw * (20 / $xs-base));
-			margin-block: calc(100vw * (20 / $xs-base)) calc(100vw * (30 / $xs-base));
-		}
+    &__author {
+      font-size: calc(100vw * (20 / $xs-base));
+      margin-block: calc(100vw * (20 / $xs-base)) calc(100vw * (30 / $xs-base));
+    }
 
-		&__rating {
-			font-size: calc(100vw * (26 / $xs-base));
-		}
+    &__rating {
+      font-size: calc(100vw * (26 / $xs-base));
+    }
 
-		&__grade {
-			margin-right: calc(100vw * (14 / $xs-base));
-		}
+    &__grade {
+      margin-right: calc(100vw * (14 / $xs-base));
+    }
 
-		&__star {
-			width: calc(100vw * (29 / $xs-base));
-		}
-	}
+    &__star {
+      width: calc(100vw * (29 / $xs-base));
+    }
+  }
 }

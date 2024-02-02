@@ -1,210 +1,210 @@
 .catalog-select {
-	position: relative;
+  position: relative;
 
-	&__caption {
-		font-size: calc(100vw * (15 / 1920));
-		line-height: 2.433;
-		text-align: center;
-		color: $white;
-		cursor: pointer;
-		transition: color 0.25s ease;
-		display: flex;
-		align-items: center;
+  &__caption {
+    font-size: 15px;
+    line-height: 2.433;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
 
-		> svg {
-			transition: rotate 0.3s ease;
-			margin-left: 5px;
-		}
+    > svg {
+      transition: rotate 0.3s ease;
+      margin-left: 5px;
+    }
 
-		&:not(.collapsed) {
-			> svg {
-				rotate: -180deg;
-			}
-		}
+    &:not(.collapsed) {
+      > svg {
+        rotate: -180deg;
+      }
+    }
 
-		&:hover {
-			color: $special;
-		}
-	}
+    &:hover {
+      color: $special;
+    }
+  }
 
-	&__list-wrapper {
-		position: absolute;
-		top: 100%;
-		left: -1.75em;
-		z-index: 1000;
-	}
+  &__list-wrapper {
+    position: absolute;
+    top: 100%;
+    left: -1.75em;
+    z-index: 1000;
+  }
 
-	&__list {
-		color: #2b2b2b;
-		padding: 1.5em 1.75em;
-		background-color: $white;
-		box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
-	}
+  &__list {
+    color: #2b2b2b;
+    padding: 1.5em 1.75em;
+    background-color: $white;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
+  }
 
-	&__item {
-		min-width: max-content;
-		width: 100%;
-		border-bottom: 1px solid #e3e3e3;
-		position: relative;
+  &__item {
+    min-width: max-content;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
 
-		&:last-child {
-			border: none;
-		}
+    &:last-child {
+      border: none;
+    }
 
-		a {
-			font-size: calc(100vw * (20 / 1920));
-			line-height: 2.5;
-			text-align: left;
-		}
+    a {
+      font-size: 18px;
+      line-height: 2.5;
+      text-align: left;
+    }
 
-		&::after {
-			content: '';
-			width: 0;
-			height: calc(100vw * (3 / 1920));
-			background-color: $special;
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			transition: width 0.25s ease;
-			transform-origin: center;
-		}
+    &::after {
+      content: "";
+      width: 0;
+      height: 3px;
+      background-color: $special;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.25s ease;
+      transform-origin: center;
+    }
 
-		&:hover a,
-		&.active a {
-			color: $special;
-			transition: all 0.25s ease;
-		}
+    &:hover a,
+    &.active a {
+      color: $special;
+      transition: all 0.25s ease;
+    }
 
-		&:hover::after,
-		&.active::after {
-			width: 105%;
-			transition: width 0.25s ease;
-		}
-	}
+    &:hover::after,
+    &.active::after {
+      width: 105%;
+      transition: width 0.25s ease;
+    }
+  }
 }
 
 @include xl {
-	.catalog-select {
-		&__btn {
-			width: calc(100vw * (18 / $xl));
-			aspect-ratio: 1 / 1;
-			background: transparent url('../img/cross.png') no-repeat center;
-			background-size: 100% auto;
-			display: flex;
-			align-items: center;
+  .catalog-select {
+    &__btn {
+      width: calc(100vw * (18 / $xl));
+      aspect-ratio: 1 / 1;
+      background: transparent url("../img/cross.png") no-repeat center;
+      background-size: 100% auto;
+      display: flex;
+      align-items: center;
 
-			&.collapsed {
-				background-image: url('../img/burger.png');
-			}
-		}
+      &.collapsed {
+        background-image: url("../img/burger.png");
+      }
+    }
 
-		&__list-wrapper {
-			margin-top: 10px;
-			left: auto;
-			right: 0;
-		}
+    &__list-wrapper {
+      margin-top: 10px;
+      left: auto;
+      right: 0;
+    }
 
-		&__caption {
-			font-size: calc(100vw * (15 / $xl));
-		}
+    &__caption {
+      font-size: calc(100vw * (15 / $xl));
+    }
 
-		&__item {
-			a {
-				font-size: calc(100vw * (20 / $xl));
-			}
+    &__item {
+      a {
+        font-size: calc(100vw * (20 / $xl));
+      }
 
-			&::after {
-				height: calc(100vw * (3 / $xl));
-			}
-		}
-	}
+      &::after {
+        height: calc(100vw * (3 / $xl));
+      }
+    }
+  }
 }
 
 @include lg {
-	.catalog-select {
-		&__btn {
-			width: calc(100vw * (18 / $lg));
-		}
+  .catalog-select {
+    &__btn {
+      width: calc(100vw * (18 / $lg));
+    }
 
-		&__caption {
-			font-size: calc(100vw * (15 / $lg));
-		}
+    &__caption {
+      font-size: calc(100vw * (15 / $lg));
+    }
 
-		&__item {
-			a {
-				font-size: calc(100vw * (18 / $lg));
-			}
+    &__item {
+      a {
+        font-size: calc(100vw * (18 / $lg));
+      }
 
-			&::after {
-				height: calc(100vw * (3 / $lg));
-			}
-		}
-	}
+      &::after {
+        height: calc(100vw * (3 / $lg));
+      }
+    }
+  }
 }
 
 @include sm {
-	.catalog-select {
-		&__btn {
-			width: calc(100vw * (18 / $sm));
-		}
+  .catalog-select {
+    &__btn {
+      width: calc(100vw * (18 / $sm));
+    }
 
-		&__list-wrapper {
-			top: 0;
-			left: auto;
-			right: 110%;
-		}
+    &__list-wrapper {
+      top: 0;
+      left: auto;
+      right: 110%;
+    }
 
-		&__list {
-			width: calc(100vw * (360 / $sm));
-			padding-inline: calc(100vw * (20 / $sm));
-			padding-block: 0;
-		}
+    &__list {
+      width: calc(100vw * (360 / $sm));
+      padding-inline: calc(100vw * (20 / $sm));
+      padding-block: 0;
+    }
 
-		&__item {
-			width: 100%;
-			padding-block: calc(100vw * (20 / $sm));
-			display: flex;
-			justify-content: center;
-			align-items: center;
+    &__item {
+      width: 100%;
+      padding-block: calc(100vw * (20 / $sm));
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-			a {
-				font-size: calc(100vw * (18 / $sm));
-				line-height: 1.2;
-			}
+      a {
+        font-size: calc(100vw * (18 / $sm));
+        line-height: 1.2;
+      }
 
-			&::after {
-				content: none;
-			}
-		}
-	}
+      &::after {
+        content: none;
+      }
+    }
+  }
 }
 
 @include xs {
-	.catalog-select {
-		position: static;
+  .catalog-select {
+    position: static;
 
-		&__btn {
-			width: calc(100vw * (18 / $xs-base));
-		}
+    &__btn {
+      width: calc(100vw * (18 / $xs-base));
+    }
 
-		&__list-wrapper {
-			top: calc(100vw * (47 / $xs-base));
-			transition: all 0.3s ease;
-		}
+    &__list-wrapper {
+      top: calc(100vw * (47 / $xs-base));
+      transition: all 0.3s ease;
+    }
 
-		&__list {
-			width: 100%;
-			padding-inline: calc(100vw * (20 / $xs-base));
-			position: absolute;
-		}
+    &__list {
+      width: 100%;
+      padding-inline: calc(100vw * (20 / $xs-base));
+      position: absolute;
+    }
 
-		&__item {
-			padding-block: calc(100vw * (20 / $xs-base));
+    &__item {
+      padding-block: calc(100vw * (20 / $xs-base));
 
-			a {
-				font-size: calc(100vw * (18 / $xs-base));
-			}
-		}
-	}
+      a {
+        font-size: calc(100vw * (18 / $xs-base));
+      }
+    }
+  }
 }
